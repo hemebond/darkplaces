@@ -1,2 +1,9 @@
-- name: Doxygen Action
-  uses: mattnotmitt/doxygen-action@1.9.4
+name: learn-github-actions
+on: [push]
+jobs:
+  run-doxygen-docker:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Doxygen Action
+        uses: mattnotmitt/doxygen-action@1.9.4
