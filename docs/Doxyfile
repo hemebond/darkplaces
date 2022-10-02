@@ -1,0 +1,19 @@
+PROJECT_NAME           = "DarkPlaces"
+PROJECT_BRIEF          = "Game engine based on the Quake 1 engine by id Software, developed by LadyHavoc"
+PROJECT_LOGO           = "darkplaces48x48.png"
+INPUT                  = "./"
+OUTPUT_DIRECTORY       = "./docs/_build/doxygen"
+GENERATE_HTML          = YES
+GENERATE_XML           = NO
+GENERATE_LATEX         = NO
+FILE_PATTERNS          = *.c *.cc *.cxx *.cpp *.c++ *.h *.hh *.hxx *.hpp *.h++ *.qc *.qh
+
+XML_PROGRAMLISTING     = NO
+RECURSIVE              = NO
+
+# Try and properly parse ifdefs
+# and work around duplicate signature errors
+ENABLE_PREPROCESSING   = YES
+MACRO_EXPANSION        = YES
+EXPAND_ONLY_PREDEF     = NO
+SKIP_FUNCTION_MACROS   = NO

@@ -1,0 +1,22 @@
+name: Publish Doxygen Documentation
+
+on:
+  push:
+    branches:
+      - $default-branch
+
+  workflow_dispatch:
+
+jobs:
+  publish-doxygen-docs:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Doxygen Action
+        uses: mattnotmitt/doxygen-action@1.9.4
+        with:
+          doxyfile-path: docs/Doxyfile
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./docs/_build/doxygen/html
