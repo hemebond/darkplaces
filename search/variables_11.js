@@ -1,0 +1,26 @@
+var searchData=
+[
+  ['sendmessagelength_0',['sendMessageLength',['../structnetconn__s.html#a53fc6d20a83df10c865c2964629bd248',1,'netconn_s']]],
+  ['sendsignon_1',['sendsignon',['../structclient__s.html#a4c25c3d100955727f7ae19995744cf24',1,'client_s']]],
+  ['serverflags_2',['serverflags',['../structserver__static__s.html#a25b493de1e16bb795adf9a0c388cfb4e',1,'server_static_s']]],
+  ['serverinfo_3',['serverinfo',['../structserver__static__s.html#a761716bd6833f96c4506988e9b4bcf5a',1,'server_static_s']]],
+  ['shadow_4',['shadow',['../structrtlight__s.html#ac99dff6869d8ad0b70c56180900f470b',1,'rtlight_s']]],
+  ['shadowmapatlasposition_5',['shadowmapatlasposition',['../structrtlight__s.html#abaf58baddff81ed759a773e3363509e8',1,'rtlight_s']]],
+  ['shadowmapatlassidesize_6',['shadowmapatlassidesize',['../structrtlight__s.html#a49cfe5e3f223433ece964312f30a6981',1,'rtlight_s']]],
+  ['shadowmapsidesize_7',['shadowmapsidesize',['../structrtlight__s.html#abebd4ce1436a8c3b17a5626f34a60a48',1,'rtlight_s']]],
+  ['shadoworigin_8',['shadoworigin',['../structrtlight__s.html#a874590eb2c5e16c5387959e5f987fc08',1,'rtlight_s']]],
+  ['signon_5fbuf_9',['signon_buf',['../structserver__s.html#a757efcd605bdd3876b415d7365806290',1,'server_s']]],
+  ['skynoshadowtexture_10',['skynoshadowtexture',['../structtexture__s.html#ad47a3a3386b048e312e7349b49003b35',1,'texture_s']]],
+  ['spawn_5fparms_11',['spawn_parms',['../structclient__s.html#a88f5e08dbd401111b7dcbf7c749e0efa',1,'client_s']]],
+  ['spawned_12',['spawned',['../structclient__s.html#a93a3f8566812dcee8f028a535b9d588a',1,'client_s']]],
+  ['specularscale_13',['specularscale',['../structrtlight__s.html#aad5b660afb73d47d969293d60d40084d',1,'rtlight_s']]],
+  ['state_14',['state',['../structz__stream.html#a740662e1be0a7172afb4a08180e0df70',1,'z_stream::state()'],['../structserver__s.html#a5e1cfc7cbcedd026cbe358c3f01b1868',1,'server_s::state()']]],
+  ['static_5fmeshchain_5fshadow_5fshadowmap_15',['static_meshchain_shadow_shadowmap',['../structrtlight__s.html#a2a3a9183ac2f7ad602e5fe95c0d5ebdd',1,'rtlight_s']]],
+  ['static_5fnumleafs_16',['static_numleafs',['../structrtlight__s.html#afdcfa0a928590d59022479c44715daf4',1,'rtlight_s']]],
+  ['static_5fnumlighttrispvsbytes_17',['static_numlighttrispvsbytes',['../structrtlight__s.html#a242c15b23037216a4260d7ffbfca4722',1,'rtlight_s']]],
+  ['static_5fnumshadowtrispvsbytes_18',['static_numshadowtrispvsbytes',['../structrtlight__s.html#ae0d96516389a6849a147582df1239158',1,'rtlight_s']]],
+  ['static_5fnumsurfaces_19',['static_numsurfaces',['../structrtlight__s.html#a3d337d1f90c80db937960ac16f39dbb0',1,'rtlight_s']]],
+  ['static_5fshadowmap_5freceivers_20',['static_shadowmap_receivers',['../structrtlight__s.html#a7f1d43d09b6693f65da0cfca5f346c50',1,'rtlight_s']]],
+  ['style_21',['style',['../structrtlight__s.html#ae8d0d9593495f58efc0dca9bcfaea31f',1,'rtlight_s']]],
+  ['sv_5fdemo_5ffile_22',['sv_demo_file',['../structclient__s.html#ac7fe4709211877106e036d4017f86e5a',1,'client_s']]]
+];
