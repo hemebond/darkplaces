@@ -1,13 +1,41 @@
+#---------------------------------------------------------------------------
+# Project related configuration options
+#---------------------------------------------------------------------------
 PROJECT_NAME           = "DarkPlaces"
 PROJECT_BRIEF          = "Game engine based on the Quake 1 engine by id Software, developed by LadyHavoc"
 PROJECT_LOGO           = "darkplaces48x48.png"
-INPUT                  = "./"
 OUTPUT_DIRECTORY       = "./docs/_doxygen"
 GENERATE_HTML          = YES
 GENERATE_XML           = NO
 GENERATE_LATEX         = NO
-FILE_PATTERNS          = *.c *.cc *.cxx *.cpp *.c++ *.h *.hh *.hxx *.hpp *.h++ *.qc *.qh
+JAVADOC_AUTOBRIEF      = YES
+OPTIMIZE_OUTPUT_FOR_C  = YES
+EXTENSION_MAPPING      = qc=C qh=C inc=C
+TYPEDEF_HIDES_STRUCT   = YES
 
+#---------------------------------------------------------------------------
+# Build related configuration options
+#---------------------------------------------------------------------------
+EXTRACT_ALL            = YES
+EXTRACT_PRIVATE        = YES
+EXTRACT_PRIV_VIRTUAL   = YES
+EXTRACT_PACKAGE        = YES
+EXTRACT_STATIC         = YES
+EXTRACT_LOCAL_METHODS  = YES
+EXTRACT_ANON_NSPACES   = YES
+INTERNAL_DOCS          = YES
+SHOW_GROUPED_MEMB_INC  = YES
+SORT_MEMBERS_CTORS_1ST = YES
+
+#---------------------------------------------------------------------------
+# Configuration options related to the HTML output
+#---------------------------------------------------------------------------
+DISABLE_INDEX = YES
+GENERATE_TREEVIEW = YES
+
+#---------------------------------------------------------------------------
+# Configuration options related to the XML output
+#---------------------------------------------------------------------------
 XML_PROGRAMLISTING     = NO
 RECURSIVE              = NO
 
@@ -15,5 +43,20 @@ RECURSIVE              = NO
 # and work around duplicate signature errors
 ENABLE_PREPROCESSING   = YES
 MACRO_EXPANSION        = YES
-EXPAND_ONLY_PREDEF     = NO
+EXPAND_ONLY_PREDEF     = YES
 SKIP_FUNCTION_MACROS   = NO
+
+#---------------------------------------------------------------------------
+# Configuration options related to the input files
+#---------------------------------------------------------------------------
+INPUT                  = "./"
+FILE_PATTERNS          = *.c *.cc *.cxx *.cpp *.c++ *.h *.hh *.hxx *.hpp *.h++ *.qc *.qh *.inc
+RECURSIVE              = YES
+USE_MDFILE_AS_MAINPAGE = README.md
+
+#---------------------------------------------------------------------------
+# Configuration options related to source browsing
+#---------------------------------------------------------------------------
+SOURCE_BROWSER         = YES
+INLINE_SOURCES         = YES
+REFERENCED_BY_RELATION = YES

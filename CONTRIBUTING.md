@@ -1,17 +1,16 @@
 # DarkPlaces Contributing Guidelines
--------------------------------------------------------------------------------
 
-1. ### Do not break Quake or its mods, and any other game using the engine.
+1. Do not break Quake or its mods, and any other game using the engine.
 
    The engine has known compatibility issues with Quake and many community
    mods. All code must not make the situation worse. This is analogous to the policy
    of the Linux kernel to not break userspace.
 
-2. ### Sign off all of your commits if they are to be included upstream.
+2. Sign off all of your commits if they are to be included upstream.
 
    You must use a valid, permanent email address.
 
-2. ### All code submitted should follow the Allman style for the most part.
+2. All code submitted should follow the Allman style for the most part.
 
 	1. In statements, the curly brace should be placed on the next line at the
 	   same indentation level as the statement. If the statement only involves

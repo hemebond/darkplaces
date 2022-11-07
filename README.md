@@ -67,9 +67,9 @@ Runtime (optional): `libcurl` `libpng`
 1. Install MSYS2, found [here](https://www.msys2.org/).
 2. Once you've installed MSYS2 and have fully updated it, open a MinGW64 terminal (***not an MSYS2 terminal***) and input the following command:
 
-```
-pacman -S --needed gcc make mingw-w64-x86_64-{toolchain,libjpeg-turbo,libpng,libogg,libvorbis,SDL2}
-```
+   ```
+   pacman -S --needed gcc make mingw-w64-x86_64-{toolchain,libjpeg-turbo,libpng,libogg,libvorbis,SDL2}
+   ```
 
 3. See [Unix instructions](#unix-(general)).
 
@@ -78,9 +78,9 @@ pacman -S --needed gcc make mingw-w64-x86_64-{toolchain,libjpeg-turbo,libpng,lib
 2. Install [Homebrew](https://brew.sh)
 3. In the same (or a different terminal), input the following command:
 
-```
-brew install sdl2 libjpeg-turbo libpng libvorbis curl
-```
+   ```
+   brew install sdl2 libjpeg-turbo libpng libvorbis curl
+   ```
 
 4. See [Unix instructions](#unix-(general)).
 

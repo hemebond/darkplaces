@@ -11,6 +11,13 @@ on:
 jobs:
   publish-doxygen-docs:
     runs-on: ubuntu-latest
+
+    permissions:
+      contents: write
+
+    concurrency:
+      group: ${{ github.workflow }}-${{ github.ref }}
+
     steps:
       - name: Checkout
         uses: actions/checkout@v3
@@ -24,4 +31,4 @@ jobs:
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./docs/_doxygen/html
+          publish_dir: docs/_doxygen/html
