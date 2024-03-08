@@ -191,7 +191,12 @@ DO_CC=$(CC) $(CFLAGS) -c $< -o $@
 # Link
 
 # not checking for .git directory before running `git describe` because that would stop it working in a subdirectory
-VCREVISION=$(shell { test -d .svn && svnversion; } || git describe --always --dirty='~' 2>/dev/null || echo -)
+$(error GITHUB_REF_NAME is $(GITHUB_REF_NAME))
+ifdef GITHUB_REF_NAME
+	VCREVISION=$(GITHUB_REF_NAME)
+else
+	VCREVISION=$(shell { test -d .svn && svnversion; } || git describe --always --dirty='~' 2>/dev/null || echo -)
+endif
 
 LDFLAGS_DEBUG=-g -ggdb $(OPTIM_DEBUG)                  -DVCREVISION=$(VCREVISION) -DBUILDTYPE=debug
 LDFLAGS_PROFILE=-g -pg -fprofile-arcs $(OPTIM_RELEASE) -DVCREVISION=$(VCREVISION) -DBUILDTYPE=profile
