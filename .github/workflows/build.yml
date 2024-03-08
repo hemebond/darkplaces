@@ -5,7 +5,8 @@ on:
   push:
     branches:
       - master
-  pull_request:
+      - feature/github-actions-enhancements
+  # pull_request:
 
 jobs:
   build:
