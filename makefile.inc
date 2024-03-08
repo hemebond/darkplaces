@@ -191,7 +191,7 @@ DO_CC=$(CC) $(CFLAGS) -c $< -o $@
 # Link
 
 # not checking for .git directory before running `git describe` because that would stop it working in a subdirectory
-$(error GITHUB_REF_NAME is $(GITHUB_REF_NAME))
+$(error GITHUB_SHA is $(GITHUB_SHA))
 ifdef GITHUB_REF_NAME
 	VCREVISION=$(GITHUB_REF_NAME)
 else
