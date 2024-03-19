@@ -23,7 +23,7 @@ jobs:
         uses: actions/checkout@v3
 
       - name: Doxygen Action
-        uses: mattnotmitt/doxygen-action@1.9.4
+        uses: mattnotmitt/doxygen-action@1.9.8
         with:
           doxyfile-path: docs/Doxyfile
 
@@ -31,4 +31,4 @@ jobs:
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: docs/_doxygen/html
+          publish_dir: docs/output/html

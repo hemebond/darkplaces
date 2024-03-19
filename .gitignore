@@ -41,6 +41,6 @@ Makefile.win
 *.pdb
 *.lib
 *.exp
-/docs/_doxygen
+/docs/output
 /docs/build
 /docs/source
