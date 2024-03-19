@@ -1,0 +1,26 @@
+var structfont__postprocess__t =
+[
+    [ "blur", "structfont__postprocess__t.html#a5226cef8298bdbb63ecf1229fbb4eb43", null ],
+    [ "blurpadding_lt", "structfont__postprocess__t.html#ad6e825dfdab6fc7e465435c4b9abf760", null ],
+    [ "blurpadding_rb", "structfont__postprocess__t.html#acdc5fc5c5bc499dfc4c58d46bd265610", null ],
+    [ "buf", "structfont__postprocess__t.html#a61e742b79e2e9990e15cc838545ad054", null ],
+    [ "buf2", "structfont__postprocess__t.html#a4292c65e41c65dd39697b1fda4bcb208", null ],
+    [ "bufheight", "structfont__postprocess__t.html#a40e956504b8d61badf226d3de4593abe", null ],
+    [ "bufpitch", "structfont__postprocess__t.html#ae5f2b681db4f5349edd29853aaf3b110", null ],
+    [ "bufsize", "structfont__postprocess__t.html#a6ffe6ca72ff35c0648fc40f74acd55b2", null ],
+    [ "bufwidth", "structfont__postprocess__t.html#a1f4c85e3addcbf0f1a8a5523a9952088", null ],
+    [ "circlematrix", "structfont__postprocess__t.html#ae05e82c65ae7245f3df891f57313620e", null ],
+    [ "gausstable", "structfont__postprocess__t.html#af02e6103110c09330f06f0f50756eba3", null ],
+    [ "outline", "structfont__postprocess__t.html#a371ff0f6cc35ac9489f732d460b416ad", null ],
+    [ "outlinepadding_b", "structfont__postprocess__t.html#a74f5424aab6f26fa036f26dad974b650", null ],
+    [ "outlinepadding_l", "structfont__postprocess__t.html#aaaa4ec42ae40de8aca5936366b56842c", null ],
+    [ "outlinepadding_r", "structfont__postprocess__t.html#a1d38894b6de4a57bafffe095c4a71f0b", null ],
+    [ "outlinepadding_t", "structfont__postprocess__t.html#a1c50e409eab54c151d84cf170ee0eb1a", null ],
+    [ "padding_b", "structfont__postprocess__t.html#ac8627d209444ad13d3484d25c369370d", null ],
+    [ "padding_l", "structfont__postprocess__t.html#a5f3be8d2318ed212945cedbb5b45ad9e", null ],
+    [ "padding_r", "structfont__postprocess__t.html#ab01eb8c8891860e33ffb1e193feb9650", null ],
+    [ "padding_t", "structfont__postprocess__t.html#ae50c112363345ba98b42e1f99a78e343", null ],
+    [ "shadowx", "structfont__postprocess__t.html#a353c9dac84fbad9483c528d54a3be69a", null ],
+    [ "shadowy", "structfont__postprocess__t.html#aab15aec4e1327874d2d0a66a21996329", null ],
+    [ "shadowz", "structfont__postprocess__t.html#ab2e94b629f5616a8096aca711e98f49c", null ]
+];

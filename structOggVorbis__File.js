@@ -1,0 +1,25 @@
+var structOggVorbis__File =
+[
+    [ "bittrack", "structOggVorbis__File.html#aa72a11d9f154636d4dc9edac4c9eb843", null ],
+    [ "callbacks", "structOggVorbis__File.html#afb1474e24193f577dd21395a76199415", null ],
+    [ "current_link", "structOggVorbis__File.html#a9b2d64c3739364ac4c08070aac2e0588", null ],
+    [ "current_serialno", "structOggVorbis__File.html#ad7545f86b92a6d66641f3d04a2497763", null ],
+    [ "dataoffsets", "structOggVorbis__File.html#a6fafbdb3b15b2f33a17e5c71590ff025", null ],
+    [ "datasource", "structOggVorbis__File.html#a46afb3dcc7aac5917573e41d7504c0d6", null ],
+    [ "end", "structOggVorbis__File.html#a3455d08d9e390a87fb323d13a6559493", null ],
+    [ "links", "structOggVorbis__File.html#ad41f80ffaa6b48a14addef0a02639a87", null ],
+    [ "offset", "structOggVorbis__File.html#a37d47aede2f36a4221e3a58c21970122", null ],
+    [ "offsets", "structOggVorbis__File.html#ad2fdf6fac46a9bb20603af0f3305ee09", null ],
+    [ "os", "structOggVorbis__File.html#a8658f17a6f662a74f8763c47d560d712", null ],
+    [ "oy", "structOggVorbis__File.html#ae35fa1e6f99edcb104566301324ecf94", null ],
+    [ "pcm_offset", "structOggVorbis__File.html#a98f655a82f9f07f652a16ee899119844", null ],
+    [ "pcmlengths", "structOggVorbis__File.html#ad3fe0c8c491e75956a3cfdb034dce777", null ],
+    [ "ready_state", "structOggVorbis__File.html#ad304fe18bebc075c34f2e5ec7d1f2a99", null ],
+    [ "samptrack", "structOggVorbis__File.html#a3fcbfeaad027ada99496dfcaf94866a9", null ],
+    [ "seekable", "structOggVorbis__File.html#a2a390c4f15c0d1fe0cf9c90fd0bae087", null ],
+    [ "serialnos", "structOggVorbis__File.html#abd5a9adc78abd620ce2c63bd153df150", null ],
+    [ "vb", "structOggVorbis__File.html#a3201599977a781b7bf559167cd892638", null ],
+    [ "vc", "structOggVorbis__File.html#a4467850c72aed93fe0a70e8f1fd6f20e", null ],
+    [ "vd", "structOggVorbis__File.html#acb9d38719f54642d1a39f24203b466d6", null ],
+    [ "vi", "structOggVorbis__File.html#aa5586b939d7c31c8eec83cf1380b45a6", null ]
+];

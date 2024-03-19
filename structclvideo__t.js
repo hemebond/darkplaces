@@ -1,0 +1,27 @@
+var structclvideo__t =
+[
+    [ "cachepic", "structclvideo__t.html#a3e21b8913c9e430098e5ddba7f09487d", null ],
+    [ "close", "structclvideo__t.html#a7daa17137f495dd5f4f8fd3eb261e373", null ],
+    [ "decodeframe", "structclvideo__t.html#ab20cc4653d28014f78b80c0c61882dcd", null ],
+    [ "filename", "structclvideo__t.html#af378e1809fc02f9d89d3060e620cc256", null ],
+    [ "framenum", "structclvideo__t.html#ac7d1b050491e5e68ff3f151fcbef440b", null ],
+    [ "framerate", "structclvideo__t.html#afa395e29731cf9c5f7acdd8cf05bf547", null ],
+    [ "getaspectratio", "structclvideo__t.html#ac83915d1d5edefddd1ae08d2c814c273", null ],
+    [ "getframerate", "structclvideo__t.html#a975e910f9fa50718cc1381a3cc26f78f", null ],
+    [ "getheight", "structclvideo__t.html#aa2fc88c9efd67a4c3a8ff85b7cd8dff0", null ],
+    [ "getwidth", "structclvideo__t.html#ad8cd715badcb0dc41ddc299f5a2a28fd", null ],
+    [ "height", "structclvideo__t.html#a79e6ce537cbb5e74640e0ab0dcec1d12", null ],
+    [ "imagedata", "structclvideo__t.html#af8b9d0004c5ef735751308055bc97d05", null ],
+    [ "lasttime", "structclvideo__t.html#a1fa7789b84a4cf30a1d78e969521e463", null ],
+    [ "name", "structclvideo__t.html#a6a29bf239e4091198d10bda7d2d527cb", null ],
+    [ "ownertag", "structclvideo__t.html#a0939f23b3e10ac956be4530785726348", null ],
+    [ "starttime", "structclvideo__t.html#a18169bd7d3984037bd7b8651659cce81", null ],
+    [ "state", "structclvideo__t.html#a46a0b30e8e959ef60771f406fee30f38", null ],
+    [ "stream", "structclvideo__t.html#a04b09966884250b8bf12ddb0edb48fad", null ],
+    [ "subtitle_end", "structclvideo__t.html#aa7b1a8976d42daee6b997e8ea0e8fbea", null ],
+    [ "subtitle_start", "structclvideo__t.html#a0c18ae3e179dc240abea0d9c94e4947a", null ],
+    [ "subtitle_text", "structclvideo__t.html#add6f5c61da855b3a2277f2cbaabb7dd1", null ],
+    [ "subtitles", "structclvideo__t.html#ac5906daadf03dca88c0360d27796b0e8", null ],
+    [ "suspended", "structclvideo__t.html#a240bfdf0f62023c680ae00081d98f1df", null ],
+    [ "width", "structclvideo__t.html#ae2db00674d4fd99ab2545e75a279909e", null ]
+];

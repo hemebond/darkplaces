@@ -1,0 +1,26 @@
+var r__explosion_8c =
+[
+    [ "explosion_t", "structexplosion__t.html", "structexplosion__t" ],
+    [ "EXPLOSIONGRID", "r__explosion_8c.html#a2a1dead54b0b174e4f2558fcc2ab6176", null ],
+    [ "EXPLOSIONTRIS", "r__explosion_8c.html#ae2d4468ce780ee073e75c187ed0f7807", null ],
+    [ "EXPLOSIONVERTS", "r__explosion_8c.html#ad0931d592abd280c866ed7b64d7781ac", null ],
+    [ "R_DrawExplosion_TransparentCallback", "r__explosion_8c.html#a178aa18c917c0674350d251357e096de", null ],
+    [ "R_DrawExplosions", "r__explosion_8c.html#a3486266fa1d4b194ef6163731a972450", null ],
+    [ "R_Explosion_Init", "r__explosion_8c.html#a44e886acacc383c761fbb0cfcb17ceb3", null ],
+    [ "r_explosion_newmap", "r__explosion_8c.html#a2b9e5291c407bbcf2aebf082deadb096", null ],
+    [ "r_explosion_shutdown", "r__explosion_8c.html#a2d5ea1f765ea127a1235ad86c07645f4", null ],
+    [ "r_explosion_start", "r__explosion_8c.html#a46db2fa838d68bcdc005c5dd92076a2f", null ],
+    [ "R_ExplosionVert", "r__explosion_8c.html#a4378a6508a7e41541ff37863480bedeb", null ],
+    [ "R_MoveExplosion", "r__explosion_8c.html#ad3e7a367d16438c363777854abb2b222", null ],
+    [ "R_NewExplosion", "r__explosion_8c.html#abe5bb29212d008f49727a314fc42ddbf", null ],
+    [ "explosion", "r__explosion_8c.html#adc4add69fdcaf944c935e73e8b5f2a9e", null ],
+    [ "explosionnoiseindex", "r__explosion_8c.html#a9eaa430204583d304aba82668b7ce5dd", null ],
+    [ "explosionpoint", "r__explosion_8c.html#aa6ee014b1fa7ac472ef411ede2ba9138", null ],
+    [ "explosiontexcoord2f", "r__explosion_8c.html#a81f9a22481a5a21c8f987ac1e6d375f8", null ],
+    [ "explosiontexture", "r__explosion_8c.html#a5e1d2624ef5287c3b9e3388e909ab0c3", null ],
+    [ "explosiontexturepool", "r__explosion_8c.html#a154ef8daf2dc97ab10938583d732874a", null ],
+    [ "explosiontris", "r__explosion_8c.html#ac2a01e3e576fe9d3a7e1cfed4d82c27b", null ],
+    [ "numexplosions", "r__explosion_8c.html#a31726f6306d0b37c177d4a36f75dc101", null ],
+    [ "r_drawexplosions", "r__explosion_8c.html#a8fb3bd9374a9e83f2026474423102a9c", null ],
+    [ "r_explosionclip", "r__explosion_8c.html#a9d6cd5c71c8f275f3d603aac9221a433", null ]
+];

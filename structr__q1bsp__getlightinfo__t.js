@@ -1,0 +1,27 @@
+var structr__q1bsp__getlightinfo__t =
+[
+    [ "frontsidecasting", "structr__q1bsp__getlightinfo__t.html#a1cdaa91ea5ad70427da47752bf65d56c", null ],
+    [ "frustumplanes", "structr__q1bsp__getlightinfo__t.html#a4945c0559d6492ecdad5a7162681e4df", null ],
+    [ "lightmaxs", "structr__q1bsp__getlightinfo__t.html#a13bfaab90b159a6d255988b5f973cc5a", null ],
+    [ "lightmins", "structr__q1bsp__getlightinfo__t.html#ae48fe06f7c2dcd7e1e1709d2b66c5d0c", null ],
+    [ "lightradius", "structr__q1bsp__getlightinfo__t.html#afcd63823a73c36811b5db7fb63687725", null ],
+    [ "model", "structr__q1bsp__getlightinfo__t.html#ad6b12e0389247d767ea51db7836ea62d", null ],
+    [ "noocclusion", "structr__q1bsp__getlightinfo__t.html#a6d5d26cf7dbc73741b1cff4b4659f9d1", null ],
+    [ "numfrustumplanes", "structr__q1bsp__getlightinfo__t.html#a3c9e17a01ba2c00cbbca2c5394fc1ce3", null ],
+    [ "outleaflist", "structr__q1bsp__getlightinfo__t.html#a38efcd9f10a71d7dca3b28ba7465d79b", null ],
+    [ "outleafpvs", "structr__q1bsp__getlightinfo__t.html#a5f17b8f8c0cc51833b6606567640399f", null ],
+    [ "outlighttrispvs", "structr__q1bsp__getlightinfo__t.html#a2ee9968a90d8dceeee5d37923a86906a", null ],
+    [ "outmaxs", "structr__q1bsp__getlightinfo__t.html#a1b544dacd8a538b1a446c78366d562ad", null ],
+    [ "outmins", "structr__q1bsp__getlightinfo__t.html#a1dbf8d90f9a5105fdb422a9a1fa9ba8c", null ],
+    [ "outnumleafs", "structr__q1bsp__getlightinfo__t.html#aa4661ea2bb1dc75f551c85fa39941e10", null ],
+    [ "outnumsurfaces", "structr__q1bsp__getlightinfo__t.html#ad4c53cc3bf98f19cb832eb2d8fc42b32", null ],
+    [ "outshadowtrispvs", "structr__q1bsp__getlightinfo__t.html#a96aa7a42113b35d29d6188aeda56e4c3", null ],
+    [ "outsurfacelist", "structr__q1bsp__getlightinfo__t.html#a8c2e3b57e1ba6f4c2d9d38447c589091", null ],
+    [ "outsurfacepvs", "structr__q1bsp__getlightinfo__t.html#ab22ca71c13a0ccc7d0e152fd8df7bc8d", null ],
+    [ "pvs", "structr__q1bsp__getlightinfo__t.html#a73fbe1e96de359d6e963679e5d09cdc5", null ],
+    [ "relativelightorigin", "structr__q1bsp__getlightinfo__t.html#a3fa44e72b6e2801e82445681bb2386bc", null ],
+    [ "svbsp_active", "structr__q1bsp__getlightinfo__t.html#aa9b516b8ff34cc574dcfba9646298e14", null ],
+    [ "svbsp_insertoccluder", "structr__q1bsp__getlightinfo__t.html#ad6cffeaa4c6a2fd61e333adac97d5fde", null ],
+    [ "tempsurfacepvs", "structr__q1bsp__getlightinfo__t.html#ac2222f706dd7eb7f3c987a59459415c7", null ],
+    [ "visitingleafpvs", "structr__q1bsp__getlightinfo__t.html#adf68c76a9e50377456b7bbbee8b89f57", null ]
+];

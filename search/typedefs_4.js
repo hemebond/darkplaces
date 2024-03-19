@@ -1,0 +1,22 @@
+var searchData=
+[
+  ['glbitfield_0',['GLbitfield',['../glquake_8h.html#a0fb936f29008789fb46b434319f68cc9',1,'glquake.h']]],
+  ['glboolean_1',['GLboolean',['../glquake_8h.html#a53c5acd584fe74e6090441964a422dee',1,'glquake.h']]],
+  ['glbyte_2',['GLbyte',['../glquake_8h.html#a0a9e8b1f1d9c4bcf1c0bc5d5d4e3608a',1,'glquake.h']]],
+  ['glchar_3',['GLchar',['../glquake_8h.html#af7575655ac056b187ea385966b95a22d',1,'glquake.h']]],
+  ['glclampd_4',['GLclampd',['../glquake_8h.html#abcfa26465edd603937283c6ffae752c6',1,'glquake.h']]],
+  ['glclampf_5',['GLclampf',['../glquake_8h.html#aded4e0631b68d219180490a73d8424c0',1,'glquake.h']]],
+  ['gldebugprocarb_6',['GLDEBUGPROCARB',['../glquake_8h.html#aa1883345349bf5e91958cc2206090f2d',1,'glquake.h']]],
+  ['gldouble_7',['GLdouble',['../glquake_8h.html#a4f86c02824a01bb647d89449b9a8eacc',1,'glquake.h']]],
+  ['glenum_8',['GLenum',['../glquake_8h.html#a927f9e229ec7a64384ed1fdf889d0e9c',1,'glquake.h']]],
+  ['glfloat_9',['GLfloat',['../glquake_8h.html#a31aeedaeef29442c9c015ab355c8f5ab',1,'glquake.h']]],
+  ['glint_10',['GLint',['../glquake_8h.html#a1df7fac5bc539d8661f0690e59a3c1b8',1,'glquake.h']]],
+  ['glintptr_11',['GLintptr',['../glquake_8h.html#a0374caf1f25a139da21f84d81f637c23',1,'glquake.h']]],
+  ['glshort_12',['GLshort',['../glquake_8h.html#a2dfad4d45d694268922f502efa9c1cc0',1,'glquake.h']]],
+  ['glsizei_13',['GLsizei',['../glquake_8h.html#a9289d5b99dc1f27f01480360f2e18ae0',1,'glquake.h']]],
+  ['glsizeiptr_14',['GLsizeiptr',['../glquake_8h.html#aa4edc01036f13fcf17e0b1baf6c70ea7',1,'glquake.h']]],
+  ['glubyte_15',['GLubyte',['../glquake_8h.html#a0595908be03a8cff881a23cdc9170e7c',1,'glquake.h']]],
+  ['gluint_16',['GLuint',['../glquake_8h.html#a087030f771e19c7145d9de2db60d773b',1,'glquake.h']]],
+  ['glushort_17',['GLushort',['../glquake_8h.html#ac995a558f6571eb5f98b7a6d2b2a4468',1,'glquake.h']]],
+  ['glvoid_18',['GLvoid',['../glquake_8h.html#a878ae805a8ef62ffacda0d34c6e70645',1,'glquake.h']]]
+];

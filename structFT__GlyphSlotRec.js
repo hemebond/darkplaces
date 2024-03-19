@@ -1,0 +1,25 @@
+var structFT__GlyphSlotRec =
+[
+    [ "advance", "structFT__GlyphSlotRec.html#ace341bc2bb2b6f1d882ff86d7234b39a", null ],
+    [ "bitmap", "structFT__GlyphSlotRec.html#afb1b94600662ac671954ae3bfcc5b655", null ],
+    [ "bitmap_left", "structFT__GlyphSlotRec.html#afe99ec9a779a8319c10600be15897eec", null ],
+    [ "bitmap_top", "structFT__GlyphSlotRec.html#ac23adae779baf51a544f57874f6b2ae6", null ],
+    [ "control_data", "structFT__GlyphSlotRec.html#acf922b07f25978a634b75b038a4f9486", null ],
+    [ "control_len", "structFT__GlyphSlotRec.html#a6296160dd64ac97cf770ab7ac5b5a6c1", null ],
+    [ "face", "structFT__GlyphSlotRec.html#a826ee401b105f663d3ab5cb5f7ca9bbd", null ],
+    [ "format", "structFT__GlyphSlotRec.html#a0b6b84afa8dd64cc8fbcdfa2e2bd164d", null ],
+    [ "generic", "structFT__GlyphSlotRec.html#a04e2bd8aba8d5c0becae7a5f54fd569a", null ],
+    [ "internal", "structFT__GlyphSlotRec.html#af0b5eda99e637c8604191495bce50e71", null ],
+    [ "library", "structFT__GlyphSlotRec.html#a6c783ef113b5f83b398b03f3d1265305", null ],
+    [ "linearHoriAdvance", "structFT__GlyphSlotRec.html#a1a3f7c3701884e308682d3ecc6f409e4", null ],
+    [ "linearVertAdvance", "structFT__GlyphSlotRec.html#a069a0ee56679dcbae542e490d0cbccda", null ],
+    [ "lsb_delta", "structFT__GlyphSlotRec.html#a985315a9384f983a4ad4106586b2a89c", null ],
+    [ "metrics", "structFT__GlyphSlotRec.html#a70e0a31a0f6aa4ec16708f53ec247562", null ],
+    [ "next", "structFT__GlyphSlotRec.html#a137e131eb8911291d3ae3d22f2d8a589", null ],
+    [ "num_subglyphs", "structFT__GlyphSlotRec.html#a3a96cd16c4bb51cea189408bc70b7ee0", null ],
+    [ "other", "structFT__GlyphSlotRec.html#af0cd0c5115fc5a55158eb7765c4a22ed", null ],
+    [ "outline", "structFT__GlyphSlotRec.html#a7d7c1109237710a3c98cfdb60b1e01e2", null ],
+    [ "reserved", "structFT__GlyphSlotRec.html#a86d95f3da95d97b540bbb5f6a40d21c2", null ],
+    [ "rsb_delta", "structFT__GlyphSlotRec.html#a10a94a3a59c5e0b4e2193cbc12fb0362", null ],
+    [ "subglyphs", "structFT__GlyphSlotRec.html#a36619d03d9aa4c9b6b673842719a7645", null ]
+];

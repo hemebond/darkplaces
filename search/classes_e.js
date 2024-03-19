@@ -1,8 +1,14 @@
 var searchData=
 [
-  ['nehahrademonames_5fs_0',['nehahrademonames_s',['../structnehahrademonames__s.html',1,'']]],
-  ['netconn_5fnq_5fs_1',['netconn_nq_s',['../structnetconn__s_1_1netconn__nq__s.html',1,'netconn_s']]],
-  ['netconn_5fqw_5fs_2',['netconn_qw_s',['../structnetconn__s_1_1netconn__qw__s.html',1,'netconn_s']]],
-  ['netconn_5fs_3',['netconn_s',['../structnetconn__s.html',1,'']]],
-  ['netgraphitem_5fs_4',['netgraphitem_s',['../structnetgraphitem__s.html',1,'']]]
+  ['objvertex_5ft_0',['objvertex_t',['../structobjvertex__t.html',1,'']]],
+  ['ogg_5fpacket_1',['ogg_packet',['../structogg__packet.html',1,'']]],
+  ['ogg_5fpage_2',['ogg_page',['../structogg__page.html',1,'']]],
+  ['ogg_5fstream_5fperchannel_5ft_3',['ogg_stream_perchannel_t',['../structogg__stream__perchannel__t.html',1,'']]],
+  ['ogg_5fstream_5fpersfx_5ft_4',['ogg_stream_persfx_t',['../structogg__stream__persfx__t.html',1,'']]],
+  ['ogg_5fstream_5fstate_5',['ogg_stream_state',['../structogg__stream__state.html',1,'']]],
+  ['ogg_5fsync_5fstate_6',['ogg_sync_state',['../structogg__sync__state.html',1,'']]],
+  ['oggpack_5fbuffer_7',['oggpack_buffer',['../structoggpack__buffer.html',1,'']]],
+  ['oggvorbis_5ffile_8',['OggVorbis_File',['../structOggVorbis__File.html',1,'']]],
+  ['ov_5fcallbacks_9',['ov_callbacks',['../structov__callbacks.html',1,'']]],
+  ['ov_5fdecode_5ft_10',['ov_decode_t',['../structov__decode__t.html',1,'']]]
 ];

@@ -1,15 +1,11 @@
 var searchData=
 [
-  ['gamedir_5ft_0',['gamedir_t',['../structgamedir__t.html',1,'']]],
-  ['gameinfo_5fs_1',['gameinfo_s',['../structgameinfo__s.html',1,'']]],
-  ['gamelevels_5fs_2',['gamelevels_s',['../structgamelevels__s.html',1,'']]],
-  ['gamemode_5finfo_5fs_3',['gamemode_info_s',['../structgamemode__info__s.html',1,'']]],
-  ['gl_5fstate_5fs_4',['gl_state_s',['../structgl__state__s.html',1,'']]],
-  ['glfunction_5fs_5',['glfunction_s',['../structglfunction__s.html',1,'']]],
-  ['glmode_5fs_6',['glmode_s',['../structglmode__s.html',1,'']]],
-  ['globalvars_5fs_7',['globalvars_s',['../structglobalvars__s.html',1,'']]],
-  ['gltexture_5fs_8',['gltexture_s',['../structgltexture__s.html',1,'']]],
-  ['gltexturepool_5fs_9',['gltexturepool_s',['../structgltexturepool__s.html',1,'']]],
-  ['gltextureunit_5fs_10',['gltextureunit_s',['../structgltextureunit__s.html',1,'']]],
-  ['glyph_5fslot_5fs_11',['glyph_slot_s',['../structglyph__slot__s.html',1,'']]]
+  ['hl2dheader_5ft_0',['hl2dheader_t',['../structhl2dheader__t.html',1,'']]],
+  ['hl2lump_5ft_1',['hl2lump_t',['../structhl2lump__t.html',1,'']]],
+  ['host_5fstatic_5ft_2',['host_static_t',['../structhost__static__t.html',1,'']]],
+  ['hull_5ft_3',['hull_t',['../structhull__t.html',1,'']]],
+  ['hullinfo_5ft_4',['hullinfo_t',['../structhullinfo__t.html',1,'']]],
+  ['hz_5fbitstream_5fread_5ft_5',['hz_bitstream_read_t',['../structhz__bitstream__read__t.html',1,'']]],
+  ['hz_5fbitstream_5freadblock_5ft_6',['hz_bitstream_readblock_t',['../structhz__bitstream__readblock__t.html',1,'']]],
+  ['hz_5fbitstream_5freadblocks_5ft_7',['hz_bitstream_readblocks_t',['../structhz__bitstream__readblocks__t.html',1,'']]]
 ];

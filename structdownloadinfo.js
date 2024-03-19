@@ -1,0 +1,26 @@
+var structdownloadinfo =
+[
+    [ "buffer", "structdownloadinfo.html#abd96d9398dadda96965366df74466b52", null ],
+    [ "buffersize", "structdownloadinfo.html#a3ecb33e2238c1dca1916650bb58e02c1", null ],
+    [ "bytes_received", "structdownloadinfo.html#ab93da5bde2545a4411ba853c993abb81", null ],
+    [ "bytes_received_curl", "structdownloadinfo.html#abeffe40f2505dae8d61f45ea2cb918a4", null ],
+    [ "bytes_sent_curl", "structdownloadinfo.html#a1b44e14863e0ecab6258a61f9aee72b2", null ],
+    [ "callback", "structdownloadinfo.html#ab24c96eb347c7e840331474ff0a9481f", null ],
+    [ "callback_data", "structdownloadinfo.html#afcbe471fb84541ec097bd3c6ab6d7a38", null ],
+    [ "curle", "structdownloadinfo.html#a64071669ae6cfd9f74420a21437f8487", null ],
+    [ "extraheaders", "structdownloadinfo.html#ac09c7ed13e156d0fb440f65795a2a445", null ],
+    [ "filename", "structdownloadinfo.html#abaf50cb7902c38d48b590e467600ea17", null ],
+    [ "forthismap", "structdownloadinfo.html#a9cea744c09b56ed11da861f02cae6489", null ],
+    [ "list", "structdownloadinfo.html#ac7c841b40bdd00bd486006a448e7db42", null ],
+    [ "loadtype", "structdownloadinfo.html#acc4db19c796737325ee0c5912e6a1d22", null ],
+    [ "maxspeed", "structdownloadinfo.html#abb5e7e518bda199aa6a96c7e5183328e", null ],
+    [ "post_content_type", "structdownloadinfo.html#ad9cac1d0ecb7822312457ab09d7d6aa8", null ],
+    [ "postbuf", "structdownloadinfo.html#af8fd6c954ade80524ee827ef703e69b5", null ],
+    [ "postbufsize", "structdownloadinfo.html#a82c4e26667e4b541ad05570c33af1d07", null ],
+    [ "referer", "structdownloadinfo.html#a6d4d64c2d9ff390e173b22658fa96ecf", null ],
+    [ "slist", "structdownloadinfo.html#af4f73b0e4286abc70e52cc11aee7365b", null ],
+    [ "started", "structdownloadinfo.html#a17161db505281a4f8e552053a53e3357", null ],
+    [ "startpos", "structdownloadinfo.html#acdf20808c978d5b1a5f185191831bed8", null ],
+    [ "stream", "structdownloadinfo.html#a2575ab4ce982cb3d4762d5ab25502bcc", null ],
+    [ "url", "structdownloadinfo.html#ae07f704d33ab4e0ee284cb6f86aef28e", null ]
+];

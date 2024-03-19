@@ -1,0 +1,26 @@
+var r__sprites_8c =
+[
+    [ "EPSILON", "r__sprites_8c.html#a002b2f4894492820fe708b1b7e7c5e70", null ],
+    [ "MIN_EPSILON", "r__sprites_8c.html#a52ba3c577921eda72acf7767b2816109", null ],
+    [ "SIDE_BOTTOM", "r__sprites_8c.html#ae281d840a2869bf9a9f948dcdf47c577", null ],
+    [ "SIDE_LEFT", "r__sprites_8c.html#af0bc89249d9fa3c091578c4ff995c61c", null ],
+    [ "SIDE_RIGHT", "r__sprites_8c.html#a7063d24f8cfdeea4d2d5d9d447b8a11f", null ],
+    [ "SIDE_TOP", "r__sprites_8c.html#afd635f10d32c6cfb3fb83c7e417e86c9", null ],
+    [ "TSF_ROTATE", "r__sprites_8c.html#a465ddad87c4f5656d04ced3cf3249645", null ],
+    [ "TSF_ROTATE_CONTINOUSLY", "r__sprites_8c.html#a46d3bcf8bc271ca967dbf98d498605bd", null ],
+    [ "R_Model_Sprite_Draw", "r__sprites_8c.html#a68a8e3db5320b41f8f2cef12aee9e8b9", null ],
+    [ "R_Model_Sprite_Draw_TransparentCallback", "r__sprites_8c.html#a58cc48884e3a40806be3c80c74513d21", null ],
+    [ "R_RotateSprite", "r__sprites_8c.html#abad8bd81a7d10efc22c75b0e24a045af", null ],
+    [ "R_TrackSprite", "r__sprites_8c.html#a520972feefce388265f8b6b22eb0c90d", null ],
+    [ "r_labelsprites_roundtopixels", "r__sprites_8c.html#ac0573398da90398cc58ba3d429064e72", null ],
+    [ "r_labelsprites_scale", "r__sprites_8c.html#a60022e3edccf81e897e5295c49973cb2", null ],
+    [ "r_overheadsprites_perspective", "r__sprites_8c.html#af3eb7f4980cabcb6d313c320e0d8987f", null ],
+    [ "r_overheadsprites_pushback", "r__sprites_8c.html#a1c6c4f9d6011904957ffa0a873e275f3", null ],
+    [ "r_overheadsprites_scalex", "r__sprites_8c.html#ae718a33501aa5892ff39ba19ce810efb", null ],
+    [ "r_overheadsprites_scaley", "r__sprites_8c.html#afb5c7754f508f054b5925cd5eaf8770d", null ],
+    [ "r_track_sprites", "r__sprites_8c.html#a76d549dc96cbd7abd89cda38b280bd08", null ],
+    [ "r_track_sprites_flags", "r__sprites_8c.html#a824aa6c3f5fefb27734ba077872ab146", null ],
+    [ "r_track_sprites_scaleh", "r__sprites_8c.html#a915b83d38c915b2b1803e24cee75130b", null ],
+    [ "r_track_sprites_scalew", "r__sprites_8c.html#ab86f02bcd71ee1112d709e5e2191d661", null ],
+    [ "spritetexcoord2f", "r__sprites_8c.html#a02387b9e26d871fb6674f3f91dffb692", null ]
+];

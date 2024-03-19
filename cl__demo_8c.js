@@ -1,0 +1,26 @@
+var cl__demo_8c =
+[
+    [ "benchmarkhistory_t", "structbenchmarkhistory__t.html", "structbenchmarkhistory__t" ],
+    [ "DO_MAX", "cl__demo_8c.html#a32f6543bc19e87b82151baa56240fadc", null ],
+    [ "DO_MED", "cl__demo_8c.html#a43aa8abc55952d5074e9d412507a9330", null ],
+    [ "DO_MIN", "cl__demo_8c.html#a2b47645b0155f696576699699544b937", null ],
+    [ "CL_CutDemo", "cl__demo_8c.html#a84c00505f41ea505370686677d7e489a", null ],
+    [ "CL_Demo_Init", "cl__demo_8c.html#ab9c625081596f2e966a597ca9fd96b76", null ],
+    [ "CL_Demos_f", "cl__demo_8c.html#a1c11eeca6dcdc5dcb22ecc4f78685edc", null ],
+    [ "CL_FinishTimeDemo", "cl__demo_8c.html#a4a1ac6186658fca0d330d8b5d3c565a9", null ],
+    [ "CL_NextDemo", "cl__demo_8c.html#ab9245ecafef47f1d0eea0122fc18d5bd", null ],
+    [ "CL_PasteDemo", "cl__demo_8c.html#a39f71316972c8e84ca1b51f0a5a6ad6a", null ],
+    [ "CL_PauseDemo_f", "cl__demo_8c.html#a25006e1d74b05dcacf621d1eb932d827", null ],
+    [ "CL_PlayDemo", "cl__demo_8c.html#a8d3109b60dd70ffbc78583cdc7275deb", null ],
+    [ "CL_PlayDemo_f", "cl__demo_8c.html#a01aa49dfdb1e55b6658dfd058737b688", null ],
+    [ "CL_ReadDemoMessage", "cl__demo_8c.html#a424da74a7a9e39e8807980cdc8d7db5c", null ],
+    [ "CL_Record_f", "cl__demo_8c.html#a8117f6dea0e521ea29b87a8364bca6e9", null ],
+    [ "CL_Startdemos_f", "cl__demo_8c.html#a2fd5fce84e08e09e0db082cd11bbbf38", null ],
+    [ "CL_Stop_f", "cl__demo_8c.html#a0fa8e9664a63b769e4892ea55a288387", null ],
+    [ "CL_Stopdemo_f", "cl__demo_8c.html#a27d461cdc8f3472b3f4a9871f01055fb", null ],
+    [ "CL_StopPlayback", "cl__demo_8c.html#a88392cbcdb1580dc0288ddaff7e50cf0", null ],
+    [ "CL_TimeDemo_f", "cl__demo_8c.html#a671ab8e940fc2a167b09446810225178", null ],
+    [ "CL_WriteDemoMessage", "cl__demo_8c.html#a9796f00638135ecedd379a8a587e1fd4", null ],
+    [ "doublecmp_withoffset", "cl__demo_8c.html#a1d7be6f809bdb7de306b1eb770238cec", null ],
+    [ "doublecmp_offset", "cl__demo_8c.html#a6210886887a9f35bdde0debc3047e14f", null ]
+];

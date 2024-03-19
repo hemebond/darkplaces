@@ -1,0 +1,26 @@
+var structdlight__t =
+[
+    [ "ambientscale", "structdlight__t.html#a72f243f8c925ddbce2418a8a68a09aa8", null ],
+    [ "angles", "structdlight__t.html#a009183a597923cdb1b3f4724898e4aae", null ],
+    [ "color", "structdlight__t.html#a4cc64dc21f7ca9660cfd16456ab2dc17", null ],
+    [ "corona", "structdlight__t.html#a2fe3d12b89d2273840d647e3c93c945a", null ],
+    [ "coronasizescale", "structdlight__t.html#a0f1cda7ca2828e507e02338e207c008a", null ],
+    [ "cubemapname", "structdlight__t.html#a8e74e7af17eed7d4eb98120bff101ce8", null ],
+    [ "decay", "structdlight__t.html#a02e05ec8484ccecbe7cea4ba16e738be", null ],
+    [ "die", "structdlight__t.html#a5ebf2610041923782dc5bf1f95bbb609", null ],
+    [ "diffusescale", "structdlight__t.html#ab088c1ee9aa47945db3138ab995be194", null ],
+    [ "ent", "structdlight__t.html#a035bca6fa699dc60767fb0242f1fb034", null ],
+    [ "flags", "structdlight__t.html#a0381227767f2212ce5e3d7f25927a9c5", null ],
+    [ "initialcolor", "structdlight__t.html#a4f33add1fac6c1cb272ea96f16f5982f", null ],
+    [ "initialradius", "structdlight__t.html#ab349e7b186c7d10377236a9feca7c741", null ],
+    [ "intensity", "structdlight__t.html#ae5bc719910ad8bec6c76778cce3bf7a7", null ],
+    [ "matrix", "structdlight__t.html#a0ffd9bab15e5c6d72aeb05f0a247c658", null ],
+    [ "next", "structdlight__t.html#a98c0118e84a785b3b9fb4ac07eccd774", null ],
+    [ "origin", "structdlight__t.html#a18dafed1466de01c08238971a40f5a0c", null ],
+    [ "radius", "structdlight__t.html#ae766a5758dec2bff346406b341a35870", null ],
+    [ "rtlight", "structdlight__t.html#a0fd49d0987dbb02d764e37b3da3d52a9", null ],
+    [ "selected", "structdlight__t.html#af5dad81679e7b427bf826b2bfddf182b", null ],
+    [ "shadow", "structdlight__t.html#a3721fc9bd1fcd9e1b04dfcb997657892", null ],
+    [ "specularscale", "structdlight__t.html#aba1c14226d0eda5524cd4bce8fa08ba6", null ],
+    [ "style", "structdlight__t.html#a24fa5ff0a261949edc364e03870bb7c7", null ]
+];

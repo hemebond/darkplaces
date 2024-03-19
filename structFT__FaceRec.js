@@ -1,0 +1,27 @@
+var structFT__FaceRec =
+[
+    [ "ascender", "structFT__FaceRec.html#ada220b9b8d791244c76bc6e6952ad4d3", null ],
+    [ "available_sizes", "structFT__FaceRec.html#a00f3d28e1682e4c3ad5691b2844f62a5", null ],
+    [ "bbox", "structFT__FaceRec.html#a90bcabddd37512bc768506f0f9cd3c67", null ],
+    [ "charmap", "structFT__FaceRec.html#a0d0312af79d81290fe0ff1a6700cdbd5", null ],
+    [ "charmaps", "structFT__FaceRec.html#a3e6897ee4a5f933d5de3b93ec030fa83", null ],
+    [ "descender", "structFT__FaceRec.html#a4f31233b231f7c083698f3811e978617", null ],
+    [ "face_flags", "structFT__FaceRec.html#a4ed819689e12a656644b6089842d7f81", null ],
+    [ "face_index", "structFT__FaceRec.html#a4f9f36b4e941369df78e64de32eae922", null ],
+    [ "family_name", "structFT__FaceRec.html#ae43571ec22b980effffd8c6f6484c4e4", null ],
+    [ "generic", "structFT__FaceRec.html#a097a932d5842444cab6f8a2ca982b973", null ],
+    [ "glyph", "structFT__FaceRec.html#a73633c1cf7ed9865697e1b11715c29a8", null ],
+    [ "height", "structFT__FaceRec.html#a61718a9b644f965466bdb6a5729cca99", null ],
+    [ "max_advance_height", "structFT__FaceRec.html#a3e360e0bef252d5d089719416e93bc7a", null ],
+    [ "max_advance_width", "structFT__FaceRec.html#a468d895ba3b87aafd95e43f1e967c693", null ],
+    [ "num_charmaps", "structFT__FaceRec.html#a36efc01f04578166c068c7f3a5af2c16", null ],
+    [ "num_faces", "structFT__FaceRec.html#ae3a15cbde37704e41e3339331822a3e6", null ],
+    [ "num_fixed_sizes", "structFT__FaceRec.html#aeb0c195357926f4f327551d13283ce97", null ],
+    [ "num_glyphs", "structFT__FaceRec.html#a3bf6682d0bb57f2375f6e838286b078a", null ],
+    [ "size", "structFT__FaceRec.html#a706f8b09f6e6685743bed43027e0b01a", null ],
+    [ "style_flags", "structFT__FaceRec.html#a2bf443b12550c7708cf861182f8a98a2", null ],
+    [ "style_name", "structFT__FaceRec.html#a2021ab056afcb7a0d41317fd7dc9bd8c", null ],
+    [ "underline_position", "structFT__FaceRec.html#af6837a27674df2abdd59957ff7b265d8", null ],
+    [ "underline_thickness", "structFT__FaceRec.html#a7a8417ec00afd53e1101ebd4b089d036", null ],
+    [ "units_per_EM", "structFT__FaceRec.html#a5313252fa6213574aeb101681ed29d7f", null ]
+];

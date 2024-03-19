@@ -1,0 +1,25 @@
+var structr__refdef__scene__t =
+[
+    [ "ambientintensity", "structr__refdef__scene__t.html#a347a3f10e8de8e04904d0b8a70b38d87", null ],
+    [ "entities", "structr__refdef__scene__t.html#a6e9b9caf2253fce60dcd0c86d1400c63", null ],
+    [ "expandtempentities", "structr__refdef__scene__t.html#af652567fcd33b48ed9b779ebbb5ee48d", null ],
+    [ "extraupdate", "structr__refdef__scene__t.html#a5e522da90373661c46825181a717d610", null ],
+    [ "lightmapintensity", "structr__refdef__scene__t.html#a4cb3e4b7d463102f104be9f3af762fc1", null ],
+    [ "lights", "structr__refdef__scene__t.html#aec6438e3812387c92681237d33bfe46f", null ],
+    [ "lightstylevalue", "structr__refdef__scene__t.html#ac62427e93af8fe1079c18d69619fb699", null ],
+    [ "maxentities", "structr__refdef__scene__t.html#a2f20b944036f73913def5a1d5b02c843", null ],
+    [ "maxtempentities", "structr__refdef__scene__t.html#a1f96187521cef4ed417226d983ca6caf", null ],
+    [ "numentities", "structr__refdef__scene__t.html#ab8c4efc627714dd8b1d5840851b45220", null ],
+    [ "numlights", "structr__refdef__scene__t.html#a0d2e420f14635b0aff07275fa6b74d82", null ],
+    [ "numtempentities", "structr__refdef__scene__t.html#a83bedeedcecfb7f2139a288e0720ec24", null ],
+    [ "rtdlight", "structr__refdef__scene__t.html#abc931d4756002d9eac83fc0f292adc09", null ],
+    [ "rtdlightshadows", "structr__refdef__scene__t.html#ac37d87f99c54b619604ddbe0fddd3c94", null ],
+    [ "rtlightstylevalue", "structr__refdef__scene__t.html#a660519b32b5ce0399970d9869890ab87", null ],
+    [ "rtworld", "structr__refdef__scene__t.html#ad6fc2a07d8d706f5daf13c5849db84fc", null ],
+    [ "rtworldshadows", "structr__refdef__scene__t.html#ac261c344d37b7155ff7421f98b48e36b", null ],
+    [ "tempentities", "structr__refdef__scene__t.html#a3369f601fb2e2f31256bc3e064e05d39", null ],
+    [ "templights", "structr__refdef__scene__t.html#ae7fe6da979d07418652cc0e9002cc674", null ],
+    [ "time", "structr__refdef__scene__t.html#ae8084373da2e6a507c6ec0c78b23d84c", null ],
+    [ "worldentity", "structr__refdef__scene__t.html#ae4dfd0ad65bd2cecac4d12f329e331ca", null ],
+    [ "worldmodel", "structr__refdef__scene__t.html#aa2dcfd41f0bab5977bed85951106fd29", null ]
+];
