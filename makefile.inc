@@ -414,6 +414,11 @@ prepare :
 	$(CMD_CP) makefile.inc $(BUILD_DIR)/
 	$(CMD_CP) $(MAKEFILE) $(BUILD_DIR)/
 
+docs : docs/output/html
+
+docs/output/html :
+	@doxygen docs/Doxyfile
+
 
 #this checks USEODE when compiling so it needs the ODE flags as well
 cl_parse.o: cl_parse.c
@@ -503,6 +508,7 @@ clean:
 	-$(CMD_RM) *.d
 	-$(CMD_RM) *.gch
 	-$(CMD_RM) build-obj/
+	-$(CMD_RM) docs/output/
 clean: .EXTRA_PREREQS =  # prevents circular dependency with clean-profile
 
 clean-profile: clean
