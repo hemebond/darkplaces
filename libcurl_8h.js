@@ -18,7 +18,7 @@ var libcurl_8h =
     [ "Curl_Register_predownload", "libcurl_8h.html#a0d50aa6a60373f7dd432ecba719ded0b", null ],
     [ "Curl_RequireFile", "libcurl_8h.html#abf8c83f03777d6916aa1d6dd6760649d", null ],
     [ "Curl_Running", "libcurl_8h.html#af047161c7f736d611a94892f186797f8", null ],
-    [ "Curl_Select", "libcurl_8h.html#a86181f32ea8bd882abadd9c4219a35ca", null ],
+    [ "Curl_Select", "libcurl_8h.html#a554bf3ebb4c711fc0bfa48e37fc8757c", null ],
     [ "Curl_SendRequirements", "libcurl_8h.html#a15ed658abba00e33f574d1fe7e85593d", null ],
     [ "Curl_Shutdown", "libcurl_8h.html#ad7fcf6e74c1c681ff23c17b1002a7a8c", null ]
 ];

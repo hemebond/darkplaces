@@ -18,6 +18,7 @@ var cl__particles_8c =
     [ "CL_ImmediateBloodStain", "cl__particles_8c.html#a28138d0f32ea01a7405c575eb0a2591f", null ],
     [ "CL_NewParticle", "cl__particles_8c.html#a184c475c75758d6c027a244e337e7dbe", null ],
     [ "CL_NewParticlesFromEffectinfo", "cl__particles_8c.html#af1c8954e5c471715dcd9484b7a3f3c1d", null ],
+    [ "CL_NewQuakeParticle", "cl__particles_8c.html#a779af911ae013b8586e51a369ad906ed", null ],
     [ "CL_ParseParticleEffect", "cl__particles_8c.html#a9e8c4d6c6de33e7868a7ea10cf153272", null ],
     [ "CL_Particle_PixelCoordsForTexnum", "cl__particles_8c.html#a5445d89dc558e21b58f6a1a8a879134c", null ],
     [ "CL_ParticleBox", "cl__particles_8c.html#a8dac8a7bb2e62c2ddd6712c7e242ae7f", null ],
@@ -124,5 +125,6 @@ var cl__particles_8c =
     [ "tex_particle", "cl__particles_8c.html#abff2e4cd315b45eceef7fbbfb3c8571b", null ],
     [ "tex_raindrop", "cl__particles_8c.html#ad3db8107eb79d98a2af00bdf6af81d1b", null ],
     [ "tex_rainsplash", "cl__particles_8c.html#a9b8723c8c1e5da8afda8a0cf176c2bae", null ],
-    [ "tex_smoke", "cl__particles_8c.html#ac04d54be468ef0ec2af59c64e07d804b", null ]
+    [ "tex_smoke", "cl__particles_8c.html#ac04d54be468ef0ec2af59c64e07d804b", null ],
+    [ "tex_square", "cl__particles_8c.html#adb08988dec9ae38db430d58342a3a940", null ]
 ];

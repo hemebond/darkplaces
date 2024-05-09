@@ -461,6 +461,7 @@ var annotated_dup =
     [ "viddef_support_t", "structviddef__support__t.html", "structviddef__support__t" ],
     [ "viddef_t", "structviddef__t.html", "structviddef__t" ],
     [ "video_resolution_t", "structvideo__resolution__t.html", "structvideo__resolution__t" ],
+    [ "vidfallback_s", "structvidfallback__s.html", "structvidfallback__s" ],
     [ "vmparticlespawner_t", "structvmparticlespawner__t.html", "structvmparticlespawner__t" ],
     [ "vmparticletheme_t", "structvmparticletheme__t.html", "structvmparticletheme__t" ],
     [ "vorbis_block", "structvorbis__block.html", "structvorbis__block" ],

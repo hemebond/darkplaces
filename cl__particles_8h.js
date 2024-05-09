@@ -69,10 +69,13 @@ var cl__particles_8h =
       [ "pt_smoke", "cl__particles_8h.html#a723256dea8a6fd9c487829bc1ed6f911ae7cfd3b97ca8553866cd8d40ebb46b6f", null ],
       [ "pt_decal", "cl__particles_8h.html#a723256dea8a6fd9c487829bc1ed6f911afa9cac57bf3888984131735ec5d16e7b", null ],
       [ "pt_entityparticle", "cl__particles_8h.html#a723256dea8a6fd9c487829bc1ed6f911acc387488f76b18b6d7f75d0123d409ec", null ],
+      [ "pt_explode", "cl__particles_8h.html#a723256dea8a6fd9c487829bc1ed6f911ad98fdef2479f26b81bc393b6745997c8", null ],
+      [ "pt_explode2", "cl__particles_8h.html#a723256dea8a6fd9c487829bc1ed6f911a53bf5eb522be68eb336cdffe0aa918dd", null ],
       [ "pt_total", "cl__particles_8h.html#a723256dea8a6fd9c487829bc1ed6f911a2fcd22dc631ef4fd96eece5d901f54b2", null ]
     ] ],
     [ "CL_EntityParticles", "cl__particles_8h.html#a8adcdb7fc64e543ee218da77122e6dc2", null ],
     [ "CL_NewParticle", "cl__particles_8h.html#a184c475c75758d6c027a244e337e7dbe", null ],
+    [ "CL_NewQuakeParticle", "cl__particles_8h.html#a779af911ae013b8586e51a369ad906ed", null ],
     [ "CL_ParseParticleEffect", "cl__particles_8h.html#a9e8c4d6c6de33e7868a7ea10cf153272", null ],
     [ "CL_ParticleBox", "cl__particles_8h.html#ae46c6629e47bd74fa0aeb611d88263e8", null ],
     [ "CL_ParticleCube", "cl__particles_8h.html#a7226c06acdc174bc9840630665cb9ad3", null ],

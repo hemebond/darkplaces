@@ -84,6 +84,7 @@ var csprogs_8h =
     [ "CSQC_UpdateNetworkTimes", "csprogs_8h.html#a37fd3a8e9e2de7fb3ed364863f90b0af", null ],
     [ "MakeDownloadPacket", "csprogs_8h.html#a287eaf1d9a70ee7ca30a769a527d5996", null ],
     [ "QW_CL_StartUpload", "csprogs_8h.html#aced39d7c167b32aba8ee2184ca62fc13", null ],
+    [ "csqc_lowres", "csprogs_8h.html#ac0a1ca49cedb039f20b6c7eeef292ca9", null ],
     [ "csqc_polygons_defaultmaterial_nocullface", "csprogs_8h.html#a9a4494c9b71b9cedf41e2f4e974234f0", null ],
     [ "csqc_progcrc", "csprogs_8h.html#a09020ffd13bc6f05d50b204167d50ce2", null ],
     [ "csqc_progname", "csprogs_8h.html#aabcd4e0d46fdee7adeb65e0ce7be4aaa", null ],

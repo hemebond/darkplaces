@@ -121,6 +121,7 @@ var render_8h =
       [ "SHADERMODE_DEFERREDLIGHTSOURCE", "render_8h.html#a5007655fc62669fc9040bb0163594c4eaa08004a4bb2dd9b8d9d3906ac15c46a8", null ],
       [ "SHADERMODE_COUNT", "render_8h.html#a5007655fc62669fc9040bb0163594c4ea6a7b08ccdc293e1852b08523216dbca2", null ]
     ] ],
+    [ "CL_VM_DrawHud", "render_8h.html#aa9fad0d38544a5ba12201cbb60340267", null ],
     [ "CL_VM_UpdateView", "render_8h.html#acd4ee992c9c9eda74d82028d319be8a3", null ],
     [ "FindFont", "render_8h.html#aefe763bbb1f025cedf6f6d4cc3568f69", null ],
     [ "FOG_clear", "render_8h.html#a514e32619bddb219ee7cc5059b3ee738", null ],

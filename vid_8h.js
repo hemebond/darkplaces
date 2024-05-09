@@ -28,7 +28,7 @@ var vid_8h =
     [ "VID_GetDesktopMode", "vid_8h.html#a844cdb4806c34ac76bd8a4f55c830612", null ],
     [ "VID_HasScreenKeyboardSupport", "vid_8h.html#a2d2bb76bbece809df21388d462a7525d", null ],
     [ "VID_Init", "vid_8h.html#a7028e508084b68c030392a6518f61598", null ],
-    [ "VID_InitMode", "vid_8h.html#a8c50e0e2859df39706e1f57805e8ed3d", null ],
+    [ "VID_InitMode", "vid_8h.html#a8d0b5b32a2dca4207ae1c2503918bbcb", null ],
     [ "VID_JoyBlockEmulatedKeys", "vid_8h.html#a52ad95fd9ca7f5b7400d22ce7f845ae6", null ],
     [ "VID_JoyState_GetAxis", "vid_8h.html#a39e8b6659fca3011f9b0daa99e1befc0", null ],
     [ "VID_ListModes", "vid_8h.html#a49952f92b6943a015203828147a82c8e", null ],
@@ -89,8 +89,6 @@ var vid_8h =
     [ "vid_hidden", "vid_8h.html#ad4c23fc337f707d5afe2a0fa265557af", null ],
     [ "vid_info_displaycount", "vid_8h.html#a667a7d8c00cd0f082464bc27f1770f6d", null ],
     [ "vid_joystate", "vid_8h.html#a6b4890f94917f904f7826a7308aa6e12", null ],
-    [ "vid_menudrawfn", "vid_8h.html#a964e6e6e21f61b53bd815ce88da66650", null ],
-    [ "vid_menukeyfn", "vid_8h.html#a846f93ad858edb973063064960419074", null ],
     [ "vid_minheight", "vid_8h.html#ae6a3cfc860b54a78710fcf05523b5dd0", null ],
     [ "vid_minimize_on_focus_loss", "vid_8h.html#a0b01fb581ea7f3f5fbbfab720c2dcf64", null ],
     [ "vid_minwidth", "vid_8h.html#a28bcbbfb29f8ee068d68b2a568986367", null ],
@@ -109,7 +107,6 @@ var vid_8h =
     [ "vid_touchscreen_supportshowkeyboard", "vid_8h.html#ad09b07a014261fe21bf5e3d797fe5a9a", null ],
     [ "vid_touchscreen_xdpi", "vid_8h.html#a6e70d5e74d8fa763819d0d822468d97d", null ],
     [ "vid_touchscreen_ydpi", "vid_8h.html#a3e823aedb10549d53833c3b6a1d692fb", null ],
-    [ "vid_userefreshrate", "vid_8h.html#a38f95b1783449bada8749043d3b34b2e", null ],
     [ "vid_vsync", "vid_8h.html#a377f5ccaf716e28c46822daf5b99055c", null ],
     [ "vid_width", "vid_8h.html#a01176c273cfc056d982cf4e1c4b36da4", null ]
 ];

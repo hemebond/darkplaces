@@ -1,9 +1,6 @@
 var sys__shared_8c =
 [
-    [ "HAVE_GETTIMEOFDAY", "sys__shared_8c.html#a32e7ff1da5763e68f44097cb23826415", null ],
-    [ "HAVE_USLEEP", "sys__shared_8c.html#a176348b5cb3250d8116ad36bf163c024", null ],
     [ "SUPPORTDLL", "sys__shared_8c.html#a483161d10bf97fe7c7b5aab01fd4c832", null ],
-    [ "main", "sys__shared_8c.html#a3c04138a5bfe5d72780bb7e82a18e627", null ],
     [ "Sys_AllowProfiling", "sys__shared_8c.html#a6e31205c7dc8a8c5bbb9da6b0cd38477", null ],
     [ "Sys_CheckParm", "sys__shared_8c.html#ae9b9461780a044853793708c49317b28", null ],
     [ "Sys_ConsoleInput", "sys__shared_8c.html#a4e530bd8e8190b77647d966df10619cf", null ],
@@ -22,6 +19,7 @@ var sys__shared_8c =
     [ "Sys_LoadDependencyFunctions", "sys__shared_8c.html#a9f69cdfecfe809c3e2eddb73bd449abd", null ],
     [ "Sys_LoadLibrary", "sys__shared_8c.html#a673021b28081b72931c7930b18b0d9c4", null ],
     [ "Sys_LoadSelf", "sys__shared_8c.html#afc2fd22e37ef4fe9a9ecf9fec82b9fac", null ],
+    [ "Sys_Main", "sys__shared_8c.html#a899071017e2abaee19d9eb1815214a09", null ],
     [ "Sys_MakeProcessMean", "sys__shared_8c.html#aa6f913cd3dbe687c0a7f0c84c83ea4f3", null ],
     [ "Sys_MakeProcessNice", "sys__shared_8c.html#a58e14aa371327ceef80f2f366f14ef8e", null ],
     [ "Sys_Print", "sys__shared_8c.html#a277828e69bb595765f2e8fbd5e5eeb7c", null ],
@@ -32,7 +30,6 @@ var sys__shared_8c =
     [ "Sys_TimeString", "sys__shared_8c.html#a104b651171bb21edbdf976dc0b236f01", null ],
     [ "Sys_UpdateOutFD_c", "sys__shared_8c.html#a6f9742bd6e89076e3d2513e3f43bb418", null ],
     [ "benchmark_time", "sys__shared_8c.html#a3e39132ffc4e2f353b76e446f421c27a", null ],
-    [ "host_maxwait", "sys__shared_8c.html#acadd48f792250446b968c522e59acd43", null ],
     [ "sys", "sys__shared_8c.html#ae590414a212a3043d2158012d0c93985", null ],
     [ "sys_debugsleep", "sys__shared_8c.html#acaeaf4cc3816b8fdad1427d1581e1d44", null ],
     [ "sys_libdir", "sys__shared_8c.html#ababfae960fa103ca1a5d80eefed93b26", null ],

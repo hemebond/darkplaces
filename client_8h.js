@@ -173,6 +173,7 @@ var client_8h =
     [ "cl_sidespeed", "client_8h.html#a13210c745b7dabf4ef8da7f31ca75afe", null ],
     [ "cl_stainmaps", "client_8h.html#a8cb002aca17ed260e455a09b30057617", null ],
     [ "cl_stainmaps_clearonload", "client_8h.html#a4464d836d1ac899355ae8c3092ffaf77", null ],
+    [ "cl_startdemos", "client_8h.html#ad59f062bf3778243313526c21c266283", null ],
     [ "cl_upspeed", "client_8h.html#a3644b9af9a01c0ccb7ef0cf0f666a2a8", null ],
     [ "cl_yawspeed", "client_8h.html#a034c0e689ad0cb2c0025d5763511788b", null ],
     [ "cls", "client_8h.html#ab4b4e0f12a72d330ee0869bdf1b372cd", null ],

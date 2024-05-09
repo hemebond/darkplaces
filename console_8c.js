@@ -21,7 +21,7 @@ var console_8c =
     [ "Con_DisplayList", "console_8c.html#af27143432d3a889ef925e8b689e59f1b", null ],
     [ "Con_DPrint", "console_8c.html#aae665de4dbcbf2047ee305901e2f6627", null ],
     [ "Con_DPrintf", "console_8c.html#a2696300802453d9333e9f52e5fae15bc", null ],
-    [ "Con_DrawConsole", "console_8c.html#a08c9c35606c0cf6f5ddd8854bd37a8fd", null ],
+    [ "Con_DrawConsole", "console_8c.html#a526766c2bfde6ea15c935ca4928ba494", null ],
     [ "Con_DrawConsoleLine", "console_8c.html#a672e115bafbbeddcad54702cd9358289", null ],
     [ "Con_DrawInput", "console_8c.html#a1966264ce06e32f82125a479240b9dbb", null ],
     [ "Con_DrawNotify", "console_8c.html#a3d12d1ba70924a345c9d4065ab6ba508", null ],

@@ -104,8 +104,6 @@ $(document).ready(function(){initNavTree('structmodlist__entry__t.html',''); ini
 Data Fields</h2></td></tr>
 <tr class="memitem:a93e7c87f3a3ed0432abdc4fc57b4aeec" id="r_a93e7c87f3a3ed0432abdc4fc57b4aeec"><td class="memItemLeft" align="right" valign="top"><a class="el" href="qtypes_8h.html#aa250998bce2dc350e4f644297bb579c3">qbool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structmodlist__entry__t.html#a93e7c87f3a3ed0432abdc4fc57b4aeec">loaded</a></td></tr>
 <tr class="separator:a93e7c87f3a3ed0432abdc4fc57b4aeec"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa59e6f062bb9357628115b57988b4ad9" id="r_aa59e6f062bb9357628115b57988b4ad9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="fs_8c.html#a93257bedba32e45fc3f07bea139c0604">int</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structmodlist__entry__t.html#aa59e6f062bb9357628115b57988b4ad9">enabled</a></td></tr>
-<tr class="separator:aa59e6f062bb9357628115b57988b4ad9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a066cb8a076c864861549a37d75402efa" id="r_a066cb8a076c864861549a37d75402efa"><td class="memItemLeft" align="right" valign="top"><a class="el" href="glquake_8h.html#af7ca775b6d9354291c4d7d01b8b2a8bc">char</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structmodlist__entry__t.html#a066cb8a076c864861549a37d75402efa">name</a> [128]</td></tr>
 <tr class="separator:a066cb8a076c864861549a37d75402efa"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a12f66bbcb20c7ef8728dc4f97e8e1d48" id="r_a12f66bbcb20c7ef8728dc4f97e8e1d48"><td class="memItemLeft" align="right" valign="top"><a class="el" href="glquake_8h.html#af7ca775b6d9354291c4d7d01b8b2a8bc">char</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structmodlist__entry__t.html#a12f66bbcb20c7ef8728dc4f97e8e1d48">dir</a> [<a class="el" href="qdefs_8h.html#abd4ae30fcfdcbbff51bbf3f4e6daeee7">MAX_QPATH</a>]</td></tr>
@@ -113,7 +111,7 @@ Data Fields</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock">
-<p class="definition">Definition at line <a class="el" href="menu_8c_source.html#l04514">4514</a> of file <a class="el" href="menu_8c_source.html">menu.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="menu_8c_source.html#l04523">4523</a> of file <a class="el" href="menu_8c_source.html">menu.c</a>.</p>
 </div><h2 class="groupheader">Field Documentation</h2>
 <a id="a12f66bbcb20c7ef8728dc4f97e8e1d48" name="a12f66bbcb20c7ef8728dc4f97e8e1d48"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a12f66bbcb20c7ef8728dc4f97e8e1d48">&#9670;&#160;</a></span>dir</h2>
@@ -127,27 +125,9 @@ Data Fields</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="menu_8c_source.html#l04522">4522</a> of file <a class="el" href="menu_8c_source.html">menu.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="menu_8c_source.html#l04530">4530</a> of file <a class="el" href="menu_8c_source.html">menu.c</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="menu_8c_source.html#l04531">ModList_RebuildList()</a>.</p>
-
-</div>
-</div>
-<a id="aa59e6f062bb9357628115b57988b4ad9" name="aa59e6f062bb9357628115b57988b4ad9"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa59e6f062bb9357628115b57988b4ad9">&#9670;&#160;</a></span>enabled</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="fs_8c.html#a93257bedba32e45fc3f07bea139c0604">int</a> modlist_entry_t::enabled</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="menu_8c_source.html#l04517">4517</a> of file <a class="el" href="menu_8c_source.html">menu.c</a>.</p>
-
-<p class="reference">Referenced by <a class="el" href="menu_8c_source.html#l04616">M_Menu_ModList_AdjustSliders()</a>, and <a class="el" href="menu_8c_source.html#l04531">ModList_RebuildList()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="menu_8c_source.html#l04637">M_ModList_Draw()</a>, <a class="el" href="menu_8c_source.html#l04588">ModList_Enable()</a>, and <a class="el" href="menu_8c_source.html#l04539">ModList_RebuildList()</a>.</p>
 
 </div>
 </div>
@@ -163,9 +143,9 @@ Data Fields</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="menu_8c_source.html#l04516">4516</a> of file <a class="el" href="menu_8c_source.html">menu.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="menu_8c_source.html#l04525">4525</a> of file <a class="el" href="menu_8c_source.html">menu.c</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="menu_8c_source.html#l04616">M_Menu_ModList_AdjustSliders()</a>, and <a class="el" href="menu_8c_source.html#l04531">ModList_RebuildList()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="menu_8c_source.html#l04626">M_Menu_ModList_AdjustSliders()</a>, and <a class="el" href="menu_8c_source.html#l04539">ModList_RebuildList()</a>.</p>
 
 </div>
 </div>
@@ -181,7 +161,9 @@ Data Fields</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="menu_8c_source.html#l04520">4520</a> of file <a class="el" href="menu_8c_source.html">menu.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="menu_8c_source.html#l04528">4528</a> of file <a class="el" href="menu_8c_source.html">menu.c</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="menu_8c_source.html#l04637">M_ModList_Draw()</a>.</p>
 
 </div>
 </div>

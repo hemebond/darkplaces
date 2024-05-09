@@ -227,7 +227,7 @@ Functions</h2></td></tr>
 <div class="ttc" id="astructthread__cond__t_html_a920cec424652ef2be0b84171a26f7ed2"><div class="ttname"><a href="structthread__cond__t.html#a920cec424652ef2be0b84171a26f7ed2">thread_cond_t::sem</a></div><div class="ttdeci">thread_semaphore_t * sem</div><div class="ttdef"><b>Definition</b> <a href="thread__win_8c_source.html#l00107">thread_win.c:107</a></div></div>
 <div class="ttc" id="astructthread__cond__t_html_abddeaa9bf47c03de63d3e3996d26adb9"><div class="ttname"><a href="structthread__cond__t.html#abddeaa9bf47c03de63d3e3996d26adb9">thread_cond_t::mutex</a></div><div class="ttdeci">HANDLE mutex</div><div class="ttdef"><b>Definition</b> <a href="thread__win_8c_source.html#l00104">thread_win.c:104</a></div></div>
 <div class="ttc" id="astructthread__cond__t_html_aeeef8b24dd89e280c0fa4e6aa9195c16"><div class="ttname"><a href="structthread__cond__t.html#aeeef8b24dd89e280c0fa4e6aa9195c16">thread_cond_t::waiting</a></div><div class="ttdeci">int waiting</div><div class="ttdef"><b>Definition</b> <a href="thread__win_8c_source.html#l00105">thread_win.c:105</a></div></div>
-<div class="ttc" id="asys_8h_html_a2e96c9ccfa6d43e1677769d19dbc1a21"><div class="ttname"><a href="sys_8h.html#a2e96c9ccfa6d43e1677769d19dbc1a21">Sys_Printf</a></div><div class="ttdeci">void Sys_Printf(const char *fmt,...)</div><div class="ttdoc">used to report failures inside Con_Printf()</div><div class="ttdef"><b>Definition</b> <a href="sys__shared_8c_source.html#l00605">sys_shared.c:605</a></div></div>
+<div class="ttc" id="asys_8h_html_a2e96c9ccfa6d43e1677769d19dbc1a21"><div class="ttname"><a href="sys_8h.html#a2e96c9ccfa6d43e1677769d19dbc1a21">Sys_Printf</a></div><div class="ttdeci">void Sys_Printf(const char *fmt,...)</div><div class="ttdoc">used to report failures inside Con_Printf()</div><div class="ttdef"><b>Definition</b> <a href="sys__shared_8c_source.html#l00634">sys_shared.c:634</a></div></div>
 <div class="ttc" id="athread__win_8c_html_ac60c963cc1850da698586cb6ec5311a7"><div class="ttname"><a href="thread__win_8c.html#ac60c963cc1850da698586cb6ec5311a7">Thread_WaitSemaphore</a></div><div class="ttdeci">static int Thread_WaitSemaphore(thread_semaphore_t *s, unsigned int msec)</div><div class="ttdef"><b>Definition</b> <a href="thread__win_8c_source.html#l00080">thread_win.c:80</a></div></div>
 <div class="ttc" id="athread__win_8c_html_ad683a75acd4fcbbb25a7dc753e477951"><div class="ttname"><a href="thread__win_8c.html#ad683a75acd4fcbbb25a7dc753e477951">Thread_PostSemaphore</a></div><div class="ttdeci">static int Thread_PostSemaphore(thread_semaphore_t *s)</div><div class="ttdef"><b>Definition</b> <a href="thread__win_8c_source.html#l00093">thread_win.c:93</a></div></div>
 </div><!-- fragment -->
@@ -406,7 +406,7 @@ Functions</h2></td></tr>
 <div class="ttc" id="astructbarrier__t_html"><div class="ttname"><a href="structbarrier__t.html">barrier_t</a></div><div class="ttdef"><b>Definition</b> <a href="thread__pthread_8c_source.html#l00178">thread_pthread.c:178</a></div></div>
 <div class="ttc" id="athread_8h_html_a4fe4e5bb1feca332e6957d1c27a87b58"><div class="ttname"><a href="thread_8h.html#a4fe4e5bb1feca332e6957d1c27a87b58">Thread_CreateMutex</a></div><div class="ttdeci">#define Thread_CreateMutex()</div><div class="ttdef"><b>Definition</b> <a href="thread_8h_source.html#l00015">thread.h:15</a></div></div>
 <div class="ttc" id="athread_8h_html_ad27b919db25db048aef743edb359f51c"><div class="ttname"><a href="thread_8h.html#ad27b919db25db048aef743edb359f51c">Thread_CreateCond</a></div><div class="ttdeci">#define Thread_CreateCond()</div><div class="ttdef"><b>Definition</b> <a href="thread_8h_source.html#l00019">thread.h:19</a></div></div>
-<div class="ttc" id="azone_8h_html_a35deb8ef816a08fb1bc8feac8db020c5"><div class="ttname"><a href="zone_8h.html#a35deb8ef816a08fb1bc8feac8db020c5">Z_Malloc</a></div><div class="ttdeci">#define Z_Malloc(size)</div><div class="ttdef"><b>Definition</b> <a href="zone_8h_source.html#l00154">zone.h:154</a></div></div>
+<div class="ttc" id="azone_8h_html_a35deb8ef816a08fb1bc8feac8db020c5"><div class="ttname"><a href="zone_8h.html#a35deb8ef816a08fb1bc8feac8db020c5">Z_Malloc</a></div><div class="ttdeci">#define Z_Malloc(size)</div><div class="ttdef"><b>Definition</b> <a href="zone_8h_source.html#l00161">zone.h:161</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -976,7 +976,7 @@ Functions</h2></td></tr>
 <div class="line"><span class="lineno">   23</span><span class="preprocessor">#endif</span></div>
 <div class="line"><span class="lineno">   24</span>}</div>
 </div><!-- fragment -->
-<p class="reference">Referenced by <a class="el" href="console_8c_source.html#l00865">Con_Init()</a>, <a class="el" href="crypto_8c_source.html#l01072">Crypto_Init()</a>, <a class="el" href="libcurl_8c_source.html#l00810">Curl_Init()</a>, <a class="el" href="fs_8c_source.html#l02114">FS_Init_Dir()</a>, <a class="el" href="zone_8c_source.html#l00882">Memory_Init()</a>, <a class="el" href="netconn_8c_source.html#l04039">NetConn_Init()</a>, and <a class="el" href="sv__main_8c_source.html#l02842">SV_StartThread()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="console_8c_source.html#l00865">Con_Init()</a>, <a class="el" href="crypto_8c_source.html#l01072">Crypto_Init()</a>, <a class="el" href="libcurl_8c_source.html#l00810">Curl_Init()</a>, <a class="el" href="fs_8c_source.html#l02139">FS_Init_Dir()</a>, <a class="el" href="zone_8c_source.html#l00882">Memory_Init()</a>, <a class="el" href="netconn_8c_source.html#l04039">NetConn_Init()</a>, and <a class="el" href="sv__main_8c_source.html#l02843">SV_StartThread()</a>.</p>
 
 </div>
 </div>
@@ -1005,7 +1005,7 @@ Functions</h2></td></tr>
 <div class="line"><span class="lineno">   11</span>}</div>
 <div class="ttc" id="aconsole_8c_html_a49b71fe9a87e57a440e07af4a869a9f6"><div class="ttname"><a href="console_8c.html#a49b71fe9a87e57a440e07af4a869a9f6">Con_Printf</a></div><div class="ttdeci">void Con_Printf(const char *fmt,...)</div><div class="ttdoc">Prints to all appropriate console targets.</div><div class="ttdef"><b>Definition</b> <a href="console_8c_source.html#l01460">console.c:1460</a></div></div>
 </div><!-- fragment -->
-<p class="reference">Referenced by <a class="el" href="host_8c_source.html#l00370">Host_Init()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="host_8c_source.html#l00374">Host_Init()</a>.</p>
 
 </div>
 </div>
@@ -1066,7 +1066,7 @@ Functions</h2></td></tr>
 <div class="fragment"><div class="line"><span class="lineno">   14</span>{</div>
 <div class="line"><span class="lineno">   15</span>}</div>
 </div><!-- fragment -->
-<p class="reference">Referenced by <a class="el" href="host_8c_source.html#l00569">Host_Shutdown()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="host_8c_source.html#l00573">Host_Shutdown()</a>.</p>
 
 </div>
 </div>

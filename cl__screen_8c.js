@@ -124,6 +124,7 @@ var cl__screen_8c =
     [ "scr_numtouchscreenareas", "cl__screen_8c.html#a96bf4ab2a9e87b745e6a23313751d1d0", null ],
     [ "scr_printspeed", "cl__screen_8c.html#ad95998a3c72dbc202847542efc7563b1", null ],
     [ "scr_refresh", "cl__screen_8c.html#a502b6527c7e375220bc5804115c09509", null ],
+    [ "scr_sbarscale", "cl__screen_8c.html#ac9695d7c1de622ef9021a2cca150b530", null ],
     [ "scr_screenshot_alpha", "cl__screen_8c.html#a81f492f09b9d52e0cf2351afba597f4b", null ],
     [ "scr_screenshot_gammaboost", "cl__screen_8c.html#acb4ee7b8017207205b8ed0ce23be98bf", null ],
     [ "scr_screenshot_jpeg", "cl__screen_8c.html#a847c9012dc8dbaad3a0809ab7862ce37", null ],

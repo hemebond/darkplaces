@@ -212,6 +212,7 @@ var server_8h =
     [ "sv_gameplayfix_fixedcheckwatertransition", "server_8h.html#a9f24bab157086eaea993a94281545d5a", null ],
     [ "sv_gameplayfix_gravityunaffectedbyticrate", "server_8h.html#a982633fde699d333309be995776ac44b", null ],
     [ "sv_gameplayfix_grenadebouncedownslopes", "server_8h.html#af519f0c26ede8b9b10d52cac1720c99d", null ],
+    [ "sv_gameplayfix_impactbeforeonground", "server_8h.html#a440e8a5f8ef2fa2e8b351cece4c35432", null ],
     [ "sv_gameplayfix_multiplethinksperframe", "server_8h.html#afbb2738c59152e5c3b6ae31cff2ec673", null ],
     [ "sv_gameplayfix_noairborncorpse", "server_8h.html#a8be678b529fdd44eb99c35817cb684b5", null ],
     [ "sv_gameplayfix_noairborncorpse_allowsuspendeditems", "server_8h.html#a1ceee82298b57d51675f528cad0085b9", null ],

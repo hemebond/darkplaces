@@ -8,8 +8,13 @@ var fs_8h =
     [ "FS_FILETYPE_NONE", "fs_8h.html#ab9550d878584be17086e5780df0073cf", null ],
     [ "MAX_GAMEDIRS", "fs_8h.html#a28d7415b6e8333c22d3d5d842543669d", null ],
     [ "fs_offset_t", "fs_8h.html#a5bcbce6d6c29888adf596671d6acd44b", null ],
+    [ "addgamedirs_t", "fs_8h.html#a1dc08a4266ddc3ae693ba4586a25a3a4", [
+      [ "GAMEDIRS_ALLGOOD", "fs_8h.html#a1dc08a4266ddc3ae693ba4586a25a3a4a965a231b8b7c6438ce94ae96e6ea9dd7", null ],
+      [ "GAMEDIRS_FAILURE", "fs_8h.html#a1dc08a4266ddc3ae693ba4586a25a3a4acd169c268bfa5b1f6cb54cdd33d843e3", null ],
+      [ "GAMEDIRS_SUCCESS", "fs_8h.html#a1dc08a4266ddc3ae693ba4586a25a3a4a29a533d7e75d9eca8c035ab0931f8e43", null ]
+    ] ],
     [ "FS_AddPack", "fs_8h.html#a87fce57e0194dccb6e05b7bd04150d33", null ],
-    [ "FS_ChangeGameDirs", "fs_8h.html#ad8f17eb38854c4515cd715413bb8a795", null ],
+    [ "FS_ChangeGameDirs", "fs_8h.html#a3806b59d4546d489eb52bbbd45ae23b2", null ],
     [ "FS_CheckGameDir", "fs_8h.html#a360bff9bae9632be880e851386abfa23", null ],
     [ "FS_CheckNastyPath", "fs_8h.html#ae0629b94b2f8803b95c72571ac6f1558", null ],
     [ "FS_Close", "fs_8h.html#abcf26e98f08b7bbcc5645486294ebb5c", null ],
@@ -43,6 +48,7 @@ var fs_8h =
     [ "FS_SanitizePath", "fs_8h.html#ab0bdcd3ddc4eeae13ee7b56380c81b09", null ],
     [ "FS_Search", "fs_8h.html#a637b96ed07f8e70398c51a8bc3ce4fb9", null ],
     [ "FS_Seek", "fs_8h.html#a695442a3ff4506082973bc053c1ec983", null ],
+    [ "FS_SetGameDirs", "fs_8h.html#a04911405f3c548289708edf1c9e3ba36", null ],
     [ "FS_Shutdown", "fs_8h.html#abebce4845c7c6f83b3241ae1c3d6c61a", null ],
     [ "FS_StripExtension", "fs_8h.html#a9fd7ebcbb75f140d76ab37664280555f", null ],
     [ "FS_SysFileExists", "fs_8h.html#a4073e77fbe03a9dc9f40e2961605853c", null ],

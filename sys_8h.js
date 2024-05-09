@@ -20,6 +20,7 @@ var sys_8h =
     [ "Sys_LoadDependency", "sys_8h.html#a7d5fb719236d753c6487958a306b51c6", null ],
     [ "Sys_LoadLibrary", "sys_8h.html#a673021b28081b72931c7930b18b0d9c4", null ],
     [ "Sys_LoadSelf", "sys_8h.html#afc2fd22e37ef4fe9a9ecf9fec82b9fac", null ],
+    [ "Sys_Main", "sys_8h.html#a899071017e2abaee19d9eb1815214a09", null ],
     [ "Sys_MakeProcessMean", "sys_8h.html#aa6f913cd3dbe687c0a7f0c84c83ea4f3", null ],
     [ "Sys_MakeProcessNice", "sys_8h.html#a58e14aa371327ceef80f2f366f14ef8e", null ],
     [ "Sys_Print", "sys_8h.html#a277828e69bb595765f2e8fbd5e5eeb7c", null ],

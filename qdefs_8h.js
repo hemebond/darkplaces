@@ -56,7 +56,6 @@ var qdefs_8h =
     [ "MAX_LEVELNETWORKEYES", "qdefs_8h.html#a93f3dabec908b81333036f5c7be05876", null ],
     [ "MAX_LIGHTSTYLES", "qdefs_8h.html#a48b85f1ccb414316c117e943ba927f19", null ],
     [ "MAX_LOCALINFO_STRING", "qdefs_8h.html#a83a88e148bd59bd33c7073140e8ccbdc", null ],
-    [ "MAX_MAP_LEAFS", "qdefs_8h.html#a58900a442b4f58bef2ce13f477662684", null ],
     [ "MAX_MODELS", "qdefs_8h.html#aff903af1964a7ac4a6fe71edd5efaa6a", null ],
     [ "MAX_NETWM_ICON", "qdefs_8h.html#ad055b0719a547f82ae87219ae1c00ae3", null ],
     [ "MAX_NUM_ARGVS", "qdefs_8h.html#a2fd2acc32bec76c55e24b1e607731065", null ],

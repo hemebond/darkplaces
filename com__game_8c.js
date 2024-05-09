@@ -1,7 +1,7 @@
 var com__game_8c =
 [
     [ "gamemode_info_t", "structgamemode__info__t.html", "structgamemode__info__t" ],
-    [ "COM_ChangeGameTypeForGameDirs", "com__game_8c.html#a1cffac5f2be2df1facafad9712cfd76d", null ],
+    [ "COM_ChangeGameTypeForGameDirs", "com__game_8c.html#abfa94d7aab926adc052b1581505c7882", null ],
     [ "COM_InitGameType", "com__game_8c.html#a55e06b8bf6b11f981623c64312ae0fa9", null ],
     [ "COM_SetGameType", "com__game_8c.html#addd2333ba733236e66dbb042fda9d32f", null ],
     [ "com_modname", "com__game_8c.html#a089b42925916fc1698399220e989dc47", null ],

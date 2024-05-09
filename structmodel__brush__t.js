@@ -19,7 +19,7 @@ var structmodel__brush__t =
     [ "data_portals", "structmodel__brush__t.html#a447975184b2754629bb27c1bcf15d2dc", null ],
     [ "data_pvsclusters", "structmodel__brush__t.html#a11db9074e004ceac57a0b79b27a8845a", null ],
     [ "entities", "structmodel__brush__t.html#a962a79e3c0eaf5b85f182d9b3fa93688", null ],
-    [ "FatPVS", "structmodel__brush__t.html#a477929f3e6f9e3b51141ff41bdd4d514", null ],
+    [ "FatPVS", "structmodel__brush__t.html#a3634300a234424ffc7217385fe8c3249", null ],
     [ "FindBoxClusters", "structmodel__brush__t.html#a5050ba4f944c09d84c3ab53ccd7d6cf8", null ],
     [ "FindNonSolidLocation", "structmodel__brush__t.html#a8d0042214ff0c446bc69f675e65aadb2", null ],
     [ "GetPVS", "structmodel__brush__t.html#a465f9f70ab597ec72c701c20e28bf8d1", null ],

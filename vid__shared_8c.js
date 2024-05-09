@@ -1,6 +1,7 @@
 var vid__shared_8c =
 [
     [ "glfunction_t", "structglfunction__t.html", "structglfunction__t" ],
+    [ "vidfallback_s", "structvidfallback__s.html", "structvidfallback__s" ],
     [ "BOUNDCVAR", "vid__shared_8c.html#a14a07191b0a00e32d2a8db3e9216114d", null ],
     [ "GAMMACHECK", "vid__shared_8c.html#a26c6f1f86aa1b2107d08f0fbea0272b9", null ],
     [ "Force_CenterView_f", "vid__shared_8c.html#a3f3c5d6937164221f85f3a30d12706b5", null ],
@@ -22,7 +23,7 @@ var vid__shared_8c =
     [ "VID_JoyBlockEmulatedKeys", "vid__shared_8c.html#a52ad95fd9ca7f5b7400d22ce7f845ae6", null ],
     [ "VID_JoyState_GetAxis", "vid__shared_8c.html#afee595f11a06fb76ebccb4737c86dd10", null ],
     [ "VID_KeyEventForButton", "vid__shared_8c.html#ae358b9dbb9ec1fe70688334d2ff2b245", null ],
-    [ "VID_Mode", "vid__shared_8c.html#a300e550a8830f3a69b576b60dd9c74b4", null ],
+    [ "VID_Mode", "vid__shared_8c.html#af95f245d1b54015ca7da3465e658825e", null ],
     [ "VID_Restart_f", "vid__shared_8c.html#aedbc82c998fb5ec909e2700e3703c331", null ],
     [ "VID_Shared_BuildJoyState_Begin", "vid__shared_8c.html#ab17d11eb15a1151f5dca52b95d02eff9", null ],
     [ "VID_Shared_BuildJoyState_Finish", "vid__shared_8c.html#a1c8c4574eb902a5aeef862c0a9938e90", null ],
@@ -252,10 +253,9 @@ var vid__shared_8c =
     [ "vid_touchscreen_supportshowkeyboard", "vid__shared_8c.html#ad09b07a014261fe21bf5e3d797fe5a9a", null ],
     [ "vid_touchscreen_xdpi", "vid__shared_8c.html#a6e70d5e74d8fa763819d0d822468d97d", null ],
     [ "vid_touchscreen_ydpi", "vid__shared_8c.html#a3e823aedb10549d53833c3b6a1d692fb", null ],
-    [ "vid_userefreshrate", "vid__shared_8c.html#a38f95b1783449bada8749043d3b34b2e", null ],
     [ "vid_vsync", "vid__shared_8c.html#a377f5ccaf716e28c46822daf5b99055c", null ],
     [ "vid_width", "vid__shared_8c.html#a01176c273cfc056d982cf4e1c4b36da4", null ],
-    [ "vidfallbacks", "vid__shared_8c.html#a556167463d43827aeff6f81719db58c6", null ],
+    [ "vidfallbacks", "vid__shared_8c.html#a05862a5827b021e88e43cf7c159b0315", null ],
     [ "w", "vid__shared_8c.html#a161f4efd20c5f2bfc9a7c49c07be7ed7", null ],
     [ "width", "vid__shared_8c.html#a0e843e6cb4b0547b3a2b414af3d53a53", null ],
     [ "x", "vid__shared_8c.html#a75c9c896e11dc1eed9f9f1180b86d099", null ],

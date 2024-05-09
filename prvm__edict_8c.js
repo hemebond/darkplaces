@@ -112,7 +112,7 @@ var prvm__edict_8c =
     [ "PRVM_PO_ParseString", "prvm__edict_8c.html#a2afeacf2a79d3b1cd1cbbd5e42dc7cad", null ],
     [ "PRVM_PO_UnparseString", "prvm__edict_8c.html#ab2d9e733331ebcb5604939155785d810", null ],
     [ "PRVM_Prog_Init", "prvm__edict_8c.html#a38c52776f1640ab0aa4f0c5edddc8645", null ],
-    [ "PRVM_Prog_Load", "prvm__edict_8c.html#a7bfb69ce0956d66b7625e138df259d9a", null ],
+    [ "PRVM_Prog_Load", "prvm__edict_8c.html#a3c596410957c6aaaa834b9f202c7103d", null ],
     [ "PRVM_Prog_Reset", "prvm__edict_8c.html#a6ed8e5fe503388c30371badd73a0dc3a", null ],
     [ "PRVM_ProgFromString", "prvm__edict_8c.html#a6448b804a9c92e6f86c4d53aa0786caa", null ],
     [ "PRVM_SetEngineString", "prvm__edict_8c.html#a4e3638f6c2086a6c6336e55b79cf6670", null ],

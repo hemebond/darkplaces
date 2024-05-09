@@ -138,7 +138,7 @@ var searchData=
   ['in_5fforward_135',['in_forward',['../cl__input_8c.html#a400f2a9c865c5fc612e407788d4c4644',1,'cl_input.c']]],
   ['in_5fforwarddown_136',['IN_ForwardDown',['../cl__input_8c.html#a2879edb84b5c99021d6575aeb5ba6915',1,'cl_input.c']]],
   ['in_5fforwardup_137',['IN_ForwardUp',['../cl__input_8c.html#a889c094f256ea7a14bb694f4453bfb69',1,'cl_input.c']]],
-  ['in_5fimpulse_138',['in_impulse',['../cl__input_8c.html#a276cea8287cb3ea274518537502bf889',1,'in_impulse:&#160;cl_input.c'],['../cl__input_8c.html#a30ad4acbb196f6eb12b2f5a2472f23e5',1,'IN_Impulse(cmd_state_t *cmd):&#160;cl_input.c']]],
+  ['in_5fimpulse_138',['in_impulse',['../cl__input_8c.html#a30ad4acbb196f6eb12b2f5a2472f23e5',1,'IN_Impulse(cmd_state_t *cmd):&#160;cl_input.c'],['../cl__input_8c.html#a276cea8287cb3ea274518537502bf889',1,'in_impulse:&#160;cl_input.c']]],
   ['in_5find_139',['in_ind',['../structztoolkit__t.html#a0a55756c457d806c4b08110dd9dbe278',1,'ztoolkit_t']]],
   ['in_5fjump_140',['in_jump',['../cl__input_8c.html#a7528080f8a10712d3d24eb5eb405a077',1,'cl_input.c']]],
   ['in_5fjumpdown_141',['IN_JumpDown',['../cl__input_8c.html#a15bedc34d957e826095f34d03e168aa4',1,'cl_input.c']]],

@@ -15,6 +15,7 @@ var host_8h =
     [ "Host_Main", "host_8h.html#a29f7e481d6fab7657395bbcc0580f973", null ],
     [ "Host_SaveConfig", "host_8h.html#ab875d82ae7b85a4f3fd57d12983f1f72", null ],
     [ "Host_UnlockSession", "host_8h.html#a6fc5981d0937dec0c773704fa46affc8", null ],
+    [ "Host_UpdateVersion", "host_8h.html#a2c6aa244a39374649570de1435e65843", null ],
     [ "developer", "host_8h.html#a0f852a9c1ca7535482bd2917bc62ff41", null ],
     [ "developer_entityparsing", "host_8h.html#aa08574cf650b6b50f0cd08d444b07aa0", null ],
     [ "developer_extra", "host_8h.html#a2d29d0100dc86ae96b813350bb2b6c32", null ],

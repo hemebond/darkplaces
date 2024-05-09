@@ -322,7 +322,7 @@ var searchData=
   ['pvs_319',['pvs',['../structr__q1bsp__getlightinfo__t.html#a73fbe1e96de359d6e963679e5d09cdc5',1,'r_q1bsp_getlightinfo_t']]],
   ['pvs_5fclusterlist_320',['pvs_clusterlist',['../structedict__engineprivate__t.html#a8d0842e866bc0e5662f2e35772538cf1',1,'edict_engineprivate_t']]],
   ['pvs_5fnumclusters_321',['pvs_numclusters',['../structedict__engineprivate__t.html#a180c37285dc28ef7431b14abbbfeefbc',1,'edict_engineprivate_t']]],
-  ['pvsbits_322',['pvsbits',['../structr__waterstate__waterplane__t.html#a8087aad8ff429edc7009f8bfa85fa221',1,'r_waterstate_waterplane_t']]],
+  ['pvsbits_322',['pvsbits',['../structr__waterstate__waterplane__t.html#a2704e114c5cf6e7c14f304ef0f08396b',1,'r_waterstate_waterplane_t']]],
   ['pvsvalid_323',['pvsvalid',['../structr__waterstate__waterplane__t.html#a478bb33296b4b9dbcac52e0423a57202',1,'r_waterstate_waterplane_t']]],
   ['px_324',['px',['../shader__glsl_8h.html#adfa1e01d266867c3c98e1651a56241af',1,'shader_glsl.h']]],
   ['px1_325',['px1',['../shader__glsl_8h.html#a577d45141d5df21022fcef8f8660db35',1,'shader_glsl.h']]],

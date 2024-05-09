@@ -120,6 +120,8 @@ Functions</h2></td></tr>
 <tr class="separator:a2dd70e472619f0d2d92bf7a8c0bbd6ce"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8b4a404db70ff4e3c8a71d41d3d5c42e" id="r_a8b4a404db70ff4e3c8a71d41d3d5c42e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="glquake_8h.html#afa45fc0640b31002c1792c59eb062c59">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="sys__sdl_8c.html#a8b4a404db70ff4e3c8a71d41d3d5c42e">Sys_SDL_Delay</a> (<a class="el" href="glquake_8h.html#af7ca775b6d9354291c4d7d01b8b2a8bc">unsigned</a> <a class="el" href="fs_8c.html#a93257bedba32e45fc3f07bea139c0604">int</a> <a class="el" href="glquake_8h.html#af7ca775b6d9354291c4d7d01b8b2a8bc">milliseconds</a>)</td></tr>
 <tr class="separator:a8b4a404db70ff4e3c8a71d41d3d5c42e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0ddf1224851353fc92bfbff6f499fa97" id="r_a0ddf1224851353fc92bfbff6f499fa97"><td class="memItemLeft" align="right" valign="top"><a class="el" href="fs_8c.html#a93257bedba32e45fc3f07bea139c0604">int</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="sys__sdl_8c.html#a0ddf1224851353fc92bfbff6f499fa97">main</a> (<a class="el" href="fs_8c.html#a93257bedba32e45fc3f07bea139c0604">int</a> argc, <a class="el" href="glquake_8h.html#af7ca775b6d9354291c4d7d01b8b2a8bc">char</a> *argv[])</td></tr>
+<tr class="separator:a0ddf1224851353fc92bfbff6f499fa97"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="var-members" name="var-members"></a>
 Variables</h2></td></tr>
@@ -129,6 +131,40 @@ Variables</h2></td></tr>
 <tr class="separator:af83a1cd970265fef08f4cdcd37e5b1ba"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Function Documentation</h2>
+<a id="a0ddf1224851353fc92bfbff6f499fa97" name="a0ddf1224851353fc92bfbff6f499fa97"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0ddf1224851353fc92bfbff6f499fa97">&#9670;&#160;</a></span>main()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="fs_8c.html#a93257bedba32e45fc3f07bea139c0604">int</a> main </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="fs_8c.html#a93257bedba32e45fc3f07bea139c0604">int</a>&#160;</td>
+          <td class="paramname"><em>argc</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="glquake_8h.html#af7ca775b6d9354291c4d7d01b8b2a8bc">char</a> *&#160;</td>
+          <td class="paramname"><em>argv</em>[]&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="sys__sdl_8c_source.html#l00073">73</a> of file <a class="el" href="sys__sdl_8c_source.html">sys_sdl.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   74</span>{</div>
+<div class="line"><span class="lineno">   75</span>    <span class="keywordflow">return</span> <a class="code hl_function" href="sys_8h.html#a899071017e2abaee19d9eb1815214a09">Sys_Main</a>(argc, argv);</div>
+<div class="line"><span class="lineno">   76</span>}</div>
+<div class="ttc" id="asys_8h_html_a899071017e2abaee19d9eb1815214a09"><div class="ttname"><a href="sys_8h.html#a899071017e2abaee19d9eb1815214a09">Sys_Main</a></div><div class="ttdeci">int Sys_Main(int argc, char *argv[])</div><div class="ttdoc">main() but renamed so we can wrap it in sys_sdl.c and sys_null.c to avoid needing to include SDL....</div><div class="ttdef"><b>Definition</b> <a href="sys__shared_8c_source.html#l01094">sys_shared.c:1094</a></div></div>
+</div><!-- fragment -->
+</div>
+</div>
 <a id="a8b4a404db70ff4e3c8a71d41d3d5c42e" name="a8b4a404db70ff4e3c8a71d41d3d5c42e"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a8b4a404db70ff4e3c8a71d41d3d5c42e">&#9670;&#160;</a></span>Sys_SDL_Delay()</h2>
 
@@ -151,7 +187,7 @@ Variables</h2></td></tr>
 <div class="line"><span class="lineno">   71</span>}</div>
 <div class="ttc" id="aglquake_8h_html_af7ca775b6d9354291c4d7d01b8b2a8bc"><div class="ttname"><a href="glquake_8h.html#af7ca775b6d9354291c4d7d01b8b2a8bc">index</a></div><div class="ttdeci">GLuint index</div><div class="ttdef"><b>Definition</b> <a href="glquake_8h_source.html#l00628">glquake.h:628</a></div></div>
 </div><!-- fragment -->
-<p class="reference">Referenced by <a class="el" href="sys__shared_8c_source.html#l00472">Sys_Sleep()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="sys__shared_8c_source.html#l00491">Sys_Sleep()</a>.</p>
 
 </div>
 </div>
@@ -189,7 +225,7 @@ Variables</h2></td></tr>
 <div class="ttc" id="aqtypes_8h_html_a070d2ce7b6bb7e5c05602aa8c308d0c4"><div class="ttname"><a href="qtypes_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a></div><div class="ttdeci">#define NULL</div><div class="ttdef"><b>Definition</b> <a href="qtypes_8h_source.html#l00012">qtypes.h:12</a></div></div>
 <div class="ttc" id="asys__sdl_8c_html_a1c806998ae72e568f777590b031cf8bb"><div class="ttname"><a href="sys__sdl_8c.html#a1c806998ae72e568f777590b031cf8bb">nocrashdialog</a></div><div class="ttdeci">static qbool nocrashdialog</div><div class="ttdef"><b>Definition</b> <a href="sys__sdl_8c_source.html#l00028">sys_sdl.c:28</a></div></div>
 </div><!-- fragment -->
-<p class="reference">Referenced by <a class="el" href="sys__shared_8c_source.html#l00677">Sys_Error()</a>, and <a class="el" href="sys__shared_8c_source.html#l00947">Sys_HandleCrash()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="sys__shared_8c_source.html#l00706">Sys_Error()</a>, and <a class="el" href="sys__shared_8c_source.html#l00976">Sys_HandleCrash()</a>.</p>
 
 </div>
 </div>
@@ -225,11 +261,11 @@ Variables</h2></td></tr>
 <div class="line"><span class="lineno">   48</span> </div>
 <div class="line"><span class="lineno">   49</span>    <span class="keywordflow">return</span> <a class="code hl_variable" href="glquake_8h.html#a820662f5b80a48256e2503352e9f51b9">data</a>;</div>
 <div class="line"><span class="lineno">   50</span>}</div>
-<div class="ttc" id="acommon_8h_html_aaef80d6b72e2476c82258733a8c4eced"><div class="ttname"><a href="common_8h.html#aaef80d6b72e2476c82258733a8c4eced">dp_strlcpy</a></div><div class="ttdeci">#define dp_strlcpy(dst, src, dsize)</div><div class="ttdef"><b>Definition</b> <a href="common_8h_source.html#l00298">common.h:298</a></div></div>
+<div class="ttc" id="acommon_8h_html_aaef80d6b72e2476c82258733a8c4eced"><div class="ttname"><a href="common_8h.html#aaef80d6b72e2476c82258733a8c4eced">dp_strlcpy</a></div><div class="ttdeci">#define dp_strlcpy(dst, src, dsize)</div><div class="ttdef"><b>Definition</b> <a href="common_8h_source.html#l00303">common.h:303</a></div></div>
 <div class="ttc" id="aglquake_8h_html_a820662f5b80a48256e2503352e9f51b9"><div class="ttname"><a href="glquake_8h.html#a820662f5b80a48256e2503352e9f51b9">data</a></div><div class="ttdeci">GLsizeiptr const GLvoid * data</div><div class="ttdef"><b>Definition</b> <a href="glquake_8h_source.html#l00638">glquake.h:638</a></div></div>
 <div class="ttc" id="amathlib_8h_html_a2d017cd3beb218080a7988e2deed2a11"><div class="ttname"><a href="mathlib_8h.html#a2d017cd3beb218080a7988e2deed2a11">min</a></div><div class="ttdeci">#define min(A, B)</div><div class="ttdef"><b>Definition</b> <a href="mathlib_8h_source.html#l00037">mathlib.h:37</a></div></div>
 <div class="ttc" id="aqdefs_8h_html_a119f8457078d7390fb45ea0838adb806"><div class="ttname"><a href="qdefs_8h.html#a119f8457078d7390fb45ea0838adb806">MAX_INPUTLINE</a></div><div class="ttdeci">#define MAX_INPUTLINE</div><div class="ttdoc">maximum size of console commandline, QuakeC strings, and many other text processing buffers</div><div class="ttdef"><b>Definition</b> <a href="qdefs_8h_source.html#l00094">qdefs.h:94</a></div></div>
-<div class="ttc" id="azone_8h_html_a35deb8ef816a08fb1bc8feac8db020c5"><div class="ttname"><a href="zone_8h.html#a35deb8ef816a08fb1bc8feac8db020c5">Z_Malloc</a></div><div class="ttdeci">#define Z_Malloc(size)</div><div class="ttdef"><b>Definition</b> <a href="zone_8h_source.html#l00154">zone.h:154</a></div></div>
+<div class="ttc" id="azone_8h_html_a35deb8ef816a08fb1bc8feac8db020c5"><div class="ttname"><a href="zone_8h.html#a35deb8ef816a08fb1bc8feac8db020c5">Z_Malloc</a></div><div class="ttdeci">#define Z_Malloc(size)</div><div class="ttdef"><b>Definition</b> <a href="zone_8h_source.html#l00161">zone.h:161</a></div></div>
 </div><!-- fragment -->
 <p class="reference">Referenced by <a class="el" href="keys_8c_source.html#l00750">Key_Parse_CommonKeys()</a>.</p>
 
@@ -256,7 +292,7 @@ Variables</h2></td></tr>
 <div class="line"><span class="lineno">   66</span>    <span class="keywordflow">return</span> <a class="code hl_variable" href="glquake_8h.html#af7ca775b6d9354291c4d7d01b8b2a8bc">SDL_GetTicks</a>();</div>
 <div class="line"><span class="lineno">   67</span>}</div>
 </div><!-- fragment -->
-<p class="reference">Referenced by <a class="el" href="sys__shared_8c_source.html#l00375">Sys_DirtyTime()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="sys__shared_8c_source.html#l00408">Sys_DirtyTime()</a>.</p>
 
 </div>
 </div>
@@ -286,10 +322,10 @@ Variables</h2></td></tr>
 <div class="line"><span class="lineno">   59</span>    <span class="keywordflow">if</span>(!<a class="code hl_function" href="sys_8h.html#ae9b9461780a044853793708c49317b28">Sys_CheckParm</a>(<span class="stringliteral">&quot;-nocrashdialog&quot;</span>))</div>
 <div class="line"><span class="lineno">   60</span>        <a class="code hl_variable" href="sys__sdl_8c.html#a1c806998ae72e568f777590b031cf8bb">nocrashdialog</a> = <span class="keyword">false</span>;</div>
 <div class="line"><span class="lineno">   61</span>}</div>
-<div class="ttc" id="asys_8h_html_a373bafd608adfe542c636ccfdfb2368e"><div class="ttname"><a href="sys_8h.html#a373bafd608adfe542c636ccfdfb2368e">Sys_Error</a></div><div class="ttdeci">void Sys_Error(const char *error,...) DP_FUNC_PRINTF(1) DP_FUNC_NORETURN</div><div class="ttdoc">Causes the entire program to exit ASAP.</div><div class="ttdef"><b>Definition</b> <a href="sys__shared_8c_source.html#l00677">sys_shared.c:677</a></div></div>
-<div class="ttc" id="asys_8h_html_ae9b9461780a044853793708c49317b28"><div class="ttname"><a href="sys_8h.html#ae9b9461780a044853793708c49317b28">Sys_CheckParm</a></div><div class="ttdeci">int Sys_CheckParm(const char *parm)</div><div class="ttdef"><b>Definition</b> <a href="sys__shared_8c_source.html#l00324">sys_shared.c:324</a></div></div>
+<div class="ttc" id="asys_8h_html_a373bafd608adfe542c636ccfdfb2368e"><div class="ttname"><a href="sys_8h.html#a373bafd608adfe542c636ccfdfb2368e">Sys_Error</a></div><div class="ttdeci">void Sys_Error(const char *error,...) DP_FUNC_PRINTF(1) DP_FUNC_NORETURN</div><div class="ttdoc">Causes the entire program to exit ASAP.</div><div class="ttdef"><b>Definition</b> <a href="sys__shared_8c_source.html#l00706">sys_shared.c:706</a></div></div>
+<div class="ttc" id="asys_8h_html_ae9b9461780a044853793708c49317b28"><div class="ttname"><a href="sys_8h.html#ae9b9461780a044853793708c49317b28">Sys_CheckParm</a></div><div class="ttdeci">int Sys_CheckParm(const char *parm)</div><div class="ttdef"><b>Definition</b> <a href="sys__shared_8c_source.html#l00318">sys_shared.c:318</a></div></div>
 </div><!-- fragment -->
-<p class="reference">Referenced by <a class="el" href="host_8c_source.html#l00370">Host_Init()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="host_8c_source.html#l00374">Host_Init()</a>.</p>
 
 </div>
 </div>
@@ -316,7 +352,7 @@ Variables</h2></td></tr>
 <div class="line"><span class="lineno">   23</span>    <a class="code hl_variable" href="glquake_8h.html#af7ca775b6d9354291c4d7d01b8b2a8bc">SDL_Quit</a>();</div>
 <div class="line"><span class="lineno">   24</span>}</div>
 </div><!-- fragment -->
-<p class="reference">Referenced by <a class="el" href="host_8c_source.html#l00569">Host_Shutdown()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="host_8c_source.html#l00573">Host_Shutdown()</a>.</p>
 
 </div>
 </div>
@@ -361,7 +397,7 @@ Variables</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="sys__sdl_8c_source.html#l00063">63</a> of file <a class="el" href="sys__sdl_8c_source.html">sys_sdl.c</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="sys__shared_8c_source.html#l00375">Sys_DirtyTime()</a>, <a class="el" href="sys__shared_8c_source.html#l00350">Sys_Init_Commands()</a>, and <a class="el" href="sys__shared_8c_source.html#l00472">Sys_Sleep()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="sys__shared_8c_source.html#l00408">Sys_DirtyTime()</a>, <a class="el" href="sys__shared_8c_source.html#l00344">Sys_Init_Commands()</a>, and <a class="el" href="sys__shared_8c_source.html#l00491">Sys_Sleep()</a>.</p>
 
 </div>
 </div>

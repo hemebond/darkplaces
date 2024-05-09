@@ -26,7 +26,7 @@ var structprvm__prog__t =
     [ "fieldoffsets", "structprvm__prog__t.html#a46d13fa855101327aeba3cfe585eb301", null ],
     [ "filecrc", "structprvm__prog__t.html#a2591985746217347d6abf25a0294a7a8", null ],
     [ "firstfreeknownstring", "structprvm__prog__t.html#aca0e01b9d8d9c60b7787a08f6241acb3", null ],
-    [ "flag", "structprvm__prog__t.html#ad7d2a2e4d724148773a8b539a6016e63", null ],
+    [ "flag", "structprvm__prog__t.html#a84dd4738a198b70939be7e83d9d2f413", null ],
     [ "fp", "structprvm__prog__t.html#a417822b714be5ea5478aa4e4da2354dc", null ],
     [ "free_edict", "structprvm__prog__t.html#a3ac6a012fceed5a46dad5f2a7102556b", null ],
     [ "funcoffsets", "structprvm__prog__t.html#a2675e0f6aafd8c60af7e9baa4cdfa1ce", null ],

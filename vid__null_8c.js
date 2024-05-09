@@ -7,7 +7,7 @@ var vid__null_8c =
     [ "VID_BuildJoyState", "vid__null_8c.html#af2feaa237f6fc4def5fdedd22fb788bd", null ],
     [ "VID_Finish", "vid__null_8c.html#a5ae69825fb5373bc3594061a29a72538", null ],
     [ "VID_Init", "vid__null_8c.html#a7028e508084b68c030392a6518f61598", null ],
-    [ "VID_InitMode", "vid__null_8c.html#a8c50e0e2859df39706e1f57805e8ed3d", null ],
+    [ "VID_InitMode", "vid__null_8c.html#a8d0b5b32a2dca4207ae1c2503918bbcb", null ],
     [ "VID_ListModes", "vid__null_8c.html#a49952f92b6943a015203828147a82c8e", null ],
     [ "VID_Shutdown", "vid__null_8c.html#a9b17aba52e7f8862c86bee62a5b2f8fd", null ],
     [ "cl_available", "vid__null_8c.html#a1e7de339a712200de9adf32b48f4aee3", null ],

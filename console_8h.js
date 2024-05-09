@@ -19,7 +19,7 @@ var console_8h =
     [ "Con_DisplayList", "console_8h.html#af27143432d3a889ef925e8b689e59f1b", null ],
     [ "Con_DPrint", "console_8h.html#aae665de4dbcbf2047ee305901e2f6627", null ],
     [ "Con_DPrintf", "console_8h.html#ac24540d359438bf6506131b3f5483c23", null ],
-    [ "Con_DrawConsole", "console_8h.html#a08c9c35606c0cf6f5ddd8854bd37a8fd", null ],
+    [ "Con_DrawConsole", "console_8h.html#a526766c2bfde6ea15c935ca4928ba494", null ],
     [ "Con_DrawNotify", "console_8h.html#a3d12d1ba70924a345c9d4065ab6ba508", null ],
     [ "Con_Init", "console_8h.html#a020f7c3c712324e75a10e2321875cae9", null ],
     [ "Con_Init_Commands", "console_8h.html#ab1277af9341a4342cccd758e183fc2ff", null ],

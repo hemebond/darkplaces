@@ -37,6 +37,7 @@ var zone_8h =
     [ "Mem_ExpandableArray_NewArray", "zone_8h.html#a211e7367323b1791e87715797bdee714", null ],
     [ "Mem_ExpandableArray_RecordAtIndex", "zone_8h.html#a5dddb61407d9ce3f32d90b77b76837eb", null ],
     [ "Mem_IsAllocated", "zone_8h.html#a24b8df57aba4fa81fcb8e1c483695d04", null ],
+    [ "Mem_Size", "zone_8h.html#a7236222be4d5d026f21b365b6389a531", null ],
     [ "Memory_Init", "zone_8h.html#acabb68b7ea198f4e36772faa43ca8ecb", null ],
     [ "Memory_Init_Commands", "zone_8h.html#a6757fc29bd82002d4407fa5bf4b8ffbf", null ],
     [ "Memory_Shutdown", "zone_8h.html#afe28b2bfcc2dd995c4fec5da4fbb702c", null ],
