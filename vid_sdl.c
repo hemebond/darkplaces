@@ -83,10 +83,6 @@ static SDL_Window *window;
 
 // Input handling
 
-#ifndef SDLK_PERCENT
-#define SDLK_PERCENT '%'
-#endif
-
 static int MapKey( unsigned int sdlkey )
 {
 	switch(sdlkey)
@@ -1049,6 +1045,7 @@ static keynum_t buttonremap[] =
 void Sys_SDL_HandleEvents(void)
 {
 	int keycode;
+	SDL_Keycode sdl_keycode;
 	int i;
 	const char *chp;
 	qbool isdown;
@@ -1070,17 +1067,21 @@ void Sys_SDL_HandleEvents(void)
 			case SDL_EVENT_KEY_UP:
 #ifdef DEBUGSDLEVENTS
 				if (event.type == SDL_EVENT_KEY_DOWN)
-					Con_DPrintf("SDL_Event: SDL_EVENT_KEY_DOWN %i\n", event.key.key);
+					Con_DPrintf("SDL_Event: SDL_EVENT_KEY_DOWN %s (%i)\n", SDL_GetKeyName(event.key.key), event.key.key);
 				else
-					Con_DPrintf("SDL_Event: SDL_EVENT_KEY_UP %i\n", event.key.key);
+					Con_DPrintf("SDL_Event: SDL_EVENT_KEY_UP %s (%i)\n", SDL_GetKeyName(event.key.key), event.key.key);
 #endif
-				keycode = MapKey(event.key.key);
+				// FIXME: Mapping sdl_keycode to keycode is a workaround. Should change the entire stack to just use SDL
+				sdl_keycode = SDL_GetKeyFromScancode(event.key.scancode, event.key.mod, false);
+				keycode = MapKey(sdl_keycode);
 				isdown = event.key.down;
 				unicode = 0;
 				if(isdown)
 				{
 					if(SDL_PollEvent(&event))
 					{
+						// This seems to get called during gameplay, but not when using the console
+
 						if(event.type == SDL_EVENT_TEXT_INPUT)
 						{
 							// combine key code from SDL_EVENT_KEY_DOWN event and character
@@ -1098,8 +1099,15 @@ void Sys_SDL_HandleEvents(void)
 						}
 					}
 				}
-				if (!VID_JoyBlockEmulatedKeys(keycode))
+				// FIXME: The current handler thinks unicode will be the ascii code
+				if (unicode == 0) {
+					if (keycode >= 0 && keycode <= 127) {
+						unicode = keycode;
+					}
+				}
+				if (!VID_JoyBlockEmulatedKeys(keycode)) {
 					Key_Event(keycode, unicode, isdown);
+				}
 				break;
 			case SDL_EVENT_MOUSE_BUTTON_DOWN:
 			case SDL_EVENT_MOUSE_BUTTON_UP:
@@ -1348,7 +1356,8 @@ qbool GL_ExtensionSupported(const char *name)
 static void VID_ApplyDisplayMode(const viddef_mode_t *mode)
 {
 	uint32_t fullscreenwanted;
-	SDL_DisplayID displaywanted = bound(0, mode->display, vid_info_displaycount.integer - 1);
+	// SDL_DisplayID displaywanted = bound(0, mode->display, vid_info_displaycount.integer - 1);
+	SDL_DisplayID displaywanted = SDL_GetDisplayForWindow(window);
 	SDL_DisplayMode modefinal;
 	const SDL_DisplayMode *displayMode;
 
@@ -1439,7 +1448,6 @@ static void VID_ApplyDisplayMode(const viddef_mode_t *mode)
 				return;
 			}
 
-			// SDL_copyp(&modefinal, &modecurrent);
 			if (memcmp(&modecurrent, &modefinal, sizeof(modecurrent)) != 0)
 			{
 				if (mode->width != modefinal.w || mode->height != modefinal.h)
