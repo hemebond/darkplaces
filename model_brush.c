@@ -2732,7 +2732,7 @@ static void Mod_Q1BSP_LoadFaces(sizebuf_t *sb)
 		}
 
 		// check if we should apply a lightmap to this
-		if ((!(surface->lightmapinfo->texinfo->q1flags & TEX_SPECIAL) || surface->lightmapinfo->samples) && loadmodel->brushq1.lightdata)
+		if ((!(surface->lightmapinfo->texinfo->q1flags & TEX_SPECIAL) || surface->lightmapinfo->samples))
 		{
 			if (ssize > 256 || tsize > 256)
 				Host_Error("Bad surface extents");
