@@ -2,7 +2,8 @@
  * Include this BEFORE darkplaces.h because it breaks wrapping
  * _Static_assert. Cloudwalk has no idea how or why so don't ask.
  */
-#include <SDL.h>
+// #include <SDL.h>
+#include <SDL3/SDL.h>
 
 #include "darkplaces.h"
 
@@ -51,8 +52,8 @@ char *Sys_SDL_GetClipboardData (void)
 
 void Sys_SDL_Init(void)
 {
-	// we don't know which systems we'll want to init, yet...
-	if (SDL_Init(0) < 0)
+	// Pass in 0 because we don't know which systems we'll want to init, yet...
+	if (!SDL_Init(0))
 		Sys_Error("SDL_Init failed: %s\n", SDL_GetError());
 
 	// COMMANDLINEOPTION: sdl: -nocrashdialog disables "Engine Error" crash dialog boxes
