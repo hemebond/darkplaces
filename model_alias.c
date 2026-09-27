@@ -924,7 +924,6 @@ static void Mod_MDL_LoadFrames (unsigned char* datapointer, int inverts, int *ve
 
 void Mod_BuildAliasSkinsFromSkinFiles(texture_t *skin, skinfile_t *skinfile, const char *meshname, const char *shadername)
 {
-	int i;
 	char stripbuf[MAX_QPATH];
 	skinfileitem_t *skinfileitem;
 	if(developer_extra.integer)
@@ -932,7 +931,7 @@ void Mod_BuildAliasSkinsFromSkinFiles(texture_t *skin, skinfile_t *skinfile, con
 	if (skinfile)
 	{
 		// the skin += loadmodel->num_surfaces part of this is because data_textures on alias models is arranged as [numskins][numsurfaces]
-		for (i = 0;skinfile;skinfile = skinfile->next, i++, skin += loadmodel->num_surfaces)
+		for (;skinfile;skinfile = skinfile->next, skin += loadmodel->num_surfaces)
 		{
 			memset(skin, 0, sizeof(*skin));
 			// see if a mesh

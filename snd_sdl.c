@@ -17,14 +17,15 @@ along with this program; if not, write to the Free Software
 Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
 */
 #include <SDL3/SDL_audio.h>
-#include <math.h>
-// #include <SDL.h>
 #include <SDL3/SDL.h>
 
 #include "darkplaces.h"
 #include "vid.h"
 
 #include "snd_main.h"
+
+
+void SDLCALL SimpleSDLAudioCallback(void *userdata, SDL_AudioStream *stream, int additional_amount, int total_amount);
 
 
 static unsigned int sdlaudiotime = 0;
@@ -94,7 +95,7 @@ static void Buffer_Callback (void *userdata, Uint8 *stream, int len)
 }
 
 
-void SDLCALL MyNewAudioCallback(void *userdata, SDL_AudioStream *stream, int additional_amount, int total_amount) {
+void SDLCALL SimpleSDLAudioCallback(void *userdata, SDL_AudioStream *stream, int additional_amount, int total_amount) {
 	if (additional_amount > 0) {
 		Uint8 *data = SDL_stack_alloc(Uint8, additional_amount);
 		if (data) {
@@ -116,9 +117,6 @@ May return a suggested format if the requested format isn't available
 */
 qbool SndSys_Init (snd_format_t* fmt)
 {
-	// unsigned int buffersize;
-	// SDL_AudioSpec wantspec;
-	// SDL_AudioSpec obtainspec;
 	SDL_AudioStream *stream;
 
 	snd_threaded = false;
@@ -131,49 +129,13 @@ qbool SndSys_Init (snd_format_t* fmt)
 		return false;
 	}
 
-	#if 0
-	// SDL2 wiki recommends this range
-	buffersize = bound(512, ceil((double)fmt->speed * snd_bufferlength.value / 1000.0), 8192);
-
-	// Init the SDL Audio subsystem
-	memset(&wantspec, 0, sizeof(wantspec));
-	wantspec.callback = Buffer_Callback;
-	wantspec.userdata = NULL;
-	wantspec.freq = fmt->speed;
-	wantspec.format = fmt->width == 1 ? SDL_AUDIO_U8 : (fmt->width == 2 ? SDL_AUDIO_S16 : SDL_AUDIO_F32LE);
-	wantspec.channels = fmt->channels;
-	wantspec.samples = CeilPowerOf2(buffersize);  // needs to be a power of 2 on some platforms.
-
-	Con_Printf("Wanted audio Specification:\n"
-				"    Channels  : %i\n"
-				"    Format    : 0x%X\n"
-				"    Frequency : %i\n"
-				"    Samples   : %i\n",
-				wantspec.channels, wantspec.format, wantspec.freq, wantspec.samples);
-
-	if ((audio_device = SDL_OpenAudioDevice(NULL, 0, &wantspec, &obtainspec, SDL_AUDIO_ALLOW_FREQUENCY_CHANGE | SDL_AUDIO_ALLOW_CHANNELS_CHANGE)) == 0)
-	{
-		Con_Printf(CON_ERROR "Failed to open the audio device! (%s)\n", SDL_GetError() );
-		return false;
-	}
-	#endif
-
 	const SDL_AudioSpec spec = {
 		fmt->width == 1 ? SDL_AUDIO_U8 : (fmt->width == 2 ? SDL_AUDIO_S16 : SDL_AUDIO_F32LE),
 		fmt->channels,
 		fmt->speed
 	};
-    stream = SDL_OpenAudioDeviceStream(SDL_AUDIO_DEVICE_DEFAULT_PLAYBACK, &spec, MyNewAudioCallback, NULL);
+    stream = SDL_OpenAudioDeviceStream(SDL_AUDIO_DEVICE_DEFAULT_PLAYBACK, &spec, SimpleSDLAudioCallback, NULL);
     audio_device = SDL_GetAudioStreamDevice(stream);
-
-	// Con_Printf("Obtained audio specification:\n"
-	// 			"    Channels  : %i\n"
-	// 			"    Format    : 0x%X\n"
-	// 			"    Frequency : %i\n",
-	// 			obtainspec.channels, obtainspec.format, obtainspec.freq);
-
-	// fmt->speed = obtainspec.freq;
-	// fmt->channels = obtainspec.channels;
 
 	snd_threaded = true;
 
@@ -182,7 +144,6 @@ qbool SndSys_Init (snd_format_t* fmt)
 		Cvar_SetValueQuick (&snd_channellayout, SND_CHANNELLAYOUT_STANDARD);
 
 	sdlaudiotime = 0;
-	// SDL_ResumeAudioDevice(audio_device);
 	SDL_ResumeAudioDevice(SDL_GetAudioStreamDevice(stream));
 
 	return true;

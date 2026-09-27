@@ -1798,7 +1798,7 @@ static qbool VID_InitModeGL(const viddef_mode_t *mode)
 	SDL_GL_SetAttribute(SDL_GL_CONTEXT_FLAGS, (gl_debug.integer > 0 ? SDL_GL_CONTEXT_DEBUG_FLAG : 0));
 
 	window = SDL_CreateWindow(gamename, mode->width, mode->height, windowflags);
-	if (window == NULL)
+	if (!window)
 	{
 		Con_Printf(CON_ERROR "Failed to set video mode to %ix%i: %s\n", mode->width, mode->height, SDL_GetError());
 		VID_Shutdown();
@@ -1806,25 +1806,25 @@ static qbool VID_InitModeGL(const viddef_mode_t *mode)
 	}
 
 	context = SDL_GL_CreateContext(window);
-	if (context == NULL)
+	if (!context)
 		Sys_Error("Failed to initialize OpenGL context: %s\n", SDL_GetError());
 
 	GL_InitFunctions();
 
-#if !defined(USE_GLES2) && !defined(MACOSX)
-	// NVIDIA hates the Core profile and limits the version to the minimum we specified.
-	// HACK: to detect NVIDIA we first need a context, fortunately replacing it takes a few milliseconds
-	gl_vendor = (const char *)qglGetString(GL_VENDOR);
-	if (strncmp(gl_vendor, "NVIDIA", 6) == 0)
-	{
-		Con_DPrint("The Way It's Meant To Be Played: replacing OpenGL Core profile with Compatibility profile...\n");
-		SDL_GL_DestroyContext(context);
-		SDL_GL_SetAttribute(SDL_GL_CONTEXT_PROFILE_MASK, SDL_GL_CONTEXT_PROFILE_COMPATIBILITY);
-		context = SDL_GL_CreateContext(window);
-		if (context == NULL)
-			Sys_Error("Failed to initialize OpenGL context: %s\n", SDL_GetError());
-	}
-#endif
+	#if !defined(USE_GLES2) && !defined(MACOSX)
+		// NVIDIA hates the Core profile and limits the version to the minimum we specified.
+		// HACK: to detect NVIDIA we first need a context, fortunately replacing it takes a few milliseconds
+		gl_vendor = (const char *)qglGetString(GL_VENDOR);
+		if (strncmp(gl_vendor, "NVIDIA", 6) == 0)
+		{
+			Con_DPrint("The Way It's Meant To Be Played: replacing OpenGL Core profile with Compatibility profile...\n");
+			SDL_GL_DestroyContext(context);
+			SDL_GL_SetAttribute(SDL_GL_CONTEXT_PROFILE_MASK, SDL_GL_CONTEXT_PROFILE_COMPATIBILITY);
+			context = SDL_GL_CreateContext(window);
+			if (context == NULL)
+				Sys_Error("Failed to initialize OpenGL context: %s\n", SDL_GetError());
+		}
+	#endif
 
 	// apply vid_vsync
 	Cvar_Callback(&vid_vsync);
