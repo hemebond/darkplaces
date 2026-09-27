@@ -17,7 +17,6 @@ along with this program; if not, write to the Free Software
 Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
 */
 #undef WIN32_LEAN_AND_MEAN  //hush a warning, SDL.h redefines this
-// #include <SDL.h>
 #include <SDL3/SDL.h>
 #include <stdio.h>
 
@@ -1567,16 +1566,6 @@ void VID_Init (void)
 	Cvar_RegisterCallback(&vid_vsync,                  VID_SetVsync_c);
 	Cvar_RegisterCallback(&vid_mouse_clickthrough,     VID_SetHints_c);
 	Cvar_RegisterCallback(&vid_minimize_on_focus_loss, VID_SetHints_c);
-
-	// DPI scaling prevents use of the native resolution, causing blurry rendering
-	// and/or mouse cursor problems and/or incorrect render area, so we need to opt-out.
-	// Must be set before first SDL_INIT_VIDEO. Documented in SDL_hints.h.
-#ifdef WIN32
-	// make SDL coordinates == hardware pixels
-	SDL_SetHint(SDL_HINT_WINDOWS_DPI_SCALING, "0");
-	// use best available awareness mode
-	SDL_SetHint(SDL_HINT_WINDOWS_DPI_AWARENESS, "permonitorv2");
-#endif
 
 	if (!SDL_Init(SDL_INIT_VIDEO))
 		Sys_Error ("Failed to init SDL video subsystem: %s", SDL_GetError());
