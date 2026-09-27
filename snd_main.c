@@ -320,12 +320,11 @@ static void S_PlayVol_f(cmd_state_t *cmd)
 
 static void S_SoundList_f(cmd_state_t *cmd)
 {
-	unsigned int i;
 	sfx_t *sfx;
 	unsigned int total;
 
 	total = 0;
-	for (sfx = known_sfx, i = 0; sfx != NULL; sfx = sfx->next, i++)
+	for (sfx = known_sfx; sfx != NULL; sfx = sfx->next)
 	{
 		if (sfx->fetcher != NULL)
 		{

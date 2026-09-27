@@ -16,7 +16,7 @@ jobs:
       - name: Install dependencies
         run: |
           apt update
-          apt install --yes build-essential git libjpeg-dev libsdl2-dev libcurl4-openssl-dev libpng-dev libfreetype-dev libvorbis-dev
+          apt install --yes build-essential git libjpeg-dev libsdl3-dev libcurl4-openssl-dev libpng-dev libfreetype-dev libvorbis-dev
 
       - name: Fetch repository
         uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
@@ -68,7 +68,7 @@ jobs:
             mingw-w64-ucrt-x86_64-libpng
             mingw-w64-ucrt-x86_64-libogg
             mingw-w64-ucrt-x86_64-libvorbis
-            mingw-w64-ucrt-x86_64-SDL2
+            mingw-w64-ucrt-x86_64-sdl3
 
       - name: Build
         run: |

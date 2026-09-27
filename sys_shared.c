@@ -732,9 +732,10 @@ void Sys_Error (const char *error, ...)
 
 	// set output to blocking stderr
 	sys.outfd = fileno(stderr);
-#ifndef WIN32
-	fcntl(sys.outfd, F_SETFL, fcntl(sys.outfd, F_GETFL, 0) & ~O_NONBLOCK);
-#endif
+
+	#ifndef WIN32
+		fcntl(sys.outfd, F_SETFL, fcntl(sys.outfd, F_GETFL, 0) & ~O_NONBLOCK);
+	#endif
 
 	va_start (argptr,error);
 	dpvsnprintf (string, sizeof (string), error, argptr);

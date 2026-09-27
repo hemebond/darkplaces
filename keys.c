@@ -1287,10 +1287,10 @@ static void Key_Console(cmd_state_t *cmd, int key, int unicode)
 	}
 
 add_char:
-
 	// non printable
-	if (unicode < 32)
+	if (unicode < 32) {
 		return;
+	}
 
 	key_linepos = Key_AddChar(unicode, true);
 }
@@ -1832,8 +1832,7 @@ void Key_EventQueue_Unblock(void)
 	eventqueue_idx = 0;
 }
 
-void
-Key_Event (int key, int ascii, qbool down)
+void Key_Event(int key, int ascii, qbool down)
 {
 	cmd_state_t *cmd = cmd_local;
 	const char *bind;

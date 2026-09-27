@@ -406,7 +406,7 @@ void Host_Init (void)
 	// FIXME: this is evil, but possibly temporary
 	// LadyHavoc: doesn't seem very temporary...
 	// LadyHavoc: made this a saved cvar
-// COMMANDLINEOPTION: Console: -developer enables warnings and other notices (RECOMMENDED for mod developers)
+	// COMMANDLINEOPTION: Console: -developer enables warnings and other notices (RECOMMENDED for mod developers)
 	if (Sys_CheckParm("-developer"))
 	{
 		developer.value = developer.integer = 1;

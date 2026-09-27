@@ -683,30 +683,30 @@ void VID_ClearExtensions(void)
 
 void GL_InitFunctions(void)
 {
-#ifndef USE_GLES2
-	const glfunction_t *func;
-	qbool missingrequiredfuncs = false;
-	static char missingfuncs[16384];
+	#ifndef USE_GLES2
+		const glfunction_t *func;
+		qbool missingrequiredfuncs = false;
+		static char missingfuncs[16384];
 
-	// first fetch the function pointers for everything - after this we can begin making GL calls.
-	for (func = openglfuncs; func->name != NULL; func++)
-		*func->funcvariable = (void *)GL_GetProcAddress(func->name);
+		// first fetch the function pointers for everything - after this we can begin making GL calls.
+		for (func = openglfuncs; func->name != NULL; func++)
+			*func->funcvariable = (void *)GL_GetProcAddress(func->name);
 
-	missingfuncs[0] = 0;
-	for (func = openglfuncs; func && func->name != NULL; func++)
-	{
-		if (!*func->funcvariable && !strcmp(func->extension, "core"))
+		missingfuncs[0] = 0;
+		for (func = openglfuncs; func && func->name != NULL; func++)
 		{
-			Con_DPrintf("GL context is missing required function \"%s\"!\n", func->name);
-			missingrequiredfuncs = true;
-			dp_strlcat(missingfuncs, " ", sizeof(missingfuncs));
-			dp_strlcat(missingfuncs, func->name, sizeof(missingfuncs));
+			if (!*func->funcvariable && !strcmp(func->extension, "core"))
+			{
+				Con_DPrintf("GL context is missing required function \"%s\"!\n", func->name);
+				missingrequiredfuncs = true;
+				dp_strlcat(missingfuncs, " ", sizeof(missingfuncs));
+				dp_strlcat(missingfuncs, func->name, sizeof(missingfuncs));
+			}
 		}
-	}
 
-	if (missingrequiredfuncs)
-		Sys_Error("OpenGL driver/hardware lacks required features:\n%s", missingfuncs);
-#endif
+		if (missingrequiredfuncs)
+			Sys_Error("OpenGL driver/hardware lacks required features:\n%s", missingfuncs);
+	#endif
 }
 
 void GL_Setup(void)
@@ -724,25 +724,25 @@ void GL_Setup(void)
 	Con_Printf("GL_RENDERER: %s\n", gl_renderer);
 	Con_Printf("GL_VERSION: %s\n", gl_version);
 
-#ifndef USE_GLES2
-	qglGetIntegerv(GL_MAJOR_VERSION, &majorv);
-	qglGetIntegerv(GL_MINOR_VERSION, &minorv);
-	vid.support.glversion = 10 * majorv + minorv;
-	if (vid.support.glversion < 32)
-		// fallback, should never get here: GL context creation should have failed
-		Sys_Error("OpenGL driver/hardware supports version %i.%i but 3.2 is the minimum\n", majorv, minorv);
+	#ifndef USE_GLES2
+		qglGetIntegerv(GL_MAJOR_VERSION, &majorv);
+		qglGetIntegerv(GL_MINOR_VERSION, &minorv);
+		vid.support.glversion = 10 * majorv + minorv;
+		if (vid.support.glversion < 32)
+			// fallback, should never get here: GL context creation should have failed
+			Sys_Error("OpenGL driver/hardware supports version %i.%i but 3.2 is the minimum\n", majorv, minorv);
 
-	qglGetIntegerv(GL_NUM_EXTENSIONS, &numextensions);
-	Con_DPrint("GL_EXTENSIONS:\n");
-	for (j = 0; j < numextensions; j++)
-	{
-		const char *ext = (const char *)qglGetStringi(GL_EXTENSIONS, j);
-		Con_DPrintf(" %s", ext);
-		if(j && !(j % 3))
-			Con_DPrintf("\n");
-	}
-	Con_DPrint("\n");
-#endif //USE_GLES2
+		qglGetIntegerv(GL_NUM_EXTENSIONS, &numextensions);
+		Con_DPrint("GL_EXTENSIONS:\n");
+		for (j = 0; j < numextensions; j++)
+		{
+			const char *ext = (const char *)qglGetStringi(GL_EXTENSIONS, j);
+			Con_DPrintf(" %s", ext);
+			if(j && !(j % 3))
+				Con_DPrintf("\n");
+		}
+		Con_DPrint("\n");
+	#endif //USE_GLES2
 
 	Con_DPrint("Checking OpenGL extensions...\n");
 
@@ -755,99 +755,98 @@ void GL_Setup(void)
 		vid.support.glshaderversion = 100;
 	Con_Printf("Detected GLSL version %i\n", vid.support.glshaderversion);
 
-#ifdef USE_GLES2
-	// GLES devices in general do not like GL_BGRA, so use GL_RGBA
-	vid.forcetextype = TEXTYPE_RGBA;
-#else
-	// GL drivers generally prefer GL_BGRA
-	vid.forcetextype = GL_BGRA;
-#endif
+	#ifdef USE_GLES2
+		// GLES devices in general do not like GL_BGRA, so use GL_RGBA
+		vid.forcetextype = TEXTYPE_RGBA;
+	#else
+		// GL drivers generally prefer GL_BGRA
+		vid.forcetextype = GL_BGRA;
+	#endif
 
 	vid.support.amd_texture_texture4 = GL_CheckExtension("GL_AMD_texture_texture4", "-notexture4", false);
 	vid.support.arb_texture_gather = GL_CheckExtension("GL_ARB_texture_gather", "-notexturegather", false);
 	vid.support.ext_texture_compression_s3tc = GL_CheckExtension("GL_EXT_texture_compression_s3tc", "-nos3tc", false);
 	vid.support.ext_texture_filter_anisotropic = GL_CheckExtension("GL_EXT_texture_filter_anisotropic", "-noanisotropy", false);
-#ifndef USE_GLES2
-	vid.support.ext_texture_srgb = true; // GL3 core, but not GLES2
-#endif
+	#ifndef USE_GLES2
+		vid.support.ext_texture_srgb = true; // GL3 core, but not GLES2
+	#endif
 	vid.support.arb_debug_output = GL_CheckExtension("GL_ARB_debug_output", "-nogldebugoutput", false);
 	vid.allowalphatocoverage = false;
 
-// COMMANDLINEOPTION: GL: -noanisotropy disables GL_EXT_texture_filter_anisotropic (allows higher quality texturing)
-// COMMANDLINEOPTION: GL: -nos3tc disables GL_EXT_texture_compression_s3tc (which allows use of .dds texture caching)
-// COMMANDLINEOPTION: GL: -notexture4 disables GL_AMD_texture_texture4 (which provides fetch4 sampling)
-// COMMANDLINEOPTION: GL: -notexturegather disables GL_ARB_texture_gather (which provides fetch4 sampling)
-// COMMANDLINEOPTION: GL: -nogldebugoutput disables GL_ARB_debug_output (which provides the gl_debug feature, if enabled)
+	// COMMANDLINEOPTION: GL: -noanisotropy disables GL_EXT_texture_filter_anisotropic (allows higher quality texturing)
+	// COMMANDLINEOPTION: GL: -nos3tc disables GL_EXT_texture_compression_s3tc (which allows use of .dds texture caching)
+	// COMMANDLINEOPTION: GL: -notexture4 disables GL_AMD_texture_texture4 (which provides fetch4 sampling)
+	// COMMANDLINEOPTION: GL: -notexturegather disables GL_ARB_texture_gather (which provides fetch4 sampling)
+	// COMMANDLINEOPTION: GL: -nogldebugoutput disables GL_ARB_debug_output (which provides the gl_debug feature, if enabled)
 
-#ifdef WIN32
-	// gl_texturecompression_color is somehow broken on AMD's Windows driver,
-	// see: https://gitlab.com/xonotic/darkplaces/-/issues/228
-	// HACK: force it off (less bad than adding hacky checks to the renderer)
-	if (strncmp(gl_renderer, "AMD Radeon", 10) == 0)
-	{
-		Cvar_SetQuick(&gl_texturecompression_color, "0");
-		gl_texturecompression_color.flags |= CF_READONLY;
-	}
-#endif
+	#ifdef WIN32
+		// gl_texturecompression_color is somehow broken on AMD's Windows driver,
+		// see: https://gitlab.com/xonotic/darkplaces/-/issues/228
+		// HACK: force it off (less bad than adding hacky checks to the renderer)
+		if (strncmp(gl_renderer, "AMD Radeon", 10) == 0)
+		{
+			Cvar_SetQuick(&gl_texturecompression_color, "0");
+			gl_texturecompression_color.flags |= CF_READONLY;
+		}
+	#endif
 
-#ifdef GL_MAX_DRAW_BUFFERS
-	qglGetIntegerv(GL_MAX_DRAW_BUFFERS, (GLint*)&vid.maxdrawbuffers);
-	CHECKGLERROR
-#endif
+	#ifdef GL_MAX_DRAW_BUFFERS
+		qglGetIntegerv(GL_MAX_DRAW_BUFFERS, (GLint*)&vid.maxdrawbuffers);
+		CHECKGLERROR
+	#endif
 	qglGetIntegerv(GL_MAX_TEXTURE_SIZE, (GLint*)&vid.maxtexturesize_2d);
 	CHECKGLERROR
-#ifdef GL_MAX_CUBE_MAP_TEXTURE_SIZE
-#ifdef USE_GLES2
-	if (GL_CheckExtension("GL_ARB_texture_cube_map", "-nocubemap", false))
-#endif
-	{
-		qglGetIntegerv(GL_MAX_CUBE_MAP_TEXTURE_SIZE, (GLint*)&vid.maxtexturesize_cubemap);
-		Con_DPrintf("GL_MAX_CUBE_MAP_TEXTURE_SIZE = %i\n", vid.maxtexturesize_cubemap);
-	}
-	CHECKGLERROR
-#endif
-#ifdef GL_MAX_3D_TEXTURE_SIZE
-#ifdef USE_GLES2
-	if (GL_CheckExtension("GL_EXT_texture3D", "-notexture3d", false)
-	 || GL_CheckExtension("GL_OES_texture3D", "-notexture3d", false))
-#endif
-	{
-		qglGetIntegerv(GL_MAX_3D_TEXTURE_SIZE, (GLint*)&vid.maxtexturesize_3d);
-		Con_DPrintf("GL_MAX_3D_TEXTURE_SIZE = %i\n", vid.maxtexturesize_3d);
-	}
-#endif
-	CHECKGLERROR
-
-#ifdef USE_GLES2
-	Con_Print("Using GLES2 rendering path\n");
-	vid.renderpath = RENDERPATH_GLES2;
-	vid.sRGBcapable2D = false;
-	vid.sRGBcapable3D = false;
-#else
-	Con_Print("Using GL32 rendering path\n");
-	vid.renderpath = RENDERPATH_GL32;
-	vid.sRGBcapable2D = false;
-	vid.sRGBcapable3D = true;
-	// enable multisample antialiasing if possible
-	vid.allowalphatocoverage = true; // but see below, it may get turned to false again if GL_SAMPLES is <= 1
-	{
-		int samples = 0;
-		qglGetIntegerv(GL_SAMPLES, &samples);
-		vid.mode.samples = samples;
-		if (samples > 1)
-			qglEnable(GL_MULTISAMPLE);
-		else
-			vid.allowalphatocoverage = false;
-	}
-	// currently MSAA antialiasing is not implemented for fbo viewports, so we actually have to force this off anyway.
-	vid.allowalphatocoverage = false;
-#endif
+	#ifdef GL_MAX_CUBE_MAP_TEXTURE_SIZE
+		#ifdef USE_GLES2
+			if (GL_CheckExtension("GL_ARB_texture_cube_map", "-nocubemap", false))
+		#endif
+		{
+			qglGetIntegerv(GL_MAX_CUBE_MAP_TEXTURE_SIZE, (GLint*)&vid.maxtexturesize_cubemap);
+			Con_DPrintf("GL_MAX_CUBE_MAP_TEXTURE_SIZE = %i\n", vid.maxtexturesize_cubemap);
+		}
+		CHECKGLERROR
+	#endif
+	#ifdef GL_MAX_3D_TEXTURE_SIZE
+		#ifdef USE_GLES2
+			if (GL_CheckExtension("GL_EXT_texture3D", "-notexture3d", false) || GL_CheckExtension("GL_OES_texture3D", "-notexture3d", false))
+		#endif
+		{
+			qglGetIntegerv(GL_MAX_3D_TEXTURE_SIZE, (GLint*)&vid.maxtexturesize_3d);
+			Con_DPrintf("GL_MAX_3D_TEXTURE_SIZE = %i\n", vid.maxtexturesize_3d);
+		}
+	#endif
 	CHECKGLERROR
 
-#ifdef GL_MAX_TEXTURE_MAX_ANISOTROPY_EXT
-	if (vid.support.ext_texture_filter_anisotropic)
-		qglGetIntegerv(GL_MAX_TEXTURE_MAX_ANISOTROPY_EXT, (GLint*)&vid.max_anisotropy);
-#endif
+	#ifdef USE_GLES2
+		Con_Print("Using GLES2 rendering path\n");
+		vid.renderpath = RENDERPATH_GLES2;
+		vid.sRGBcapable2D = false;
+		vid.sRGBcapable3D = false;
+	#else
+		Con_Print("Using GL32 rendering path\n");
+		vid.renderpath = RENDERPATH_GL32;
+		vid.sRGBcapable2D = false;
+		vid.sRGBcapable3D = true;
+		// enable multisample antialiasing if possible
+		vid.allowalphatocoverage = true; // but see below, it may get turned to false again if GL_SAMPLES is <= 1
+		{
+			int samples = 0;
+			qglGetIntegerv(GL_SAMPLES, &samples);
+			vid.mode.samples = samples;
+			if (samples > 1)
+				qglEnable(GL_MULTISAMPLE);
+			else
+				vid.allowalphatocoverage = false;
+		}
+		// currently MSAA antialiasing is not implemented for fbo viewports, so we actually have to force this off anyway.
+		vid.allowalphatocoverage = false;
+	#endif
+	CHECKGLERROR
+
+	#ifdef GL_MAX_TEXTURE_MAX_ANISOTROPY_EXT
+		if (vid.support.ext_texture_filter_anisotropic)
+			qglGetIntegerv(GL_MAX_TEXTURE_MAX_ANISOTROPY_EXT, (GLint*)&vid.max_anisotropy);
+	#endif
 	CHECKGLERROR
 }
 

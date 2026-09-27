@@ -2732,7 +2732,7 @@ static void Mod_Q1BSP_LoadFaces(sizebuf_t *sb)
 		}
 
 		// check if we should apply a lightmap to this
-		if ((!(surface->lightmapinfo->texinfo->q1flags & TEX_SPECIAL) || surface->lightmapinfo->samples) && loadmodel->brushq1.lightdata)
+		if ((!(surface->lightmapinfo->texinfo->q1flags & TEX_SPECIAL) || surface->lightmapinfo->samples))
 		{
 			if (ssize > 256 || tsize > 256)
 				Host_Error("Bad surface extents");
@@ -8427,7 +8427,6 @@ void Mod_OBJ_Load(model_t *mod, void *buffer, void *bufferend)
 	int numtriangles = 0;
 	int maxtriangles = 0;
 	objvertex_t *vertices = NULL;
-	int linenumber = 0;
 	int maxtextures = 0, numtextures = 0, textureindex = 0;
 	int maxv = 0, numv = 1;
 	int maxvt = 0, numvt = 1;
@@ -8518,7 +8517,6 @@ void Mod_OBJ_Load(model_t *mod, void *buffer, void *bufferend)
 		static char emptyarg[1] = "";
 		if (!*text)
 			break;
-		linenumber++;
 		linelen = 0;
 		for (linelen = 0;text[linelen] && text[linelen] != '\r' && text[linelen] != '\n';linelen++)
 			line[linelen] = text[linelen];
