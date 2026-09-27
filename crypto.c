@@ -1029,12 +1029,12 @@ static void Crypto_d0_destroymutex(void *m)
 
 static int Crypto_d0_lockmutex(void *m)
 {
-	Thread_LockMutex(m);
+	return Thread_LockMutex(m);
 }
 
 static int Crypto_d0_unlockmutex(void *m)
 {
-	Thread_UnlockMutex(m);
+	return Thread_UnlockMutex(m);
 }
 #ifdef __cplusplus
 }

@@ -42,20 +42,22 @@ void _Thread_DestroyMutex(void *mutex, const char *filename, int fileline)
 	SDL_DestroyMutex((SDL_Mutex *)mutex);
 }
 
-void _Thread_LockMutex(void *mutex, const char *filename, int fileline)
+int _Thread_LockMutex(void *mutex, const char *filename, int fileline)
 {
 #ifdef THREADDEBUG
 	Sys_Printf("%p mutex lock %s:%i\n"   , mutex, filename, fileline);
 #endif
 	SDL_LockMutex((SDL_Mutex *)mutex);
+	return 0;
 }
 
-void _Thread_UnlockMutex(void *mutex, const char *filename, int fileline)
+int _Thread_UnlockMutex(void *mutex, const char *filename, int fileline)
 {
 #ifdef THREADDEBUG
 	Sys_Printf("%p mutex unlock %s:%i\n" , mutex, filename, fileline);
 #endif
 	SDL_UnlockMutex((SDL_Mutex *)mutex);
+	return 0;
 }
 
 void *_Thread_CreateCond(const char *filename, int fileline)
@@ -75,28 +77,31 @@ void _Thread_DestroyCond(void *cond, const char *filename, int fileline)
 	SDL_DestroyCondition((SDL_Condition *)cond);
 }
 
-void _Thread_CondSignal(void *cond, const char *filename, int fileline)
+int _Thread_CondSignal(void *cond, const char *filename, int fileline)
 {
 #ifdef THREADDEBUG
 	Sys_Printf("%p cond signal %s:%i\n"   , cond, filename, fileline);
 #endif
 	SDL_SignalCondition((SDL_Condition *)cond);
+	return 0;
 }
 
-void _Thread_CondBroadcast(void *cond, const char *filename, int fileline)
+int _Thread_CondBroadcast(void *cond, const char *filename, int fileline)
 {
 #ifdef THREADDEBUG
 	Sys_Printf("%p cond broadcast %s:%i\n"   , cond, filename, fileline);
 #endif
 	SDL_BroadcastCondition((SDL_Condition *)cond);
+	return 0;
 }
 
-void _Thread_CondWait(void *cond, void *mutex, const char *filename, int fileline)
+int _Thread_CondWait(void *cond, void *mutex, const char *filename, int fileline)
 {
 #ifdef THREADDEBUG
 	Sys_Printf("%p cond wait %s:%i\n"   , cond, filename, fileline);
 #endif
 	SDL_WaitCondition((SDL_Condition *)cond, (SDL_Mutex *)mutex);
+	return 0;
 }
 
 void *_Thread_CreateThread(int (*fn)(void *), void *data, const char *filename, int fileline)
