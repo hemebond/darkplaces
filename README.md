@@ -59,19 +59,19 @@ and files will be saved there, the rest are read-only.
 
 ## Build instructions (WIP)
 
-These instructions are adequate for Quake, but for Xonotic please refer to [its wiki](https://gitlab.com/xonotic/xonotic/-/wikis/Compiling).
-
 ### Required packages
 
 The minimum SDL version is 2.0.18 for Linux and 2.24.0 for Windows.  
 The supported compilers are GCC and Clang.  
 The following package names are for Debian, see below for Windows and Mac.
 
-##### Client
-Build (mandatory): `build-essential` `libjpeg-dev` `libsdl2-dev`  
+#### Client
+
+Build (mandatory): `build-essential` `libjpeg-dev` `libsdl3-dev`
 Runtime (optional): `libcurl` `libpng` `libfreetype6` `libvorbisfile`  
 
-##### Dedicated Server
+#### Dedicated Server
+
 Build (mandatory): `build-essential` `libjpeg-dev` `zlib1g-dev`  
 Runtime (optional): `libcurl` `libpng`  
 
@@ -81,7 +81,7 @@ Runtime (optional): `libcurl` `libpng`
 2. Once you've installed MSYS2 and have fully updated it, open a MinGW64 terminal (***not an MSYS2 terminal***) and input the following command:
 
 ```
-pacman -S --needed gcc make mingw-w64-x86_64-{toolchain,libjpeg-turbo,libpng,libogg,libvorbis,SDL2}
+pacman -S --needed gcc make mingw-w64-x86_64-{toolchain,libjpeg-turbo,libpng,libogg,libvorbis,SDL3}
 ```
 
 3. See [Unix instructions](#unix-(general)).
@@ -105,7 +105,6 @@ To build the main executable, input `make sdl-release` which creates the file ca
 
 If you get errors (that don't seem to be about missing dependencies) try `make clean` before compiling, especially if you updated your system since the last time you compiled.
 
-
 ### Windows (Visual Studio 2019)
 
 Not recommended due to poor support for C standards, and lack of maintenance.
@@ -121,7 +120,7 @@ The Release build crashes. The Debug x64 build doesn't crash (but is rather slow
 
 To get a build suitable for playing you'll need to use MinGW GCC, or download the autobuild from Xonotic (see above).
 
-
+<!--
 ### Web-Assembly (Emscripten)
 
 Note that this requires a linux device or WSL2.
@@ -143,7 +142,7 @@ For the standalone version (single HTML file containing engine and data):
 1. To start DP you must click somewhere in the window!
 1. If you want to upload files into the game filesystem, use `em_upload` in the darkplaces console (upload to /save if you want it to save across restarts)
 1. To save the stuff you uploaded to /save, use `em_save` (note that if you embedded the game, you won't be able to save changes to `/save/games`)
-
+-->
 
 ## Contributing
 
@@ -151,4 +150,4 @@ For the standalone version (single HTML file containing engine and data):
 
 ## Documentation
 
-Doxygen: https://xonotic.org/doxygen/darkplaces
+Doxygen: https://hemebond.github.io/darkplaces/
