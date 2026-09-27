@@ -47,17 +47,7 @@ void SV_Physics_Toss (prvm_edict_t *ent);
 int SV_GetPitchSign(prvm_prog_t *prog, prvm_edict_t *ent)
 {
 	model_t *model;
-	if (
-			(model = SV_GetModelFromEdict(ent))
-			?
-			model->type == mod_alias
-			:
-			(
-			 (((unsigned char)PRVM_serveredictfloat(ent, pflags)) & PFLAGS_FULLDYNAMIC)
-			 ||
-			 ((gamemode == GAME_TENEBRAE) && ((unsigned int)PRVM_serveredictfloat(ent, effects) & (16 | 32)))
-			)
-	   )
+	if ((model = SV_GetModelFromEdict(ent)) ? model->type == mod_alias : (((unsigned char)PRVM_serveredictfloat(ent, pflags)) & PFLAGS_FULLDYNAMIC))
 		return -1;
 	return 1;
 }

@@ -963,9 +963,6 @@ void IN_Move( void )
 	{
 		switch(gamemode)
 		{
-		case GAME_STEELSTORM:
-			IN_Move_TouchScreen_SteelStorm();
-			break;
 		default:
 			IN_Move_TouchScreen_Quake();
 			break;
