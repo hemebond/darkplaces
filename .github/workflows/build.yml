@@ -68,7 +68,7 @@ jobs:
             mingw-w64-ucrt-x86_64-libpng
             mingw-w64-ucrt-x86_64-libogg
             mingw-w64-ucrt-x86_64-libvorbis
-            mingw-w64-ucrt-x86_64-SDL3
+            mingw-w64-ucrt-x86_64-sdl3
 
       - name: Build
         run: |
