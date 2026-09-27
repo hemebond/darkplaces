@@ -299,14 +299,6 @@ static void M_Demo_Draw (void)
 }
 
 
-static void M_Menu_Demos_f(cmd_state_t *cmd)
-{
-	key_dest = key_menu;
-	m_state = m_demo;
-	m_entersound = true;
-}
-
-
 static void M_Demo_Key (cmd_state_t *cmd, int k, int ascii)
 {
 	char vabuf[1024];
@@ -4010,7 +4002,6 @@ static void M_Init (void)
 
 void M_Draw (void)
 {
-	char vabuf[1024];
 	if (key_dest != key_menu && key_dest != key_menu_grabbed)
 		m_state = m_none;
 

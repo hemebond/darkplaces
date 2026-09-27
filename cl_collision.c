@@ -235,9 +235,9 @@ trace_t CL_TracePoint(const vec3_t start, int type, prvm_edict_t *passedict, int
 	VectorCopy(start, clipstart);
 	VectorClear(clipmins2);
 	VectorClear(clipmaxs2);
-#if COLLISIONPARANOID >= 3
-	Con_Printf("move(%f %f %f)", clipstart[0], clipstart[1], clipstart[2]);
-#endif
+	#if COLLISIONPARANOID >= 3
+		Con_Printf("move(%f %f %f)", clipstart[0], clipstart[1], clipstart[2]);
+	#endif
 
 	// clip to world
 	Collision_ClipPointToWorld(&cliptrace, cl.worldmodel, clipstart, hitsupercontentsmask, skipsupercontentsmask, skipmaterialflagsmask);
@@ -330,9 +330,6 @@ trace_t CL_TracePoint(const vec3_t start, int type, prvm_edict_t *passedict, int
 				*hitnetworkentity = i;
 			Collision_CombineTraces(&cliptrace, &trace, NULL, false);
 		}
-
-skipnetworkplayers:
-		;
 	}
 
 	// clip to entities
@@ -540,9 +537,6 @@ trace_t CL_TraceLine(const vec3_t start, const vec3_t end, int type, prvm_edict_
 				*hitnetworkentity = i;
 			Collision_CombineTraces(&cliptrace, &trace, NULL, false);
 		}
-
-skipnetworkplayers:
-		;
 	}
 
 	// clip to entities
@@ -777,9 +771,6 @@ trace_t CL_TraceBox(const vec3_t start, const vec3_t mins, const vec3_t maxs, co
 				*hitnetworkentity = i;
 			Collision_CombineTraces(&cliptrace, &trace, NULL, false);
 		}
-
-skipnetworkplayers:
-		;
 	}
 
 	// clip to entities

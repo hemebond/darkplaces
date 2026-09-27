@@ -359,11 +359,6 @@ int sbar_x, sbar_y;
 Sbar_DrawPic
 =============
 */
-static void Sbar_DrawStretchPic (int x, int y, cachepic_t *pic, float alpha, float overridewidth, float overrideheight)
-{
-	DrawQ_Pic (sbar_x + x, sbar_y + y, pic, overridewidth, overrideheight, 1, 1, 1, alpha, 0);
-}
-
 static void Sbar_DrawPic (int x, int y, cachepic_t *pic)
 {
 	DrawQ_Pic (sbar_x + x, sbar_y + y, pic, 0, 0, 1, 1, 1, sbar_alpha_fg.value, 0);
@@ -655,32 +650,6 @@ static void Sbar_DrawScoreboard (void)
 	//if (cl.gametype == GAME_DEATHMATCH)
 	if (!cl.islocalgame)
 		Sbar_DeathmatchOverlay ();
-}
-
-//=============================================================================
-
-// AK to make DrawInventory smaller
-static void Sbar_DrawWeapon(int nr, float fade, int active)
-{
-	char vabuf[1024];
-	if (sbar_hudselector.integer == 1)
-	{
-		// width = 300, height = 100
-		const int w_width = 32, w_height = 12, w_space = 2, font_size = 8;
-
-		DrawQ_Pic((vid_conwidth.integer - w_width * 9) * 0.5 + w_width * nr, vid_conheight.integer - w_height, sb_weapons[0][nr], w_width, w_height, (active) ? 1 : 0.6, active ? 1 : 0.6, active ? 1 : 0.6, (active ? 1 : 0.6) * fade * sbar_alpha_fg.value, DRAWFLAG_NORMAL);
-		// FIXME ??
-		DrawQ_String((vid_conwidth.integer - w_width * 9) * 0.5 + w_width * nr + w_space, vid_conheight.integer - w_height + w_space, va(vabuf, sizeof(vabuf), "%i",nr+1), 0, font_size, font_size, 1, 1, 0, sbar_alpha_fg.value, 0, NULL, true, FONT_DEFAULT);
-	}
-	else
-	{
-		// width = 300, height = 100
-		const int w_width = 300, w_height = 100, w_space = 10;
-		const float w_scale = 0.4;
-
-		DrawQ_Pic(vid_conwidth.integer - (w_width + w_space) * w_scale, (w_height + w_space) * w_scale * nr + w_space, sb_weapons[0][nr], w_width * w_scale, w_height * w_scale, (active) ? 1 : 0.6, active ? 1 : 0.6, active ? 1 : 1, fade * sbar_alpha_fg.value, DRAWFLAG_NORMAL);
-		//DrawQ_String(vid_conwidth.integer - (w_space + font_size ), (w_height + w_space) * w_scale * nr + w_space, va(vabuf, sizeof(vabuf), "%i",nr+1), 0, font_size, font_size, 1, 0, 0, fade, 0, NULL, true, FONT_DEFAULT);
-	}
 }
 
 /*
@@ -1249,26 +1218,6 @@ void Sbar_ShowFPS(void)
 	}
 }
 
-static void Sbar_DrawGauge(float x, float y, cachepic_t *pic, float width, float height, float rangey, float rangeheight, float c1, float c2, float c1r, float c1g, float c1b, float c1a, float c2r, float c2g, float c2b, float c2a, float c3r, float c3g, float c3b, float c3a, int drawflags)
-{
-	float r[5];
-	c2 = bound(0, c2, 1);
-	c1 = bound(0, c1, 1 - c2);
-	r[0] = 0;
-	r[1] = rangey + rangeheight * (c2 + c1);
-	r[2] = rangey + rangeheight * (c2);
-	r[3] = rangey;
-	r[4] = height;
-	if (r[1] > r[0])
-		DrawQ_SuperPic(x, y + r[0], pic, width, (r[1] - r[0]), 0,(r[0] / height), c3r,c3g,c3b,c3a, 1,(r[0] / height), c3r,c3g,c3b,c3a, 0,(r[1] / height), c3r,c3g,c3b,c3a, 1,(r[1] / height), c3r,c3g,c3b,c3a, drawflags);
-	if (r[2] > r[1])
-		DrawQ_SuperPic(x, y + r[1], pic, width, (r[2] - r[1]), 0,(r[1] / height), c1r,c1g,c1b,c1a, 1,(r[1] / height), c1r,c1g,c1b,c1a, 0,(r[2] / height), c1r,c1g,c1b,c1a, 1,(r[2] / height), c1r,c1g,c1b,c1a, drawflags);
-	if (r[3] > r[2])
-		DrawQ_SuperPic(x, y + r[2], pic, width, (r[3] - r[2]), 0,(r[2] / height), c2r,c2g,c2b,c2a, 1,(r[2] / height), c2r,c2g,c2b,c2a, 0,(r[3] / height), c2r,c2g,c2b,c2a, 1,(r[3] / height), c2r,c2g,c2b,c2a, drawflags);
-	if (r[4] > r[3])
-		DrawQ_SuperPic(x, y + r[3], pic, width, (r[4] - r[3]), 0,(r[3] / height), c3r,c3g,c3b,c3a, 1,(r[3] / height), c3r,c3g,c3b,c3a, 0,(r[4] / height), c3r,c3g,c3b,c3a, 1,(r[4] / height), c3r,c3g,c3b,c3a, drawflags);
-}
-
 /*
 ===============
 Sbar_Draw
@@ -1491,7 +1440,7 @@ static float Sbar_PrintScoreboardItem(scoreboard_t *s, float x, float y)
 
 void Sbar_DeathmatchOverlay (void)
 {
-	int i, y, xmin, xmax, ymin, ymax;
+	int i, y, xmin;
 	char vabuf[1024];
 
 	// request new ping times every two second
@@ -1532,14 +1481,10 @@ void Sbar_DeathmatchOverlay (void)
 	// scores
 	Sbar_SortFrags ();
 
-	ymin = 8;
-	ymax = 40 + 8 + (Sbar_IsTeammatch() ? (teamlines * 8 + 5): 0) + scoreboardlines * 8 - 1;
-
 	if (cls.protocol == PROTOCOL_QUAKEWORLD)
 		xmin = (int) (vid_conwidth.integer - (26 + 15) * 8 * FONT_SBAR->maxwidth) / 2; // 26 characters until name, then we assume 15 character names (they can be longer but usually aren't)
 	else
 		xmin = (int) (vid_conwidth.integer - (16 + 25) * 8 * FONT_SBAR->maxwidth) / 2; // 16 characters until name, then we assume 25 character names (they can be longer but usually aren't)
-	xmax = vid_conwidth.integer - xmin;
 
 	DrawQ_Pic ((vid_conwidth.integer - Draw_GetPicWidth(sb_ranking))/2, 8, sb_ranking, 0, 0, 1, 1, 1, 1 * sbar_alpha_fg.value, 0);
 
