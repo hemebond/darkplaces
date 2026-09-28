@@ -280,7 +280,7 @@ cvar_t cl_particles = {CF_CLIENT | CF_ARCHIVE, "cl_particles", "1", "enables par
 cvar_t cl_particles_quality = {CF_CLIENT | CF_ARCHIVE, "cl_particles_quality", "1", "multiplies number of particles"};
 cvar_t cl_particles_alpha = {CF_CLIENT | CF_ARCHIVE, "cl_particles_alpha", "1", "multiplies opacity of particles"};
 cvar_t cl_particles_size = {CF_CLIENT | CF_ARCHIVE, "cl_particles_size", "1", "multiplies particle size"};
-cvar_t cl_particles_quake = {CF_CLIENT | CF_ARCHIVE, "cl_particles_quake", "0", "0: Fancy particles; 1: Disc particles like GLQuake; 2: Square particles like software-rendered Quake"};
+cvar_t cl_particles_quake = {CF_CLIENT | CF_ARCHIVE, "cl_particles_quake", "2", "0: Fancy particles; 1: Disc particles like GLQuake; 2: Square particles like software-rendered Quake"};
 cvar_t cl_particles_blood = {CF_CLIENT | CF_ARCHIVE, "cl_particles_blood", "1", "enables blood effects"};
 cvar_t cl_particles_blood_alpha = {CF_CLIENT | CF_ARCHIVE, "cl_particles_blood_alpha", "1", "opacity of blood, does not affect decals"};
 cvar_t cl_particles_blood_decal_alpha = {CF_CLIENT | CF_ARCHIVE, "cl_particles_blood_decal_alpha", "1", "opacity of blood decal"};
@@ -832,18 +832,6 @@ particle_t *CL_NewParticle(
 	}
 	else if (part->typeindex == pt_explode || part->typeindex == pt_explode2)
 		part->time2 = rand()&3; // time2 is used to progress the colour ramp index
-
-#if 0
-	else if (part->bounce != 0 && part->gravity == 0 && part->typeindex != pt_snow)
-	{
-		float lifetime = part->alpha / (part->alphafade ? part->alphafade : 1);
-		vec3_t endvec;
-		trace_t trace;
-		VectorMA(part->org, lifetime, part->vel, endvec);
-		trace = CL_TraceLine(part->org, endvec, MOVE_NOMONSTERS, NULL, SUPERCONTENTS_SOLID | SUPERCONTENTS_BODY, true, false, NULL, false);
-		part->delayedcollisions = cl.time + lifetime * trace.fraction - 0.1;
-	}
-#endif
 
 	return part;
 }
@@ -1853,9 +1841,9 @@ void CL_ReadPointFile_f(cmd_state_t *cmd)
 			t++;
 		tchar = *t;
 		*t = 0;
-#if _MSC_VER >= 1400
-#define sscanf sscanf_s
-#endif
+		#if _MSC_VER >= 1400
+			#define sscanf sscanf_s
+		#endif
 		r = sscanf (pointfilepos,"%lf %lf %lf", &org[0], &org[1], &org[2]);
 		VectorCopy(org, vecorg);
 		*t = tchar;
@@ -2214,19 +2202,6 @@ static void particletextureblotch(unsigned char *data, float radius, float red, 
 		}
 	}
 }
-
-#if 0
-static void particletextureclamp(unsigned char *data, int minr, int ming, int minb, int maxr, int maxg, int maxb)
-{
-	int i;
-	for (i = 0;i < PARTICLETEXTURESIZE*PARTICLETEXTURESIZE;i++, data += 4)
-	{
-		data[0] = bound(minb, data[0], maxb);
-		data[1] = bound(ming, data[1], maxg);
-		data[2] = bound(minr, data[2], maxr);
-	}
-}
-#endif
 
 static void particletextureinvert(unsigned char *data)
 {

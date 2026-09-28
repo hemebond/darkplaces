@@ -51,8 +51,8 @@ cvar_t r_texture_dds_load_logfailure = {CF_CLIENT, "r_texture_dds_load_logfailur
 cvar_t r_texture_dds_swdecode = {CF_CLIENT, "r_texture_dds_swdecode", "0", "0: don't software decode DDS, 1: software decode DDS if unsupported, 2: always software decode DDS"};
 
 qbool	gl_filter_force = false;
-int		gl_filter_min = GL_LINEAR_MIPMAP_LINEAR;
-int		gl_filter_mag = GL_LINEAR;
+int		gl_filter_min = GL_NEAREST;
+int		gl_filter_mag = GL_NEAREST;
 
 
 static mempool_t *texturemempool;
@@ -464,6 +464,7 @@ static void GL_TextureMode_f(cmd_state_t *cmd)
 	for (i = 0;i < (int)(sizeof(modes)/sizeof(*modes));i++)
 		if (!strcasecmp (modes[i].name, Cmd_Argv(cmd, 1) ) )
 			break;
+
 	if (i == 6)
 	{
 		Con_Print("bad filter name\n");

@@ -35,8 +35,6 @@ enum m_state_e m_state;
 
 void M_Menu_Main_f(cmd_state_t *cmd);
 	void M_Menu_SinglePlayer_f(cmd_state_t *cmd);
-		void M_Menu_Transfusion_Episode_f(cmd_state_t *cmd);
-			void M_Menu_Transfusion_Skill_f(cmd_state_t *cmd);
 		void M_Menu_Load_f(cmd_state_t *cmd);
 		void M_Menu_Save_f(cmd_state_t *cmd);
 	void M_Menu_MultiPlayer_f(cmd_state_t *cmd);
@@ -58,8 +56,6 @@ void M_Menu_ModList_f(cmd_state_t *cmd);
 
 static void M_Main_Draw (void);
 	static void M_SinglePlayer_Draw (void);
-		static void M_Transfusion_Episode_Draw (void);
-			static void M_Transfusion_Skill_Draw (void);
 		static void M_Load_Draw (void);
 		static void M_Save_Draw (void);
 	static void M_MultiPlayer_Draw (void);
@@ -82,8 +78,6 @@ static void M_ModList_Draw (void);
 
 static void M_Main_Key(cmd_state_t *cmd, int key, int ascii);
 	static void M_SinglePlayer_Key(cmd_state_t *cmd, int key, int ascii);
-		static void M_Transfusion_Episode_Key(cmd_state_t *cmd, int key, int ascii);
-			static void M_Transfusion_Skill_Key(cmd_state_t *cmd, int key, int ascii);
 		static void M_Load_Key(cmd_state_t *cmd, int key, int ascii);
 		static void M_Save_Key(cmd_state_t *cmd, int key, int ascii);
 	static void M_MultiPlayer_Key(cmd_state_t *cmd, int key, int ascii);
@@ -754,165 +748,6 @@ static void M_Save_Key(cmd_state_t *cmd, int k, int ascii)
 }
 
 //=============================================================================
-/* Transfusion Single Player Episode Menu */
-
-static int	m_episode_cursor;
-#define	EPISODE_ITEMS	6
-
-void M_Menu_Transfusion_Episode_f(cmd_state_t *cmd)
-{
-	m_entersound = true;
-	m_state = m_transfusion_episode;
-	key_dest = key_menu;
-}
-
-static void M_Transfusion_Episode_Draw (void)
-{
-	int y;
-	cachepic_t *p;
-	char vabuf[1024];
-	M_Background(640, 480);
-
-	p = Draw_CachePic ("gfx/menu/tb-episodes");
-	M_DrawPic (640/2 - Draw_GetPicWidth(p)/2, 40, "gfx/menu/tb-episodes");
-	for (y = 0; y < EPISODE_ITEMS; y++){
-		M_DrawPic (0, 160 + y * 40, va(vabuf, sizeof(vabuf), "gfx/menu/episode%i", y+1));
-	}
-
-	M_DrawPic (0, 120 + (m_episode_cursor + 1) * 40, va(vabuf, sizeof(vabuf), "gfx/menu/episode%iselected", m_episode_cursor + 1));
-}
-
-static void M_Transfusion_Episode_Key(cmd_state_t *cmd, int key, int ascii)
-{
-	switch (key)
-	{
-	case K_ESCAPE:
-		M_Menu_Main_f(cmd);
-		break;
-
-	case K_DOWNARROW:
-		S_LocalSound ("sound/misc/menu1.wav");
-		m_episode_cursor++;
-		if (m_episode_cursor >= EPISODE_ITEMS)
-			m_episode_cursor = 0;
-		break;
-
-	case K_UPARROW:
-		S_LocalSound ("sound/misc/menu1.wav");
-		m_episode_cursor--;
-		if (m_episode_cursor < 0)
-			m_episode_cursor = EPISODE_ITEMS - 1;
-		break;
-
-	case K_ENTER:
-		Cbuf_AddText(cmd, "deathmatch 0\n");
-		m_entersound = true;
-		M_Menu_Transfusion_Skill_f(cmd);
-	}
-}
-
-//=============================================================================
-/* Transfusion Single Player Skill Menu */
-
-static int	m_skill_cursor = 2;
-#define	SKILL_ITEMS	5
-
-void M_Menu_Transfusion_Skill_f(cmd_state_t *cmd)
-{
-	m_entersound = true;
-	m_state = m_transfusion_skill;
-	key_dest = key_menu;
-}
-
-static void M_Transfusion_Skill_Draw (void)
-{
-	int y;
-	cachepic_t	*p;
-	char vabuf[1024];
-	M_Background(640, 480);
-
-	p = Draw_CachePic ("gfx/menu/tb-difficulty");
-	M_DrawPic(640/2 - Draw_GetPicWidth(p)/2, 40, "gfx/menu/tb-difficulty");
-
-	for (y = 0; y < SKILL_ITEMS; y++)
-	{
-		M_DrawPic (0, 180 + y * 40, va(vabuf, sizeof(vabuf), "gfx/menu/difficulty%i", y+1));
-	}
-	M_DrawPic (0, 140 + (m_skill_cursor + 1) *40, va(vabuf, sizeof(vabuf), "gfx/menu/difficulty%iselected", m_skill_cursor + 1));
-}
-
-static void M_Transfusion_Skill_Key(cmd_state_t *cmd, int key, int ascii)
-{
-	switch (key)
-	{
-	case K_ESCAPE:
-		M_Menu_Transfusion_Episode_f(cmd);
-		break;
-
-	case K_DOWNARROW:
-		S_LocalSound ("sound/misc/menu1.wav");
-		m_skill_cursor++;
-		if (m_skill_cursor >= SKILL_ITEMS)
-			m_skill_cursor = 0;
-		break;
-
-	case K_UPARROW:
-		S_LocalSound ("sound/misc/menu1.wav");
-		m_skill_cursor--;
-		if (m_skill_cursor < 0)
-			m_skill_cursor = SKILL_ITEMS - 1;
-		break;
-
-	case K_ENTER:
-		m_entersound = true;
-		switch (m_skill_cursor)
-		{
-		case 0:
-			Cbuf_AddText(cmd, "skill 1\n");
-			break;
-		case 1:
-			Cbuf_AddText(cmd, "skill 2\n");
-			break;
-		case 2:
-			Cbuf_AddText(cmd, "skill 3\n");
-			break;
-		case 3:
-			Cbuf_AddText(cmd, "skill 4\n");
-			break;
-		case 4:
-			Cbuf_AddText(cmd, "skill 5\n");
-			break;
-		}
-		key_dest = key_game;
-		if (sv.active)
-			Cbuf_AddText(cmd, "disconnect\n");
-		Cbuf_AddText(cmd, "maxplayers 1\n");
-		Cbuf_AddText(cmd, "deathmatch 0\n");
-		Cbuf_AddText(cmd, "coop 0\n");
-		switch (m_episode_cursor)
-		{
-		case 0:
-			Cbuf_AddText(cmd, "map e1m1\n");
-			break;
-		case 1:
-			Cbuf_AddText(cmd, "map e2m1\n");
-			break;
-		case 2:
-			Cbuf_AddText(cmd, "map e3m1\n");
-			break;
-		case 3:
-			Cbuf_AddText(cmd, "map e4m1\n");
-			break;
-		case 4:
-			Cbuf_AddText(cmd, "map e6m1\n");
-			break;
-		case 5:
-			Cbuf_AddText(cmd, "map cp01\n");
-			break;
-		}
-	}
-}
-//=============================================================================
 /* MULTIPLAYER MENU */
 
 static int	m_multiplayer_cursor;
@@ -1460,7 +1295,7 @@ static void M_Options_Key(cmd_state_t *cmd, int k, int ascii)
 			M_Menu_Options_Effects_f(cmd);
 			break;
 		case 18: // Effects: Quake
-			Cbuf_AddText(cmd, "cl_particles 1;cl_particles_quake 1;cl_particles_quality 1;cl_particles_explosions_shell 0;r_explosionclip 1;cl_stainmaps 0;cl_stainmaps_clearonload 1;cl_decals 0;cl_particles_bulletimpacts 1;cl_particles_smoke 1;cl_particles_sparks 1;cl_particles_bubbles 1;cl_particles_blood 1;cl_particles_blood_alpha 1;cl_particles_blood_bloodhack 0;cl_beams_polygons 0;cl_beams_instantaimhack 0;cl_beams_quakepositionhack 1;cl_beams_lightatend 0;r_lerpmodels 1;r_lerpsprites 1;r_lerplightstyles 0;gl_polyblend 1;r_skyscroll1 1;r_skyscroll2 2;r_waterwarp 1;r_wateralpha 1;r_waterscroll 1\n");
+			Cbuf_AddText(cmd, "cl_particles 1;cl_particles_quake 2;cl_particles_quality 1;cl_particles_explosions_shell 0;r_explosionclip 1;cl_stainmaps 0;cl_stainmaps_clearonload 1;cl_decals 0;cl_particles_bulletimpacts 1;cl_particles_smoke 1;cl_particles_sparks 1;cl_particles_bubbles 1;cl_particles_blood 1;cl_particles_blood_alpha 1;cl_particles_blood_bloodhack 0;cl_beams_polygons 0;cl_beams_instantaimhack 0;cl_beams_quakepositionhack 1;cl_beams_lightatend 0;r_lerpmodels 1;r_lerpsprites 1;r_lerplightstyles 0;gl_polyblend 1;r_skyscroll1 1;r_skyscroll2 2;r_waterwarp 1;r_wateralpha 1;r_waterscroll 1\n");
 			break;
 		case 19: // Effects: Normal
 			Cbuf_AddText(cmd, "cl_particles 1;cl_particles_quake 0;cl_particles_quality 1;cl_particles_explosions_shell 0;r_explosionclip 1;cl_stainmaps 0;cl_stainmaps_clearonload 1;cl_decals 1;cl_particles_bulletimpacts 1;cl_particles_smoke 1;cl_particles_sparks 1;cl_particles_bubbles 1;cl_particles_blood 1;cl_particles_blood_alpha 1;cl_particles_blood_bloodhack 1;cl_beams_polygons 1;cl_beams_instantaimhack 0;cl_beams_quakepositionhack 1;cl_beams_lightatend 0;r_lerpmodels 1;r_lerpsprites 1;r_lerplightstyles 0;gl_polyblend 1;r_skyscroll1 1;r_skyscroll2 2;r_waterwarp 1;r_wateralpha 1;r_waterscroll 1\n");
@@ -2086,98 +1921,6 @@ static const char *quakebindnames[][2] =
 
 static int numcommands;
 static const char *(*bindnames)[2];
-
-/*
-typedef struct binditem_s
-{
-	char *command, *description;
-	struct binditem_s *next;
-}
-binditem_t;
-
-typedef struct bindcategory_s
-{
-	char *name;
-	binditem_t *binds;
-	struct bindcategory_s *next;
-}
-bindcategory_t;
-
-static bindcategory_t *bindcategories = NULL;
-
-static void M_ClearBinds (void)
-{
-	for (c = bindcategories;c;c = cnext)
-	{
-		cnext = c->next;
-		for (b = c->binds;b;b = bnext)
-		{
-			bnext = b->next;
-			Z_Free(b);
-		}
-		Z_Free(c);
-	}
-	bindcategories = NULL;
-}
-
-static void M_AddBindToCategory(bindcategory_t *c, char *command, char *description)
-{
-	for (b = &c->binds;*b;*b = &(*b)->next);
-	*b = Z_Alloc(sizeof(binditem_t) + strlen(command) + 1 + strlen(description) + 1);
-	*b->command = (char *)((*b) + 1);
-	*b->description = *b->command + strlen(command) + 1;
-	strlcpy(*b->command, command, strlen(command) + 1);
-	strlcpy(*b->description, description, strlen(description) + 1);
-}
-
-static void M_AddBind (char *category, char *command, char *description)
-{
-	for (c = &bindcategories;*c;c = &(*c)->next)
-	{
-		if (!strcmp(category, (*c)->name))
-		{
-			M_AddBindToCategory(*c, command, description);
-			return;
-		}
-	}
-	*c = Z_Alloc(sizeof(bindcategory_t));
-	M_AddBindToCategory(*c, command, description);
-}
-
-static void M_DefaultBinds (void)
-{
-	M_ClearBinds();
-	M_AddBind("movement", "+jump", "jump / swim up");
-	M_AddBind("movement", "+forward", "walk forward");
-	M_AddBind("movement", "+back", "backpedal");
-	M_AddBind("movement", "+left", "turn left");
-	M_AddBind("movement", "+right", "turn right");
-	M_AddBind("movement", "+speed", "run");
-	M_AddBind("movement", "+moveleft", "step left");
-	M_AddBind("movement", "+moveright", "step right");
-	M_AddBind("movement", "+strafe", "sidestep");
-	M_AddBind("movement", "+lookup", "look up");
-	M_AddBind("movement", "+lookdown", "look down");
-	M_AddBind("movement", "centerview", "center view");
-	M_AddBind("movement", "+mlook", "mouse look");
-	M_AddBind("movement", "+klook", "keyboard look");
-	M_AddBind("movement", "+moveup", "swim up");
-	M_AddBind("movement", "+movedown", "swim down");
-	M_AddBind("weapons", "+attack", "attack");
-	M_AddBind("weapons", "impulse 10", "next weapon");
-	M_AddBind("weapons", "impulse 12", "previous weapon");
-	M_AddBind("weapons", "impulse 1", "select weapon 1 (axe)");
-	M_AddBind("weapons", "impulse 2", "select weapon 2 (shotgun)");
-	M_AddBind("weapons", "impulse 3", "select weapon 3 (super )");
-	M_AddBind("weapons", "impulse 4", "select weapon 4 (nailgun)");
-	M_AddBind("weapons", "impulse 5", "select weapon 5 (super nailgun)");
-	M_AddBind("weapons", "impulse 6", "select weapon 6 (grenade launcher)");
-	M_AddBind("weapons", "impulse 7", "select weapon 7 (rocket launcher)");
-	M_AddBind("weapons", "impulse 8", "select weapon 8 (lightning gun)");
-}
-*/
-
-
 static int		keys_cursor;
 static int		bind_grab;
 
@@ -3995,8 +3738,6 @@ static void M_Init (void)
 	Cmd_AddCommand(CF_CLIENT, "menu_mods", M_Menu_ModList_f, "open the mods browser menu");
 	Cmd_AddCommand(CF_CLIENT, "help", M_Menu_Help_f, "open the help menu");
 	Cmd_AddCommand(CF_CLIENT, "menu_quit", M_Menu_Quit_f, "open the quit menu");
-	Cmd_AddCommand(CF_CLIENT, "menu_transfusion_episode", M_Menu_Transfusion_Episode_f, "open the transfusion episode select menu");
-	Cmd_AddCommand(CF_CLIENT, "menu_transfusion_skill", M_Menu_Transfusion_Skill_f, "open the transfusion skill select menu");
 	Cmd_AddCommand(CF_CLIENT, "menu_credits", M_Menu_Credits_f, "open the credits menu");
 }
 
@@ -4023,14 +3764,6 @@ void M_Draw (void)
 
 	case m_singleplayer:
 		M_SinglePlayer_Draw ();
-		break;
-
-	case m_transfusion_episode:
-		M_Transfusion_Episode_Draw ();
-		break;
-
-	case m_transfusion_skill:
-		M_Transfusion_Skill_Draw ();
 		break;
 
 	case m_load:
@@ -4134,14 +3867,6 @@ void M_KeyEvent (int key, int ascii, qbool downevent)
 
 	case m_singleplayer:
 		M_SinglePlayer_Key(cmd, key, ascii);
-		return;
-
-	case m_transfusion_episode:
-		M_Transfusion_Episode_Key(cmd, key, ascii);
-		return;
-
-	case m_transfusion_skill:
-		M_Transfusion_Skill_Key(cmd, key, ascii);
 		return;
 
 	case m_load:
