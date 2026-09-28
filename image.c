@@ -966,34 +966,6 @@ typedef struct imageformat_s
 }
 imageformat_t;
 
-// GAME_TENEBRAE only
-imageformat_t imageformats_tenebrae[] =
-{
-	{"override/%s.tga", LoadTGA_BGRA},
-	{"override/%s.png", PNG_LoadImage_BGRA},
-	{"override/%s.jpg", JPEG_LoadImage_BGRA},
-	{"override/%s.pcx", LoadPCX_BGRA},
-	{"%s.tga", LoadTGA_BGRA},
-	{"%s.png", PNG_LoadImage_BGRA},
-	{"%s.jpg", JPEG_LoadImage_BGRA},
-	{"%s.pcx", LoadPCX_BGRA},
-	{NULL, NULL}
-};
-
-// GAME_DELUXEQUAKE only
-// VorteX: the point why i use such messy texture paths is
-// that GtkRadiant can't detect normal/gloss textures
-// and exclude them from texture browser
-// so i just use additional folder to store this textures
-imageformat_t imageformats_dq[] =
-{
-	{"%s.tga", LoadTGA_BGRA},
-	{"%s.jpg", JPEG_LoadImage_BGRA},
-	{"texturemaps/%s.tga", LoadTGA_BGRA},
-	{"texturemaps/%s.jpg", JPEG_LoadImage_BGRA},
-	{NULL, NULL}
-};
-
 imageformat_t imageformats_textures[] =
 {
 	{"%s.tga", LoadTGA_BGRA},
@@ -1059,13 +1031,9 @@ unsigned char *loadimagepixelsbgra (const char *filename, qbool complain, qbool 
 		path[i] = 0;
 		dp_strlcpy(afterpath, basename + i + 1, sizeof(afterpath));
 	}
-	if (gamemode == GAME_TENEBRAE)
-		firstformat = imageformats_tenebrae;
-	else if (gamemode == GAME_DELUXEQUAKE)
-		firstformat = imageformats_dq;
-	else if (!strcasecmp(path, "textures"))
+	if (!strcasecmp(path, "textures"))
 		firstformat = imageformats_textures;
-	else if (!strcasecmp(path, "gfx") || !strcasecmp(path, "locale")) // locale/ is used in GAME_BLOODOMNICIDE
+	else if (!strcasecmp(path, "gfx"))
 		firstformat = imageformats_gfx;
 	else
 		firstformat = imageformats_other;

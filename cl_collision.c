@@ -235,9 +235,9 @@ trace_t CL_TracePoint(const vec3_t start, int type, prvm_edict_t *passedict, int
 	VectorCopy(start, clipstart);
 	VectorClear(clipmins2);
 	VectorClear(clipmaxs2);
-#if COLLISIONPARANOID >= 3
-	Con_Printf("move(%f %f %f)", clipstart[0], clipstart[1], clipstart[2]);
-#endif
+	#if COLLISIONPARANOID >= 3
+		Con_Printf("move(%f %f %f)", clipstart[0], clipstart[1], clipstart[2]);
+	#endif
 
 	// clip to world
 	Collision_ClipPointToWorld(&cliptrace, cl.worldmodel, clipstart, hitsupercontentsmask, skipsupercontentsmask, skipmaterialflagsmask);
@@ -304,13 +304,6 @@ trace_t CL_TracePoint(const vec3_t start, int type, prvm_edict_t *passedict, int
 		vec3_t origin, entmins, entmaxs;
 		matrix4x4_t entmatrix, entinversematrix;
 
-		if(IS_OLDNEXUIZ_DERIVED(gamemode))
-		{
-			// don't hit network players, if we are a nonsolid player
-			if(cl.scores[cl.playerentity-1].frags == -666 || cl.scores[cl.playerentity-1].frags == -616)
-				goto skipnetworkplayers;
-		}
-
 		for (i = 1;i <= cl.maxclients;i++)
 		{
 			entity_render_t *ent = &cl.entities[i].render;
@@ -325,13 +318,6 @@ trace_t CL_TracePoint(const vec3_t start, int type, prvm_edict_t *passedict, int
 			if (!cl.scores[i-1].name[0])
 				continue;
 
-			if(IS_OLDNEXUIZ_DERIVED(gamemode))
-			{
-				// don't hit spectators or nonsolid players
-				if(cl.scores[i-1].frags == -666 || cl.scores[i-1].frags == -616)
-					continue;
-			}
-
 			Matrix4x4_OriginFromMatrix(&ent->matrix, origin);
 			VectorAdd(origin, cl.playerstandmins, entmins);
 			VectorAdd(origin, cl.playerstandmaxs, entmaxs);
@@ -344,9 +330,6 @@ trace_t CL_TracePoint(const vec3_t start, int type, prvm_edict_t *passedict, int
 				*hitnetworkentity = i;
 			Collision_CombineTraces(&cliptrace, &trace, NULL, false);
 		}
-
-skipnetworkplayers:
-		;
 	}
 
 	// clip to entities
@@ -528,13 +511,6 @@ trace_t CL_TraceLine(const vec3_t start, const vec3_t end, int type, prvm_edict_
 		vec3_t origin, entmins, entmaxs;
 		matrix4x4_t entmatrix, entinversematrix;
 
-		if(IS_OLDNEXUIZ_DERIVED(gamemode))
-		{
-			// don't hit network players, if we are a nonsolid player
-			if(cl.scores[cl.playerentity-1].frags == -666 || cl.scores[cl.playerentity-1].frags == -616)
-				goto skipnetworkplayers;
-		}
-
 		for (i = 1;i <= cl.maxclients;i++)
 		{
 			entity_render_t *ent = &cl.entities[i].render;
@@ -549,13 +525,6 @@ trace_t CL_TraceLine(const vec3_t start, const vec3_t end, int type, prvm_edict_
 			if (!cl.scores[i-1].name[0])
 				continue;
 
-			if(IS_OLDNEXUIZ_DERIVED(gamemode))
-			{
-				// don't hit spectators or nonsolid players
-				if(cl.scores[i-1].frags == -666 || cl.scores[i-1].frags == -616)
-					continue;
-			}
-
 			Matrix4x4_OriginFromMatrix(&ent->matrix, origin);
 			VectorAdd(origin, cl.playerstandmins, entmins);
 			VectorAdd(origin, cl.playerstandmaxs, entmaxs);
@@ -568,9 +537,6 @@ trace_t CL_TraceLine(const vec3_t start, const vec3_t end, int type, prvm_edict_
 				*hitnetworkentity = i;
 			Collision_CombineTraces(&cliptrace, &trace, NULL, false);
 		}
-
-skipnetworkplayers:
-		;
 	}
 
 	// clip to entities
@@ -779,13 +745,6 @@ trace_t CL_TraceBox(const vec3_t start, const vec3_t mins, const vec3_t maxs, co
 		vec3_t origin, entmins, entmaxs;
 		matrix4x4_t entmatrix, entinversematrix;
 
-		if(IS_OLDNEXUIZ_DERIVED(gamemode))
-		{
-			// don't hit network players, if we are a nonsolid player
-			if(cl.scores[cl.playerentity-1].frags == -666 || cl.scores[cl.playerentity-1].frags == -616)
-				goto skipnetworkplayers;
-		}
-
 		for (i = 1;i <= cl.maxclients;i++)
 		{
 			entity_render_t *ent = &cl.entities[i].render;
@@ -800,13 +759,6 @@ trace_t CL_TraceBox(const vec3_t start, const vec3_t mins, const vec3_t maxs, co
 			if (!cl.scores[i-1].name[0])
 				continue;
 
-			if(IS_OLDNEXUIZ_DERIVED(gamemode))
-			{
-				// don't hit spectators or nonsolid players
-				if(cl.scores[i-1].frags == -666 || cl.scores[i-1].frags == -616)
-					continue;
-			}
-
 			Matrix4x4_OriginFromMatrix(&ent->matrix, origin);
 			VectorAdd(origin, cl.playerstandmins, entmins);
 			VectorAdd(origin, cl.playerstandmaxs, entmaxs);
@@ -819,9 +771,6 @@ trace_t CL_TraceBox(const vec3_t start, const vec3_t mins, const vec3_t maxs, co
 				*hitnetworkentity = i;
 			Collision_CombineTraces(&cliptrace, &trace, NULL, false);
 		}
-
-skipnetworkplayers:
-		;
 	}
 
 	// clip to entities

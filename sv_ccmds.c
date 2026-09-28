@@ -56,10 +56,6 @@ static void SV_Map_f(cmd_state_t *cmd)
 		return;
 	}
 
-	// GAME_DELUXEQUAKE - clear warpmark (used by QC)
-	if (gamemode == GAME_DELUXEQUAKE)
-		Cvar_Set(&cvars_all, "warpmark", "");
-
 	if(host.hook.Disconnect)
 		host.hook.Disconnect(false, NULL);
 
@@ -235,7 +231,7 @@ static void SV_Give_f(cmd_state_t *cmd)
 	case '8':
 	case '9':
 		// MED 01/04/97 added hipnotic give stuff
-		if (gamemode == GAME_HIPNOTIC || gamemode == GAME_QUOTH)
+		if (gamemode == GAME_HIPNOTIC)
 		{
 			if (t[0] == '6')
 			{
