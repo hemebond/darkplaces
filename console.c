@@ -1961,7 +1961,6 @@ void Con_DrawNotify (void)
 		Cvar_SetValueQuick(&con_notify, 0);
 	v = 0;
 
-	// GAME_NEXUIZ: center, otherwise left justify
 	align = con_notifyalign.value;
 
 	if(numChatlines || !con_chatrect.integer)

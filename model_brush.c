@@ -8169,7 +8169,6 @@ static void Mod_VBSP_LoadFaces(sizebuf_t *sb)
 		if (lightmapoffset == -1)
 		{
 			surface->lightmapinfo->samples = NULL;
-#if 1
 			// give non-lightmapped water a 1x white lightmap
 			if (!loadmodel->brush.isq2bsp && surface->texture->name[0] == '*' && (surface->lightmapinfo->texinfo->q1flags & TEX_SPECIAL) && ssize <= 256 && tsize <= 256)
 			{
@@ -8177,10 +8176,10 @@ static void Mod_VBSP_LoadFaces(sizebuf_t *sb)
 				surface->lightmapinfo->styles[0] = 0;
 				memset(surface->lightmapinfo->samples, 128, ssize * tsize * 3);
 			}
-#endif
 		}
-		else
+		else {
 			surface->lightmapinfo->samples = loadmodel->brushq1.lightdata + lightmapoffset;
+		}
 
 		// check if we should apply a lightmap to this
 		if (!(surface->lightmapinfo->texinfo->q1flags & TEX_SPECIAL) || surface->lightmapinfo->samples)

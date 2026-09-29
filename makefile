@@ -71,7 +71,6 @@ TARGETS_DEBUG=sv-debug sdl-debug
 TARGETS_PROFILE=sv-profile sdl-profile
 TARGETS_RELEASE=sv-release sdl-release
 TARGETS_RELEASE_PROFILE=sv-release-profile sdl-release-profile
-TARGETS_NEXUIZ=sv-nexuiz sdl-nexuiz
 
 
 ###### Optional features #####
@@ -87,7 +86,6 @@ endif
 # Linux configuration
 ifeq ($(DP_MAKE_TARGET), linux)
 	OBJ_ICON=
-	OBJ_ICON_NEXUIZ=
 
 	LDFLAGS_SV=$(LDFLAGS_LINUXSV)
 	LDFLAGS_SDL=$(LDFLAGS_LINUXSDL)
@@ -98,8 +96,6 @@ ifeq ($(DP_MAKE_TARGET), linux)
 
 	EXE_SV=$(EXE_UNIXSV)
 	EXE_SDL=$(EXE_UNIXSDL)
-	EXE_SVNEXUIZ=$(EXE_UNIXSVNEXUIZ)
-	EXE_SDLNEXUIZ=$(EXE_UNIXSDLNEXUIZ)
 
 	DP_LINK_SDL?=shared
 	DP_LINK_ZLIB?=shared
@@ -142,7 +138,6 @@ endif
 # Mac OS X configuration
 ifeq ($(DP_MAKE_TARGET), macosx)
 	OBJ_ICON=
-	OBJ_ICON_NEXUIZ=
 
 	LDFLAGS_SV=$(LDFLAGS_MACOSXSV)
 	LDFLAGS_SDL=$(LDFLAGS_MACOSXSDL)
@@ -153,8 +148,6 @@ ifeq ($(DP_MAKE_TARGET), macosx)
 
 	EXE_SV=$(EXE_UNIXSV)
 	EXE_SDL=$(EXE_UNIXSDL)
-	EXE_SVNEXUIZ=$(EXE_UNIXSVNEXUIZ)
-	EXE_SDLNEXUIZ=$(EXE_UNIXSDLNEXUIZ)
 
 	ifeq ($(word 2, $(filter -arch, $(CC))), -arch)
 		CFLAGS_MAKEDEP=
@@ -172,13 +165,11 @@ ifeq ($(DP_MAKE_TARGET), macosx)
 	TARGETS_PROFILE=sv-profile sdl-profile
 	TARGETS_RELEASE=sv-release sdl-release
 	TARGETS_RELEASE_PROFILE=sv-release-profile sdl-release-profile
-	TARGETS_NEXUIZ=sv-nexuiz sdl-nexuiz
 endif
 
 # SunOS configuration (Solaris)
 ifeq ($(DP_MAKE_TARGET), sunos)
 	OBJ_ICON=
-	OBJ_ICON_NEXUIZ=
 
 	CFLAGS_EXTRA=$(CFLAGS_SUNOS)
 
@@ -191,8 +182,6 @@ ifeq ($(DP_MAKE_TARGET), sunos)
 
 	EXE_SV=$(EXE_UNIXSV)
 	EXE_SDL=$(EXE_UNIXSDL)
-	EXE_SVNEXUIZ=$(EXE_UNIXSVNEXUIZ)
-	EXE_SDLNEXUIZ=$(EXE_UNIXSDLNEXUIZ)
 
 	DP_LINK_SDL?=shared
 	DP_LINK_ZLIB?=shared
@@ -207,7 +196,6 @@ endif
 ifeq ($(DP_MAKE_TARGET), bsd)
 
 	OBJ_ICON=
-	OBJ_ICON_NEXUIZ=
 
 	LDFLAGS_SV=$(LDFLAGS_BSDSV)
 	LDFLAGS_SDL=$(LDFLAGS_BSDSDL)
@@ -218,8 +206,6 @@ ifeq ($(DP_MAKE_TARGET), bsd)
 
 	EXE_SV=$(EXE_UNIXSV)
 	EXE_SDL=$(EXE_UNIXSDL)
-	EXE_SVNEXUIZ=$(EXE_UNIXSVNEXUIZ)
-	EXE_SDLNEXUIZ=$(EXE_UNIXSDLNEXUIZ)
 
 	DP_LINK_SDL?=shared
 	DP_LINK_ZLIB?=shared
@@ -233,7 +219,6 @@ endif
 # Win32 configuration
 ifeq ($(DP_MAKE_TARGET), mingw)
 	OBJ_ICON=darkplaces.o
-	OBJ_ICON_NEXUIZ=nexuiz.o
 
 	LDFLAGS_SV=$(LDFLAGS_WINSV)
 	LDFLAGS_SDL=$(LDFLAGS_WINSDL)
@@ -244,8 +229,6 @@ ifeq ($(DP_MAKE_TARGET), mingw)
 
 	EXE_SV=$(EXE_WINSV)
 	EXE_SDL=$(EXE_WINSDL)
-	EXE_SVNEXUIZ=$(EXE_WINSVNEXUIZ)
-	EXE_SDLNEXUIZ=$(EXE_WINSDLNEXUIZ)
 
 	DP_LINK_SDL?=shared
 	DP_LINK_ZLIB?=dlopen

@@ -210,8 +210,6 @@ CFLAGS_UNIX_PRELOAD=-DPREFER_PRELOAD
 LDFLAGS_UNIXSDL=$(SDL_LIBS) #-lGLESv2
 EXE_UNIXSV=darkplaces-dedicated
 EXE_UNIXSDL=darkplaces-sdl
-EXE_UNIXSVNEXUIZ=nexuiz-dedicated
-EXE_UNIXSDLNEXUIZ=nexuiz-sdl
 EXE_WASMJS=darkplaces-wasm.js
 EXE_WASM=darkplaces-wasm.html
 
@@ -303,8 +301,6 @@ LDFLAGS_WINSV=$(LDFLAGS_WINCOMMON) $(LIB_CRYPTO) $(LIB_CRYPTO_RIJNDAEL) -mconsol
 LDFLAGS_WINSDL=$(LDFLAGS_WINCOMMON) $(LIB_CRYPTO) $(LIB_CRYPTO_RIJNDAEL) $(LDFLAGS_UNIXSDL) -lwinmm -lws2_32 -Wl,--stack=0x800000 $(LIB_Z) $(LIB_JPEG) $(LIB_SND_XMP)
 EXE_WINSV=darkplaces-dedicated.exe
 EXE_WINSDL=darkplaces-sdl.exe
-EXE_WINSVNEXUIZ=nexuiz-dedicated.exe
-EXE_WINSDLNEXUIZ=nexuiz-sdl.exe
 
 VPATH := ../../../
 
@@ -330,19 +326,14 @@ help:
 	@echo "                              (with profiling optimizations) The profiled"
 	@echo "                              version of the program must have been"
 	@echo "                              previously compiled"
-	@echo "* $(MAKE) nexuiz               : make client and server binaries with nexuiz icon"
-	@echo "                              (release versions)"
 	@echo "* $(MAKE) sv-debug             : make dedicated server (debug version)"
 	@echo "* $(MAKE) sv-profile           : make dedicated server (profile version)"
 	@echo "* $(MAKE) sv-release-profile   : make dedicated server (release profile version)"
 	@echo "* $(MAKE) sv-release           : make dedicated server (release version)"
-	@echo "* $(MAKE) sv-nexuiz            : make dedicated server with nexuiz icon"
-	@echo "                              (release version)"
 	@echo "* $(MAKE) sdl-debug            : make SDL client (debug version)"
 	@echo "* $(MAKE) sdl-profile          : make SDL client (profile version)"
 	@echo "* $(MAKE) sdl-release-profile  : make SDL client (release version)"
 	@echo "* $(MAKE) sdl-release          : make SDL client (release version)"
-	@echo "* $(MAKE) sdl-nexuiz           : make SDL client with nexuiz icon (release version)"
 	@echo
 	@echo "* $(MAKE) emscripten-release   : make WASM client (release version)"
 	@echo "* $(MAKE) emscripten-standalone: make standalone WASM client (release version)"
@@ -359,9 +350,6 @@ release :
 
 release-profile :
 	$(MAKE) $(TARGETS_RELEASE_PROFILE)
-
-nexuiz :
-	$(MAKE) $(TARGETS_NEXUIZ)
 
 sv-debug :
 	$(MAKE) bin-debug \
@@ -382,11 +370,6 @@ sv-release-profile :
 	$(MAKE) bin-release-profile \
 		DP_MAKE_TARGET=$(DP_MAKE_TARGET) \
 		EXE='$(EXE_SV)' CFLAGS_FEATURES='$(CFLAGS_SERVER)' LDFLAGS_COMMON='$(LDFLAGS_SV)' LEVEL=1
-
-sv-nexuiz :
-	$(MAKE) bin-release \
-		DP_MAKE_TARGET=$(DP_MAKE_TARGET) \
-		EXE='$(EXE_SVNEXUIZ)' CFLAGS_FEATURES='$(CFLAGS_SERVER)' LDFLAGS_COMMON='$(LDFLAGS_SV)' LEVEL=1
 
 sdl-debug :
 	$(MAKE) bin-debug \
@@ -425,11 +408,6 @@ sdl-release-profile :
 	$(MAKE) bin-release-profile \
 		DP_MAKE_TARGET=$(DP_MAKE_TARGET) \
 		EXE='$(EXE_SDL)' CFLAGS_FEATURES='$(CFLAGS_CLIENT)' CFLAGS_SDL='$(SDLCONFIG_CFLAGS)' LDFLAGS_COMMON='$(LDFLAGS_SDL)' LEVEL=1
-
-sdl-nexuiz :
-	$(MAKE) bin-release \
-		DP_MAKE_TARGET=$(DP_MAKE_TARGET) \
-		EXE='$(EXE_SDLNEXUIZ)' CFLAGS_FEATURES='$(CFLAGS_CLIENT)' CFLAGS_SDL='$(SDLCONFIG_CFLAGS)' LDFLAGS_COMMON='$(LDFLAGS_SDL)' LEVEL=1
 
 bin-debug :
 	$(CHECKLEVEL1)
@@ -540,10 +518,6 @@ darkplaces.o: %.o : %.rc
 	$(CHECKLEVEL2)
 	$(WINDRES) -o $@ $<
 
-nexuiz.o: %.o : %.rc
-	$(CHECKLEVEL2)
-	$(WINDRES) -o $@ $<
-
 .c.o:
 	$(CHECKLEVEL2)
 	$(DO_CC)
@@ -565,15 +539,6 @@ $(EXE_WASMJS): $(OBJ_WASM) $(OBJ_ICON)
 	$(CHECKLEVEL2)
 	$(DO_LD)
 
-
-$(EXE_SVNEXUIZ): $(OBJ_SV) $(OBJ_ICON_NEXUIZ)
-	$(CHECKLEVEL2)
-	$(DO_LD)
-
-$(EXE_SDLNEXUIZ): $(OBJ_SDL) $(OBJ_ICON_NEXUIZ)
-	$(CHECKLEVEL2)
-	$(DO_LD)
-
 # If requested, these targets must always run first:
 .EXTRA_PREREQS := $(filter clean clean-profile, $(MAKECMDGOALS))
 
@@ -582,8 +547,6 @@ clean:
 	-$(CMD_RM) $(EXE_SDL)
 	-$(CMD_RM) $(EXE_WASM)
 	-$(CMD_RM) $(EXE_WASMJS)
-	-$(CMD_RM) $(EXE_SVNEXUIZ)
-	-$(CMD_RM) $(EXE_SDLNEXUIZ)
 	-$(CMD_RM) *.o
 	-$(CMD_RM) *.d
 	-$(CMD_RM) *.gch

@@ -20,7 +20,6 @@ TARGETS_DEBUG=sv-debug sdl-debug
 TARGETS_PROFILE=sv-profile sdl-profile
 TARGETS_RELEASE=sv-release sdl-release
 TARGETS_RELEASE_PROFILE=sv-release-profile sdl-release-profile
-TARGETS_NEXUIZ=sv-nexuiz sdl-nexuiz
 
 # Link options
 DP_LINK_ZLIB?=shared
@@ -54,7 +53,6 @@ DEFAULT_SNDAPI=BSD
 .endif
 
 OBJ_ICON=
-OBJ_ICON_NEXUIZ=
 
 LDFLAGS_SV=$(LDFLAGS_BSDSV)
 LDFLAGS_SDL=$(LDFLAGS_BSDSDL)
@@ -65,8 +63,6 @@ SDLCONFIG_STATICLIBS=$(SDLCONFIG_UNIXSTATICLIBS) $(SDLCONFIG_UNIXSTATICLIBS_X11)
 
 EXE_SV=$(EXE_UNIXSV)
 EXE_SDL=$(EXE_UNIXSDL)
-EXE_SVNEXUIZ=$(EXE_UNIXSVNEXUIZ)
-EXE_SDLNEXUIZ=$(EXE_UNIXSDLNEXUIZ)
 
 # set these to "" if you want to use dynamic loading instead
 # zlib
