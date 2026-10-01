@@ -27,7 +27,6 @@ struct serverlist_entry_s;
 enum m_state_e {
 	m_none,
 	m_main,
-	m_demo,
 	m_singleplayer,
 	m_load,
 	m_save,

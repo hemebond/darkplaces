@@ -1356,7 +1356,7 @@ const char *PRVM_ED_ParseEdict (prvm_prog_t *prog, const char *data, prvm_edict_
 
 		init = true;
 
-		// ignore attempts to set key "" (this problem occurs in nehahra neh1m8.bsp)
+		// ignore attempts to set key ""
 		if (!keyname[0])
 			continue;
 

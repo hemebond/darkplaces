@@ -1252,23 +1252,6 @@ static void SV_Playerskin_f(cmd_state_t *cmd)
 }
 
 /*
-======================
-SV_PModel_f
-LadyHavoc: only supported for Nehahra, I personally think this is dumb, but Mindcrime won't listen.
-LadyHavoc: correction, Mindcrime will be removing pmodel in the future, but it's still stuck here for compatibility.
-======================
-*/
-static void SV_PModel_f(cmd_state_t *cmd)
-{
-	prvm_prog_t *prog = SVVM_prog;
-
-	if (Cmd_Argc (cmd) == 1)
-		return;
-
-	PRVM_serveredictfloat(host_client->edict, pmodel) = atoi(Cmd_Argv(cmd, 1));
-}
-
-/*
 ===============================================================================
 
 DEBUGGING TOOLS
@@ -1678,7 +1661,6 @@ void SV_InitOperatorCommands(void)
 	Cmd_AddCommand(CF_USERINFO, "name", SV_Name_f, "change your player name");
 	Cmd_AddCommand(CF_USERINFO, "rate", SV_Rate_f, "change your network connection speed");
 	Cmd_AddCommand(CF_USERINFO, "rate_burstsize", SV_Rate_BurstSize_f, "change your network connection speed");
-	Cmd_AddCommand(CF_USERINFO, "pmodel", SV_PModel_f, "(Nehahra-only) change your player model choice");
 	Cmd_AddCommand(CF_USERINFO, "playermodel", SV_Playermodel_f, "change your player model");
 	Cmd_AddCommand(CF_USERINFO, "playerskin", SV_Playerskin_f, "change your player skin number");
 

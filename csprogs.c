@@ -418,12 +418,12 @@ qbool CSQC_AddRenderEdict(prvm_edict_t *ed, int edictnum)
 		if (!(entrender->effects & EF_FULLBRIGHT) && !(renderflags & RF_FULLBRIGHT))
 			entrender->flags |= RENDER_LIGHT;
 	}
-	// hide player shadow during intermission or nehahra movie
+	// hide player shadow during intermission
 	if (!(entrender->effects & (EF_NOSHADOW | EF_ADDITIVE | EF_NODEPTHTEST))
 	 &&  (entrender->alpha >= 1)
 	 && !(renderflags & RF_NOSHADOW)
 	 && !(entrender->flags & RENDER_VIEWMODEL)
-	 && (!(entrender->flags & RENDER_EXTERIORMODEL) || (!cl.intermission && cls.protocol != PROTOCOL_NEHAHRAMOVIE && !cl_noplayershadow.integer)))
+	 && (!(entrender->flags & RENDER_EXTERIORMODEL) || (!cl.intermission && !cl_noplayershadow.integer)))
 		entrender->flags |= RENDER_SHADOW;
 	if (entrender->flags & RENDER_VIEWMODEL)
 		entrender->flags |= RENDER_NOSELFSHADOW;

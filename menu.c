@@ -102,52 +102,6 @@ static qbool	m_entersound;		///< play after drawing a frame, so caching won't di
 #define StartingGame	(m_multiplayer_cursor == 1)
 #define JoiningGame		(m_multiplayer_cursor == 0)
 
-// Nehahra
-#define NumberOfNehahraDemos 34
-typedef struct nehahrademonames_s
-{
-	const char *name;
-	const char *desc;
-} nehahrademonames_t;
-
-static nehahrademonames_t NehahraDemos[NumberOfNehahraDemos] =
-{
-	{"intro", "Prologue"},
-	{"genf", "The Beginning"},
-	{"genlab", "A Doomed Project"},
-	{"nehcre", "The New Recruits"},
-	{"maxneh", "Breakthrough"},
-	{"maxchar", "Renewal and Duty"},
-	{"crisis", "Worlds Collide"},
-	{"postcris", "Darkening Skies"},
-	{"hearing", "The Hearing"},
-	{"getjack", "On a Mexican Radio"},
-	{"prelude", "Honor and Justice"},
-	{"abase", "A Message Sent"},
-	{"effect", "The Other Side"},
-	{"uhoh", "Missing in Action"},
-	{"prepare", "The Response"},
-	{"vision", "Farsighted Eyes"},
-	{"maxturns", "Enter the Immortal"},
-	{"backlot", "Separate Ways"},
-	{"maxside", "The Ancient Runes"},
-	{"counter", "The New Initiative"},
-	{"warprep", "Ghosts to the World"},
-	{"counter1", "A Fate Worse Than Death"},
-	{"counter2", "Friendly Fire"},
-	{"counter3", "Minor Setback"},
-	{"madmax", "Scores to Settle"},
-	{"quake", "One Man"},
-	{"cthmm", "Shattered Masks"},
-	{"shades", "Deal with the Dead"},
-	{"gophil", "An Unlikely Hero"},
-	{"cstrike", "War in Hell"},
-	{"shubset", "The Conspiracy"},
-	{"shubdie", "Even Death May Die"},
-	{"newranks", "An Empty Throne"},
-	{"seal", "The Seal is Broken"}
-};
-
 static float menu_x, menu_y, menu_width, menu_height;
 
 static void M_Background(int width, int height)
@@ -278,62 +232,13 @@ static void M_ToggleMenu(int mode)
 }
 
 
-static int demo_cursor;
-static void M_Demo_Draw (void)
-{
-	int i;
-
-	M_Background(320, 200);
-
-	for (i = 0;i < NumberOfNehahraDemos;i++)
-		M_Print(16, 16 + 8*i, NehahraDemos[i].desc);
-
-	// line cursor
-	M_DrawCharacter (8, 16 + demo_cursor*8, 12+((int)(host.realtime*4)&1));
-}
-
-
-static void M_Demo_Key (cmd_state_t *cmd, int k, int ascii)
-{
-	char vabuf[1024];
-	switch (k)
-	{
-	case K_ESCAPE:
-		M_Menu_Main_f (cmd);
-		break;
-
-	case K_ENTER:
-		S_LocalSound ("sound/misc/menu2.wav");
-		m_state = m_none;
-		key_dest = key_game;
-		Cbuf_AddText (cmd, va(vabuf, sizeof(vabuf), "playdemo %s\n", NehahraDemos[demo_cursor].name));
-		return;
-
-	case K_UPARROW:
-	case K_LEFTARROW:
-		S_LocalSound ("sound/misc/menu1.wav");
-		demo_cursor--;
-		if (demo_cursor < 0)
-			demo_cursor = NumberOfNehahraDemos-1;
-		break;
-
-	case K_DOWNARROW:
-	case K_RIGHTARROW:
-		S_LocalSound ("sound/misc/menu1.wav");
-		demo_cursor++;
-		if (demo_cursor >= NumberOfNehahraDemos)
-			demo_cursor = 0;
-		break;
-	}
-}
-
 //=============================================================================
 /* MAIN MENU */
 
 static int	m_main_cursor;
 static qbool m_missingdata = false;
 
-static int MAIN_ITEMS = 4; // Nehahra: Menu Disable
+static int MAIN_ITEMS = 4; // Nehahra: Menu Disable  // What does this mean?
 
 
 void M_Menu_Main_f(cmd_state_t *cmd)
@@ -3758,10 +3663,6 @@ void M_Draw (void)
 		M_Main_Draw ();
 		break;
 
-	case m_demo:
-		M_Demo_Draw ();
-		break;
-
 	case m_singleplayer:
 		M_SinglePlayer_Draw ();
 		break;
@@ -3859,10 +3760,6 @@ void M_KeyEvent (int key, int ascii, qbool downevent)
 
 	case m_main:
 		M_Main_Key(cmd, key, ascii);
-		return;
-
-	case m_demo:
-		M_Demo_Key(cmd, key, ascii);
 		return;
 
 	case m_singleplayer:

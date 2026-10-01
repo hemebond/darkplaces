@@ -208,7 +208,6 @@ static void Mod_Sprite_SharedSetup(const unsigned char *datapointer, int version
 			if (cls.state != ca_dedicated)
 			{
 				skinframe = NULL;
-				// note: Nehahra's null.spr has width == 0 and height == 0
 				if (width > 0 && height > 0)
 				{
 					if (groupframes > 1)
