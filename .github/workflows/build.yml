@@ -33,7 +33,7 @@ jobs:
           git describe --always
           # fail if there's any warnings
           export CC="cc -Werror"
-          make sdl-release
+          make release
 
       - name: Upload Linux artifacts
         uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a
@@ -41,6 +41,13 @@ jobs:
           name: Linux
           path: |
             darkplaces-sdl
+
+      - name: Upload Linux artifacts
+        uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a
+        with:
+          name: Dedicated-Server
+          path: |
+            darkplaces-dedicated
 
   windows-sdl-release:
     runs-on: windows-latest
